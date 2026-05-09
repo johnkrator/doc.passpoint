@@ -1,0 +1,9 @@
+export { default as Dashboard } from './Dashboard';
+export { default as Sections } from './Sections';
+export { default as Pages } from './Pages';
+export { default as Endpoints } from './Endpoints';
+export { default as Users } from './Users';
+export { default as Settings } from './Settings';
+export { default as FeedbackPage } from './Feedback';
+export { default as Login } from './Login';
+export { default as ForgotPassword } from './ForgotPassword';

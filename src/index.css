@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ─── Brand palette — primary: #ff003d ───────────────────────────────────── */
+  --color-brand: #ff003d;
+  --color-brand-50: #fff0f3;
+  --color-brand-100: #ffe0e8;
+  --color-brand-200: #ffb3c4;
+  --color-brand-300: #ff8099;
+  --color-brand-400: #ff4d75;
+  --color-brand-500: #ff003d;
+  --color-brand-600: #cc0031;
+  --color-brand-700: #990025;
+  --color-brand-800: #660019;
+  --color-brand-900: #33000d;
+  --color-brand-950: #1a0007;
+
+  /* ─── Editor (VS Code) theme tokens ─────────────────────────────────────── */
+  --color-editor-bg: #1e1e1e;
+  --color-editor-surface: #2d2d30;
+  --color-editor-border: #3c3c3c;
+  --color-editor-accent: #007acc;
+  --color-editor-accent-hover: #005a9e;
+  --color-editor-token: #569cd6;
+  --color-editor-fg: #cccccc;
+  --color-editor-fg-muted: #6b7280;
+  --color-editor-placeholder: #6a6a6a;
+  --color-editor-teal: #4ec9b0;
+
+  /* ─── Code block theme tokens ───────────────────────────────────────────── */
+  --color-codeblock-bg: #110317;
+  --color-codeblock-surface: #1c0526;
+  --color-codeblock-border: #2d1040;
+  --color-codeblock-fg: #e6edf3;
+  --color-codeblock-fg-muted: #8b949e;
+  --color-codeblock-line-number: #4a5568;
+  --color-codeblock-comment: #6e7681;
+  --color-codeblock-key: #ff6b93;
+  --color-codeblock-string: #ffbfd2;
+  --color-codeblock-number: #ff9b6b;
+  --color-codeblock-keyword: #c993ff;
+  --color-codeblock-accent: #ff7ca8;
+  --color-codeblock-tag: #ff4f7d;
+  --color-codeblock-attribute: #ffb07a;
+
+  /* ─── Surface tokens ─────────────────────────────────────────────────────── */
+  --color-surface-dim: #1a1a1a;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.63 0.26 25);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.63 0.26 25);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.63 0.26 25);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.63 0.26 25);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* ─── Logo color filter — converts the logo image to the brand primary color.
+   * When the primary color changes, update this filter chain accordingly.
+   * Formula: brightness(0) renders the image black, the remaining filters
+   * shift it to #ff003d. ──────────────────────────────────────────────────── */
+  :root {
+    --logo-filter: brightness(0) saturate(100%) invert(11%) sepia(91%)
+      saturate(4969%) hue-rotate(329deg) brightness(106%) contrast(106%);
+  }
+
+  .logo-brand {
+    filter: var(--logo-filter);
+  }
+
+  /* ─── Prevent iOS Safari auto-zoom on input focus ───────────────────────────
+   * iOS zooms the page when an input's font-size is < 16px.
+   * This rule ensures all inputs, selects, and textareas are at least 16px.
+   * ─────────────────────────────────────────────────────────────────────────── */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* ─── Unified Documentation Typography ─────────────────────────────────────
+   * Scale (matches Flutterwave / Stripe reference quality):
+   *   h1  — page title        : 1.75rem  → 2.25rem  @ md  (bold, tight tracking)
+   *   h2  — section heading   : 1.25rem  → 1.625rem @ md  (semibold)
+   *   h3  — subsection heading: 1.0625rem → 1.25rem @ md  (semibold)
+   *   h4  — label heading     : 0.9375rem  (medium, uppercase tracked)
+   *   p   — body paragraph    : 0.9375rem → 1rem     @ md  (comfortable read)
+   *   li  — list item         : same as p
+   *   td,th — table cells     : 0.875rem
+   * ─────────────────────────────────────────────────────────────────────────── */
+
+  /* Page title */
+  .docs-content h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    color: var(--foreground);
+  }
+
+  @media (min-width: 768px) {
+    .docs-content h1 {
+      font-size: 2.25rem;
+    }
+  }
+
+  /* Section heading */
+  .docs-content h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+  }
+
+  @media (min-width: 768px) {
+    .docs-content h2 {
+      font-size: 1.625rem;
+    }
+  }
+
+  /* Sub-section heading */
+  .docs-content h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    margin-top: 2rem;
+    margin-bottom: 0.625rem;
+    color: var(--foreground);
+  }
+
+  @media (min-width: 768px) {
+    .docs-content h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Label / minor heading */
+  .docs-content h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--muted-foreground);
+  }
+
+  /* Body text */
+  .docs-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: inherit;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
+  }
+
+  @media (min-width: 768px) {
+    .docs-content p {
+      font-size: 1rem;
+    }
+  }
+
+  /* List items */
+  .docs-content li {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.8;
+  }
+
+  @media (min-width: 768px) {
+    .docs-content li {
+      font-size: 1rem;
+    }
+  }
+
+  /* Table cells — allow long strings to wrap */
+  .docs-content td,
+  .docs-content th {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Inline code / monospace in paragraphs — break long tokens */
+  .docs-content code {
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+
+  /* Lead paragraph — first <p> directly after h1 */
+  .docs-content h1 + p {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  @media (min-width: 768px) {
+    .docs-content h1 + p {
+      font-size: 1.125rem;
+    }
+  }
+
+  /* ─── Endpoint / API cards ───────────────────────────────────────────────── */
+  /* Compact padding on small screens; overflow-clip prevents child bleed
+     without suppressing overflow-x-auto on nested table wrappers.          */
+  .docs-content .rounded-xl {
+    padding: 1rem;
+    overflow: clip;
+  }
+  @media (min-width: 640px) {
+    .docs-content .rounded-xl {
+      padding: 1.25rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .docs-content .rounded-xl {
+      padding: 2rem;
+    }
+  }
+
+  /* Flex children inside cards must not overflow their container */
+  .docs-content .flex-1.min-w-0 {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Icon column in endpoint cards — horizontal on mobile, vertical on desktop */
+  .docs-content .lg\:w-48 {
+    width: auto;
+  }
+  @media (min-width: 1024px) {
+    .docs-content .lg\:w-48 {
+      width: 10rem;
+    }
+  }
+
+  /* Icon size — smaller on mobile */
+  .docs-content .h-12.w-12 {
+    height: 2rem;
+    width: 2rem;
+  }
+  @media (min-width: 640px) {
+    .docs-content .h-12.w-12 {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .docs-content .h-12.w-12 {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  /* ─── Tables — tighter cell padding on mobile ────────────────────────────── */
+  .docs-content td,
+  .docs-content th {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+  @media (min-width: 768px) {
+    .docs-content td,
+    .docs-content th {
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  /* ─── Tables — horizontal scroll on mobile ──────────────────────────────── */
+  /* Give every scrollable table a minimum width so the overflow-x-auto
+     wrapper actually activates scroll instead of squashing columns.        */
+  .docs-content .overflow-x-auto table,
+  .docs-content .overflow-x-auto > table {
+    min-width: 520px;
+  }
+
+  /* All table cells must not wrap — let the table scroll instead */
+  .docs-content td,
+  .docs-content th {
+    white-space: nowrap;
+  }
+
+  /* Description column is the only one allowed to wrap (it's wide prose) */
+  .docs-content td:nth-child(4),
+  .docs-content th:nth-child(4) {
+    white-space: normal;
+    min-width: 180px;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brand-500);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-600);
+  }
+
+  /* For Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-brand-500) transparent;
+  }
+
+  /* Hide scrollbar utility class */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  /* ─── Homepage square grid background ──────────────────────────────────────
+   * Graph-paper grid using the brand dark purple #100318 at low opacity.
+   * Dark mode variant uses white lines instead. ─────────────────────────── */
+  .home-grid {
+    background-image:
+      linear-gradient(rgba(16, 3, 24, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 3, 24, 0.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .dark .home-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
+  /* ─── CTA glow pulse ───────────────────────────────────────────────────── */
+  @keyframes cta-glow-a {
+    0%, 100% { opacity: 0.65; transform: scale(1); }
+    50%       { opacity: 1;    transform: scale(1.18); }
+  }
+  @keyframes cta-glow-b {
+    0%, 100% { opacity: 0.45; transform: scale(1); }
+    50%       { opacity: 0.9;  transform: scale(1.22); }
+  }
+
+  /* ─── Page transition ───────────────────────────────────────────────────── */
+  @keyframes page-enter {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .page-enter {
+    animation: page-enter 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* ─── Decorative shape animations ──────────────────────────────────────── */
+  @keyframes geo-float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-16px); }
+  }
+
+  @keyframes geo-float-r {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(16px); }
+  }
+
+  @keyframes geo-drift {
+    0%, 100% { transform: translate(0px,   0px); }
+    33%      { transform: translate(8px,  -10px); }
+    66%      { transform: translate(-6px,  -6px); }
+  }
+
+  @keyframes geo-spin-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .geo-anim-1 { animation: geo-float     9s  ease-in-out infinite 0s;   }
+  .geo-anim-2 { animation: geo-float     7s  ease-in-out infinite 1.5s; }
+  .geo-anim-3 { animation: geo-drift     13s ease-in-out infinite 0.5s; }
+  .geo-anim-4 { animation: geo-float-r   11s ease-in-out infinite 2s;   }
+  .geo-anim-5 { animation: geo-spin-slow 40s linear       infinite 0s;  }
+  .geo-anim-6 { animation: geo-float     14s ease-in-out infinite 1s;   }
+  .geo-anim-7 { animation: geo-float-r   10s ease-in-out infinite 3s;   }
+  .geo-anim-8 { animation: geo-drift     8s  ease-in-out infinite 0.5s; }
+
+  /* ─── Cursor parallax layers ────────────────────────────────────────────
+   * --geo-mx / --geo-my are set by a RAF lerp loop in DocumentationLayout.
+   * Each shape has a unique depth multiplier; opposite signs create the
+   * illusion of shapes floating at different Z depths. ─────────────────── */
+  .geo-px-1 { will-change: transform; transform: translate(calc(var(--geo-mx, 0) * 42px), calc(var(--geo-my, 0) * 26px)); }
+  .geo-px-2 { will-change: transform; transform: translate(calc(var(--geo-mx, 0) * -28px), calc(var(--geo-my, 0) * -18px)); }
+  .geo-px-3 { will-change: transform; transform: translate(calc(var(--geo-mx, 0) * 18px),  calc(var(--geo-my, 0) * 34px)); }
+  .geo-px-4 { will-change: transform; transform: translate(calc(var(--geo-mx, 0) * -44px), calc(var(--geo-my, 0) * 14px)); }
+  .geo-px-5 { will-change: transform; transform: translate(calc(var(--geo-mx, 0) * 8px),   calc(var(--geo-my, 0) * 8px)); }
+  .geo-px-6 { will-change: transform; transform: translate(calc(var(--geo-mx, 0) * 30px),  calc(var(--geo-my, 0) * -22px)); }
+  .geo-px-7 { will-change: transform; transform: translate(calc(var(--geo-mx, 0) * -20px), calc(var(--geo-my, 0) * -36px)); }
+  .geo-px-8 { will-change: transform; transform: translate(calc(var(--geo-mx, 0) * 54px),  calc(var(--geo-my, 0) * -14px)); }
+
+@keyframes float-a {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%       { transform: translateY(-8px) rotate(-2deg); }
+}
+@keyframes float-b {
+  0%, 100% { transform: translateY(0) rotate(2deg); }
+  50%       { transform: translateY(-6px) rotate(2deg); }
+}
+@keyframes cursor-blink {
+  50% { opacity: 0; }
+}
+@keyframes pulse-dot {
+  0%   { box-shadow: 0 0 0 0 rgba(255,255,255,.7); }
+  70%  { box-shadow: 0 0 0 6px rgba(255,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+@keyframes dot-beep {
+  0%   { box-shadow: 0 0 0 0 oklch(0.64 0.22 18 / 0.7); }
+  70%  { box-shadow: 0 0 0 9px oklch(0.64 0.22 18 / 0); }
+  100% { box-shadow: 0 0 0 0 oklch(0.64 0.22 18 / 0); }
+}
+@keyframes arrow-up {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-3px); }
+}
+@keyframes arrow-down {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(3px); }
+}
+@keyframes step-ring {
+  0%, 100% { box-shadow: 0 0 0 5px oklch(0.92 0.06 18 / 0.9),  0 6px 16px -4px oklch(0.64 0.22 18 / 0.4); }
+  50%       { box-shadow: 0 0 0 10px oklch(0.92 0.06 18 / 0),   0 6px 16px -4px oklch(0.64 0.22 18 / 0.4); }
+}
+
+  /* ─── Claude-aesthetic landing palette (scoped to .claude-home) ──────────── */
+  /* Reset .docs-content overrides so editorial typography wins inside the
+     landing page. The parent layout applies .docs-content to all routes —
+     these rules unwind it within .claude-home only.                       */
+  .docs-content .claude-home h1,
+  .docs-content .claude-home h2,
+  .docs-content .claude-home h3,
+  .docs-content .claude-home h4,
+  .docs-content .claude-home h5 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+    text-transform: none;
+    letter-spacing: -0.025em;
+  }
+  .docs-content .claude-home p,
+  .docs-content .claude-home li {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    margin: 0;
+    color: inherit;
+  }
+  .docs-content .claude-home blockquote {
+    font-family: "Fraunces", serif;
+  }
+  .docs-content .claude-home code {
+    font-family: "JetBrains Mono", monospace;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .docs-content .claude-home td,
+  .docs-content .claude-home th {
+    white-space: normal;
+    padding: 0;
+  }
+  .docs-content .claude-home .rounded-xl,
+  .docs-content .claude-home .rounded-2xl {
+    padding: 0;
+    overflow: visible;
+  }
+  .docs-content .claude-home h1 + p {
+    font-size: inherit;
+    color: inherit;
+    margin: 0;
+    font-weight: inherit;
+  }
+
+  /* Anchor the landing palette to the global theme tokens so the page
+     stays visually consistent with the navbar and the rest of the app.
+     The brand red (--color-brand: #ff003d) is the only accent. */
+  .claude-home {
+    --paper:        var(--background);
+    --paper-deep:   var(--muted);
+    --paper-card:   var(--card);
+    --ink:          var(--foreground);
+    --ink-soft:     oklch(0.36 0 0);
+    --ink-mute:     var(--muted-foreground);
+    --rule:         var(--border);
+    --rule-soft:    var(--border);
+    --clay:         var(--color-brand);
+    --clay-soft:    var(--color-brand-50);
+    --moss:         oklch(0.55 0.13 145);
+
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  .dark .claude-home {
+    --ink-soft:     oklch(0.82 0 0);
+    --clay-soft:    oklch(0.30 0.10 18);
+  }
+
+  /* Soft editorial fade-up */
+  @keyframes ink-rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .ink-rise { animation: ink-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+  /* Slow, breathing accent dot */
+  @keyframes clay-beep {
+    0%   { box-shadow: 0 0 0 0 oklch(0.60 0.16 35 / 0.55); }
+    70%  { box-shadow: 0 0 0 8px oklch(0.60 0.16 35 / 0); }
+    100% { box-shadow: 0 0 0 0 oklch(0.60 0.16 35 / 0); }
+  }
+
+  /* Vertical gradient rule */
+  .rule-fade-y {
+    background: linear-gradient(to bottom,
+      transparent 0%,
+      var(--rule) 12%,
+      var(--rule) 88%,
+      transparent 100%);
+  }
+}
