@@ -69,7 +69,7 @@ const PayoutBankLocalGetBanks = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How the Bank List Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    Before you can send any local NGN bank transfer or perform an Account Enquiry, you need a valid <code className="font-mono bg-muted px-1.5 py-0.5 rounded text-xs">bankCode</code>. This endpoint is the authoritative source — it returns every financial institution supported in the Nigerian payout corridor, each with the code your requests require.
+                    Before you can send any local NGN bank transfer or perform an Account Enquiry, you need a valid <code className="font-mono bg-muted px-1.5 py-0.5 rounded text-xs">bankCode</code>. This endpoint is the authoritative source  it returns every financial institution supported in the Nigerian payout corridor, each with the code your requests require.
                 </p>
 
                 <div className="space-y-4">
@@ -85,7 +85,7 @@ const PayoutBankLocalGetBanks = () => {
                             {
                                 icon: <ListChecks className="h-4 w-4 text-brand" />,
                                 title: "Full corridor coverage",
-                                desc: "Returns every bank active in the Nigerian NGN payout network — including commercial banks, microfinance banks, and the special Passpoint Wallet entry (code 000000) for wallet-to-wallet transfers.",
+                                desc: "Returns every bank active in the Nigerian NGN payout network  including commercial banks, microfinance banks, and the special Passpoint Wallet entry (code 000000) for wallet-to-wallet transfers.",
                             },
                             {
                                 icon: <Info className="h-4 w-4 text-brand" />,
@@ -113,7 +113,7 @@ const PayoutBankLocalGetBanks = () => {
                                 {
                                     step: "1",
                                     label: "Fetch the bank list",
-                                    detail: "Call GET /ft-app/bank-list/NG. Cache the response — bank codes are stable and the list rarely changes.",
+                                    detail: "Call GET /ft-app/bank-list/NG. Cache the response  bank codes are stable and the list rarely changes.",
                                 },
                                 {
                                     step: "2",
@@ -177,7 +177,7 @@ const PayoutBankLocalGetBanks = () => {
                         <div>
                             <p className="text-xs font-semibold text-foreground mb-1">Caching recommendation</p>
                             <p className="text-xs text-muted-foreground">
-                                Cache the bank list response for up to 24 hours — calling this endpoint on every transaction is unnecessary overhead. However, always invalidate your cache and refetch if a bankCode lookup fails at the Account Enquiry stage, since banks are occasionally added or deactivated.
+                                Cache the bank list response for up to 24 hours  calling this endpoint on every transaction is unnecessary overhead. However, always invalidate your cache and refetch if a bankCode lookup fails at the Account Enquiry stage, since banks are occasionally added or deactivated.
                             </p>
                         </div>
                     </div>

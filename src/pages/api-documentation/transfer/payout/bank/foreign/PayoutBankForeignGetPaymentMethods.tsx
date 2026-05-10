@@ -111,7 +111,7 @@ const PayoutBankForeignGetPaymentMethods = () => {
                         {[
                             {
                                 title: "The alias field tells you which endpoint to use",
-                                body: "The alias in each payment method response (e.g. \"ach\", \"rtp\", \"wire\") maps directly to the endpoint path suffix. If alias is \"ach\", use /make-payment/ach. Always use alias — not name — to make this decision programmatically.",
+                                body: "The alias in each payment method response (e.g. \"ach\", \"rtp\", \"wire\") maps directly to the endpoint path suffix. If alias is \"ach\", use /make-payment/ach. Always use alias  not name  to make this decision programmatically.",
                             },
                             {
                                 title: "Validate amount against minLimit and maxLimit",

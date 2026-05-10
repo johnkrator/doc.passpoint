@@ -68,7 +68,7 @@ const GetCollectionCurrency = () => {
                                     <CheckCircle2 className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                                     <div>
                                         <span className="font-mono text-xs font-semibold text-foreground">{code}</span>
-                                        <span className="text-xs text-muted-foreground ml-2">— {label}</span>
+                                        <span className="text-xs text-muted-foreground ml-2"> {label}</span>
                                         <p className="text-xs text-muted-foreground mt-0.5">{note}</p>
                                     </div>
                                 </div>

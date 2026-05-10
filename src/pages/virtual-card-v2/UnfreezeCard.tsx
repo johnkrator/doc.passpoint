@@ -44,11 +44,11 @@ const UnfreezeCard = () => {
                         {[
                             {
                                 title: "Immediate effect",
-                                body: "The card is restored to ACTIVE status as soon as the API call succeeds. The cardholder can make purchases immediately — no delay or propagation window.",
+                                body: "The card is restored to ACTIVE status as soon as the API call succeeds. The cardholder can make purchases immediately  no delay or propagation window.",
                             },
                             {
                                 title: "Only FROZEN cards can be unfrozen",
-                                body: "This endpoint only works on cards in FROZEN state. TERMINATED cards cannot be reactivated — termination is permanent. Check Card Details to confirm the current card status before calling this endpoint.",
+                                body: "This endpoint only works on cards in FROZEN state. TERMINATED cards cannot be reactivated  termination is permanent. Check Card Details to confirm the current card status before calling this endpoint.",
                             },
                             {
                                 title: "All pending balance is preserved",

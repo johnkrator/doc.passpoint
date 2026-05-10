@@ -7,7 +7,7 @@ interface NavigationPage {
 }
 
 // Flatten the nav tree into a sequential list of leaf pages only.
-// Parent/group nodes (items with children) are category headers — not content pages.
+// Parent/group nodes (items with children) are category headers  not content pages.
 const flattenNavigation = (sections: NavSection[]): NavigationPage[] => {
     const pages: NavigationPage[] = [];
 

@@ -60,7 +60,7 @@ const IssueCardDefaultBilling = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Issue Card — Default Billing Details
+                    Issue Card  Default Billing Details
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Create a virtual card using the merchant's default billing details. Scheme: 1 = Mastercard, 2 = Visa.
@@ -83,11 +83,11 @@ const IssueCardDefaultBilling = () => {
                     <div className="grid sm:grid-cols-2 gap-4">
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Billing Mode</p>
-                            <p className="text-xs text-muted-foreground">This is the simpler of the two issuance modes. No billing address fields are required — Passpoint uses your merchant's pre-configured default billing address for all cards issued this way.</p>
+                            <p className="text-xs text-muted-foreground">This is the simpler of the two issuance modes. No billing address fields are required  Passpoint uses your merchant's pre-configured default billing address for all cards issued this way.</p>
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">What Is Returned</p>
-                            <p className="text-xs text-muted-foreground">The response includes a card ID, a reference, and a success status. Store the card ID in your database — you will need it to fund, freeze, retrieve details, or terminate the card.</p>
+                            <p className="text-xs text-muted-foreground">The response includes a card ID, a reference, and a success status. Store the card ID in your database  you will need it to fund, freeze, retrieve details, or terminate the card.</p>
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Funding</p>

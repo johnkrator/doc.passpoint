@@ -46,7 +46,7 @@ const PayoutMomoValidateMsisdn = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How MSISDN Validation Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    MSISDN stands for <strong className="text-foreground">Mobile Station International Subscriber Directory Number</strong> — it is the full international phone number of a mobile subscriber, including the country dialing code, with no leading <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">+</code> symbol.
+                    MSISDN stands for <strong className="text-foreground">Mobile Station International Subscriber Directory Number</strong>  it is the full international phone number of a mobile subscriber, including the country dialing code, with no leading <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">+</code> symbol.
                 </p>
 
                 <div className="grid gap-4 sm:grid-cols-2 mb-6">
@@ -76,8 +76,8 @@ const PayoutMomoValidateMsisdn = () => {
                         {[
                             "Prevents failed transactions to incorrect or inactive numbers, saving you the transaction fee on a rejected payout.",
                             "Improves payout success rates by confirming the number is live on a mobile money network before funds are dispatched.",
-                            "Lets you surface the resolved account name to the sender for confirmation — reducing user error.",
-                            "This is a real-time check — results are not cached. Always call it fresh within the same transfer flow.",
+                            "Lets you surface the resolved account name to the sender for confirmation  reducing user error.",
+                            "This is a real-time check  results are not cached. Always call it fresh within the same transfer flow.",
                         ].map((point) => (
                             <li key={point} className="flex items-start gap-2.5">
                                 <CheckCircle className="h-3.5 w-3.5 text-brand shrink-0 mt-0.5" />

@@ -65,11 +65,11 @@ const FundCard = () => {
                             },
                             {
                                 title: "orderId is your idempotency key",
-                                body: "The orderId field is your unique reference for this funding operation. Use a UUID or other unique identifier. Duplicate orderIds are rejected — this prevents accidental double-funding.",
+                                body: "The orderId field is your unique reference for this funding operation. Use a UUID or other unique identifier. Duplicate orderIds are rejected  this prevents accidental double-funding.",
                             },
                             {
                                 title: "callbackUrl receives the funding confirmation",
-                                body: "Provide a publicly accessible HTTPS URL to receive a webhook notification when the funding operation completes. If omitted, no callback is sent — you rely solely on the synchronous response.",
+                                body: "Provide a publicly accessible HTTPS URL to receive a webhook notification when the funding operation completes. If omitted, no callback is sent  you rely solely on the synchronous response.",
                             },
                         ].map(({ title, body }) => (
                             <div key={title} className="flex items-start gap-3">

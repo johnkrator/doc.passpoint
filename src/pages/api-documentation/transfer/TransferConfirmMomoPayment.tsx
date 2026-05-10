@@ -108,17 +108,17 @@ const TransferConfirmMomoPayment = () => {
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3 text-xs text-foreground font-medium">Orange (West Africa)</td>
                                         <td className="px-4 py-3 text-muted-foreground text-xs">SMS OTP sent to customer's phone</td>
-                                        <td className="px-4 py-3"><span className="px-2 py-0.5 rounded text-xs font-semibold bg-amber-50 text-amber-700 dark:bg-amber-950/30 dark:text-amber-400">Yes — use this endpoint</span></td>
+                                        <td className="px-4 py-3"><span className="px-2 py-0.5 rounded text-xs font-semibold bg-amber-50 text-amber-700 dark:bg-amber-950/30 dark:text-amber-400">Yes  use this endpoint</span></td>
                                     </tr>
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3 text-xs text-foreground font-medium">MTN</td>
                                         <td className="px-4 py-3 text-muted-foreground text-xs">In-app push approval on the customer's device</td>
-                                        <td className="px-4 py-3"><span className="px-2 py-0.5 rounded text-xs font-semibold bg-muted text-muted-foreground">No — push only</span></td>
+                                        <td className="px-4 py-3"><span className="px-2 py-0.5 rounded text-xs font-semibold bg-muted text-muted-foreground">No  push only</span></td>
                                     </tr>
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3 text-xs text-foreground font-medium">Airtel</td>
                                         <td className="px-4 py-3 text-muted-foreground text-xs">In-app push approval on the customer's device</td>
-                                        <td className="px-4 py-3"><span className="px-2 py-0.5 rounded text-xs font-semibold bg-muted text-muted-foreground">No — push only</span></td>
+                                        <td className="px-4 py-3"><span className="px-2 py-0.5 rounded text-xs font-semibold bg-muted text-muted-foreground">No  push only</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -145,7 +145,7 @@ const TransferConfirmMomoPayment = () => {
                         <div className="space-y-3">
                             {[
                                 { step: "1", label: "Initiate transfer", detail: "Call the PayoutMomoTransfer endpoint. If the response returns responseCode: \"01OTP\", proceed to step 2. Save the returned transactionId." },
-                                { step: "2", label: "Customer receives OTP", detail: "The customer receives a one-time password via SMS on their registered mobile number. OTPs are valid for approximately 3–5 minutes — prompt the customer to enter it immediately." },
+                                { step: "2", label: "Customer receives OTP", detail: "The customer receives a one-time password via SMS on their registered mobile number. OTPs are valid for approximately 3–5 minutes  prompt the customer to enter it immediately." },
                                 { step: "3", label: "Customer enters OTP in your UI", detail: "Present an OTP input field in your interface. Do not store or log the OTP value." },
                                 { step: "4", label: "Submit OTP confirmation", detail: "Call this endpoint with the transactionId from step 1 and the otp the customer entered. If the OTP is wrong or expired, the transaction is rejected and a new transfer must be initiated." },
                                 { step: "5", label: "Await final status via webhook", detail: "After a successful OTP submission, the transfer proceeds asynchronously. The final SUCCESSFUL or FAILED status is delivered to your webhook endpoint." },
@@ -202,7 +202,7 @@ const TransferConfirmMomoPayment = () => {
                                         </td>
                                         <td className="px-5 py-3.5 text-muted-foreground text-xs">{row.type}</td>
                                         <td className="px-5 py-3.5 text-muted-foreground text-sm">{row.description}</td>
-                                        <td className="px-5 py-3.5 text-muted-foreground">—</td>
+                                        <td className="px-5 py-3.5 text-muted-foreground"></td>
                                     </tr>
                                 ))}
                             </tbody>

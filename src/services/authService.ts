@@ -28,7 +28,7 @@ export interface User {
     isActive: boolean;
 }
 
-// In-memory user — wiped on page unload, restored via restoreSession()
+// In-memory user  wiped on page unload, restored via restoreSession()
 let storedUser: User | null = null;
 
 class AuthService {
@@ -45,7 +45,7 @@ class AuthService {
     }
 
     /**
-     * Called on page load — exchanges the persisted refresh token for a fresh
+     * Called on page load  exchanges the persisted refresh token for a fresh
      * access token, restoring the session without requiring re-login.
      * Returns the user if session was restored, null otherwise.
      */
@@ -67,7 +67,7 @@ class AuthService {
             storedUser = userResponse.data;
             return storedUser;
         } catch {
-            // Refresh token is expired or revoked — clear it and force re-login
+            // Refresh token is expired or revoked  clear it and force re-login
             this.clearTokens();
             return null;
         }

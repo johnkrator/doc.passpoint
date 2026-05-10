@@ -84,7 +84,7 @@ const CardStatement = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Card Statement Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    The card statement endpoint returns a ledger-style view of all balance movements on a card — including funding events, purchases, withdrawal charges, and refunds. Unlike the Transactions List which shows authorization events, this shows the actual balance impact of each operation.
+                    The card statement endpoint returns a ledger-style view of all balance movements on a card  including funding events, purchases, withdrawal charges, and refunds. Unlike the Transactions List which shows authorization events, this shows the actual balance impact of each operation.
                 </p>
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl overflow-hidden mb-4">
@@ -153,7 +153,7 @@ const CardStatement = () => {
                 <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                     <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                     <p className="text-xs text-muted-foreground">
-                        To fetch a statement for a specific transaction by ID, use <strong className="text-foreground">Card Statement by Transaction ID</strong> — set <code className="font-mono text-xs">transMode</code> to <code className="font-mono text-xs">ref::&lt;transactionId&gt;</code>.
+                        To fetch a statement for a specific transaction by ID, use <strong className="text-foreground">Card Statement by Transaction ID</strong>  set <code className="font-mono text-xs">transMode</code> to <code className="font-mono text-xs">ref::&lt;transactionId&gt;</code>.
                     </p>
                 </div>
             </section>

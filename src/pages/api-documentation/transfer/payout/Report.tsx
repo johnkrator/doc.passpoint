@@ -160,13 +160,13 @@ const Report = () => {
                 </p>
             </section>
 
-            {/* Transaction History — NGN Not Paginated */}
+            {/* Transaction History  NGN Not Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history — NGN — not paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history  NGN  not paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Returns all NGN payout transactions in the specified date range without pagination.
@@ -227,13 +227,13 @@ const Report = () => {
                 </div>
             </section>
 
-            {/* Transaction History — NGN Paginated */}
+            {/* Transaction History  NGN Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history — NGN — paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history  NGN  paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Returns NGN payout transactions with pagination enabled.
@@ -264,13 +264,13 @@ const Report = () => {
                 </div>
             </section>
 
-            {/* Transaction History — All Currencies Paginated */}
+            {/* Transaction History  All Currencies Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history — all currencies — paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history  all currencies  paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Returns payout transactions for all currencies with pagination enabled.
@@ -301,13 +301,13 @@ const Report = () => {
                 </div>
             </section>
 
-            {/* Transaction History — All Currencies Not Paginated */}
+            {/* Transaction History  All Currencies Not Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history — all currencies — not paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history  all currencies  not paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Returns all payout transactions for all currencies without pagination.

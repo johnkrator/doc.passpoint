@@ -61,7 +61,7 @@ const WithdrawFromCard = () => {
                             },
                             {
                                 title: "Card must be ACTIVE to allow withdrawals",
-                                body: "Only ACTIVE cards support withdrawals. If a card is FROZEN, unfreeze it first. TERMINATED cards cannot be accessed — withdraw remaining balance before terminating.",
+                                body: "Only ACTIVE cards support withdrawals. If a card is FROZEN, unfreeze it first. TERMINATED cards cannot be accessed  withdraw remaining balance before terminating.",
                             },
                             {
                                 title: "Partial or full withdrawal",

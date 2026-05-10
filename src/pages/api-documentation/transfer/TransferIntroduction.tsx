@@ -28,7 +28,7 @@ const TransferIntroduction = () => {
           Transfer
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
-          The Transfer module is a set of endpoints for moving funds — either
+          The Transfer module is a set of endpoints for moving funds  either
           between Passpoint wallets, from a Passpoint wallet to a NUBAN bank
           account, or to and from mobile money accounts. It is organized into
           two main sub-modules: <strong>Payout</strong> (outbound) and{" "}
@@ -59,7 +59,7 @@ const TransferIntroduction = () => {
             </div>
             <div>
               <h4 className="text-sm font-semibold text-foreground mb-1">
-                Payout — outbound transfers
+                Payout  outbound transfers
               </h4>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Send funds from a Passpoint wallet to external destinations.
@@ -76,7 +76,7 @@ const TransferIntroduction = () => {
             </div>
             <div>
               <h4 className="text-sm font-semibold text-foreground mb-1">
-                Collection — inbound transfers
+                Collection  inbound transfers
               </h4>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Receive funds into a Passpoint wallet. Supports MoMo
@@ -203,7 +203,7 @@ const TransferIntroduction = () => {
               to="/authentication"
               className="inline-flex items-center gap-1.5 text-xs font-medium text-brand hover:underline"
             >
-              Authentication — API reference
+              Authentication  API reference
               <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
@@ -221,7 +221,7 @@ const TransferIntroduction = () => {
           </h2>
         </div>
         <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
-          Step-by-step guide for transacting via mobile money — both sending
+          Step-by-step guide for transacting via mobile money  both sending
           (payout) and receiving (collection).
         </p>
 
@@ -383,7 +383,7 @@ const TransferIntroduction = () => {
           </h2>
         </div>
         <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
-          Step-by-step guide for transacting in Nigerian Naira (NGN) — both
+          Step-by-step guide for transacting in Nigerian Naira (NGN)  both
           receiving via virtual accounts (collection) and sending to bank
           accounts (payout).
         </p>
@@ -396,7 +396,7 @@ const TransferIntroduction = () => {
                 <ArrowDownToLine className="h-3.5 w-3.5 text-brand" />
               </div>
               <h4 className="text-sm font-semibold text-foreground">
-                Collection — virtual accounts
+                Collection  virtual accounts
               </h4>
             </div>
 
@@ -457,7 +457,7 @@ const TransferIntroduction = () => {
                 <ArrowUpToLine className="h-3.5 w-3.5 text-brand" />
               </div>
               <h4 className="text-sm font-semibold text-foreground">
-                Payout — bank transfers
+                Payout  bank transfers
               </h4>
             </div>
 
@@ -541,7 +541,7 @@ const TransferIntroduction = () => {
             },
             {
               icon: <Building2 className="h-3.5 w-3.5 text-brand" />,
-              title: "Bank — Local",
+              title: "Bank  Local",
               items: [
                 "Get supported banks",
                 "Account enquiry",
@@ -552,7 +552,7 @@ const TransferIntroduction = () => {
             },
             {
               icon: <Globe className="h-3.5 w-3.5 text-brand" />,
-              title: "Bank — Foreign",
+              title: "Bank  Foreign",
               items: [
                 "Get available countries",
                 "Get payment methods",
@@ -667,7 +667,7 @@ const TransferIntroduction = () => {
               icon: <Globe className="h-3.5 w-3.5 text-brand" />,
               title: "Open Banking",
               items: [
-                "Request payment — foreign",
+                "Request payment  foreign",
                 "Get banks (preselect)",
                 "Get countries (preselect)",
                 "Request payment foreign with bank preselect",
@@ -752,7 +752,7 @@ const TransferIntroduction = () => {
               body: "Every request must include x-channel-id, x-channel-code, x-merchant-id, and Authorization: Bearer <token>. Missing any of these will result in a 401 or 403 response.",
             },
             {
-              title: "Transfers are asynchronous — use callbacks",
+              title: "Transfers are asynchronous  use callbacks",
               body: "Payout and Collection requests are processed asynchronously. The initial response confirms the request was submitted (responseCode: 00), not that funds have moved. Configure a global or per-request callbackUrl to receive final status notifications.",
             },
             {
@@ -760,7 +760,7 @@ const TransferIntroduction = () => {
               body: "Always supply a unique orderId or reference for every request. Reusing a reference may result in duplicate rejection or incorrect status matching on webhook callbacks.",
             },
             {
-              title: "Webhook security — verify signatures",
+              title: "Webhook security  verify signatures",
               body: "Where a callback secret is configured, Passpoint signs the webhook payload. Always verify the signature before processing callback data to prevent spoofed callbacks from affecting your system.",
             },
             {

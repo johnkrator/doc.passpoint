@@ -153,7 +153,7 @@ const TransferStatus = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Transfer Status Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint allows you to poll the current state of any transfer transaction by its <code className="font-mono bg-muted px-1.5 py-0.5 rounded text-foreground text-xs">transactionId</code>. Passpoint processes transfers asynchronously — the initial response only confirms submission, not final outcome.
+                    This endpoint allows you to poll the current state of any transfer transaction by its <code className="font-mono bg-muted px-1.5 py-0.5 rounded text-foreground text-xs">transactionId</code>. Passpoint processes transfers asynchronously  the initial response only confirms submission, not final outcome.
                 </p>
 
                 <div className="space-y-4">
@@ -161,7 +161,7 @@ const TransferStatus = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            Passpoint uses an asynchronous processing model. The initial transfer response returns <code className="font-mono bg-muted px-1 py-0.5 rounded">status: "NEW"</code>, which only confirms the transfer was submitted. The final outcome — <code className="font-mono bg-muted px-1 py-0.5 rounded">SUCCESSFUL</code> or <code className="font-mono bg-muted px-1 py-0.5 rounded">FAILED</code> — arrives later. Store the <code className="font-mono bg-muted px-1 py-0.5 rounded">transactionId</code> from the initial response to query status.
+                            Passpoint uses an asynchronous processing model. The initial transfer response returns <code className="font-mono bg-muted px-1 py-0.5 rounded">status: "NEW"</code>, which only confirms the transfer was submitted. The final outcome  <code className="font-mono bg-muted px-1 py-0.5 rounded">SUCCESSFUL</code> or <code className="font-mono bg-muted px-1 py-0.5 rounded">FAILED</code>  arrives later. Store the <code className="font-mono bg-muted px-1 py-0.5 rounded">transactionId</code> from the initial response to query status.
                         </p>
                     </div>
 
@@ -237,16 +237,16 @@ const TransferStatus = () => {
                     <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-3">
                         <div className="flex items-center gap-2 mb-1">
                             <Bell className="h-4 w-4 text-brand shrink-0" />
-                            <h3 className="text-sm font-semibold text-foreground">Webhooks vs. polling — when to use each</h3>
+                            <h3 className="text-sm font-semibold text-foreground">Webhooks vs. polling  when to use each</h3>
                         </div>
                         <p className="text-xs text-muted-foreground mb-2">
                             Webhooks (callbacks) are the primary mechanism for receiving transfer status updates. Use this polling endpoint only as a secondary tool:
                         </p>
                         <ul className="space-y-2">
                             {[
-                                "Manual reconciliation — when you need to verify a specific transaction on demand",
-                                "Re-syncing after a webhook outage — to recover missed status updates",
-                                "User-initiated status checks — when a user requests a refresh in your UI",
+                                "Manual reconciliation  when you need to verify a specific transaction on demand",
+                                "Re-syncing after a webhook outage  to recover missed status updates",
+                                "User-initiated status checks  when a user requests a refresh in your UI",
                             ].map((item) => (
                                 <li key={item} className="flex items-start gap-2">
                                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand shrink-0" />
@@ -264,9 +264,9 @@ const TransferStatus = () => {
                         </div>
                         <ul className="space-y-2">
                             {[
-                                "Poll at reasonable intervals — every 10 to 30 seconds is appropriate. Do not hammer the endpoint.",
+                                "Poll at reasonable intervals  every 10 to 30 seconds is appropriate. Do not hammer the endpoint.",
                                 "Stop polling once the status reaches a terminal state: SUCCESSFUL or FAILED.",
-                                "Store the transactionId from the initial transfer response — it is required for every status query.",
+                                "Store the transactionId from the initial transfer response  it is required for every status query.",
                                 "A status of SUCCESSFUL means funds have been delivered to the recipient.",
                             ].map((item) => (
                                 <li key={item} className="flex items-start gap-2">
@@ -337,7 +337,7 @@ const TransferStatus = () => {
                                         <td className="px-5 py-3.5">
                                             {row.values
                                                 ? <span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">{row.values}</span>
-                                                : <span className="text-muted-foreground">—</span>}
+                                                : <span className="text-muted-foreground"></span>}
                                         </td>
                                     </tr>
                                 ))}

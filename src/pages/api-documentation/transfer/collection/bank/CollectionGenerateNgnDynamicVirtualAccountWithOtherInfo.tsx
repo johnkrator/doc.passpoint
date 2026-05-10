@@ -55,7 +55,7 @@ const CollectionGenerateNgnDynamicVirtualAccountWithOtherInfo = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Generate NGN Dynamic Virtual Account — With Other Info
+                    Generate NGN Dynamic Virtual Account  With Other Info
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Generate a temporary NGN virtual account with additional callback configuration for webhook
@@ -84,7 +84,7 @@ const CollectionGenerateNgnDynamicVirtualAccountWithOtherInfo = () => {
                             {[
                                 { title: "Transaction-scoped override", desc: "The otherInfo.callbackUrl overrides your global callback URL setting for this transaction only. Other transactions continue to use the global URL." },
                                 { title: "Falls back to global if omitted", desc: "If callbackUrl is not provided in otherInfo, Passpoint falls back to the global callback URL configured in your account settings." },
-                                { title: "Same payload, different destination", desc: "The webhook payload structure is identical to a standard Wallet Credit Callback — only the delivery destination changes." },
+                                { title: "Same payload, different destination", desc: "The webhook payload structure is identical to a standard Wallet Credit Callback  only the delivery destination changes." },
                             ].map(({ title, desc }) => (
                                 <div key={title} className="flex items-start gap-3 px-4 py-3 bg-muted/30 dark:bg-background/30 border border-border rounded-xl">
                                     <Link2 className="h-4 w-4 text-brand shrink-0 mt-0.5" />

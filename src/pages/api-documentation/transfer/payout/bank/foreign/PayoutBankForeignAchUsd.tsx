@@ -82,7 +82,7 @@ const PayoutBankForeignAchUsd = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    ACH — USD
+                    ACH  USD
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Process ACH transfers in US Dollar (USD) for automated clearing house payments.
@@ -119,11 +119,11 @@ const PayoutBankForeignAchUsd = () => {
                         {[
                             {
                                 title: "Best for: standard business payments",
-                                body: "ACH is the standard choice for payroll disbursements, vendor payments, and regular business payouts where delivery speed is not critical. It is not suitable for time-sensitive payments — use RTP or FedNow for those.",
+                                body: "ACH is the standard choice for payroll disbursements, vendor payments, and regular business payouts where delivery speed is not critical. It is not suitable for time-sensitive payments  use RTP or FedNow for those.",
                             },
                             {
                                 title: "routingNumber is the ABA routing number",
-                                body: "The routingNumber field must be a valid 9-digit ABA routing number identifying the recipient's US bank. This is not a SWIFT code — ACH is a domestic-only network. Invalid routing numbers will cause the transfer to fail.",
+                                body: "The routingNumber field must be a valid 9-digit ABA routing number identifying the recipient's US bank. This is not a SWIFT code  ACH is a domestic-only network. Invalid routing numbers will cause the transfer to fail.",
                             },
                             {
                                 title: "accountType must be savings or checking",
@@ -131,7 +131,7 @@ const PayoutBankForeignAchUsd = () => {
                             },
                             {
                                 title: "Transfer is fully asynchronous",
-                                body: "A status of \"NEW\" in the response confirms the transfer is queued — not completed. Implement webhook handling to receive the final settlement status. Do not treat a 200 response as a confirmed payout.",
+                                body: "A status of \"NEW\" in the response confirms the transfer is queued  not completed. Implement webhook handling to receive the final settlement status. Do not treat a 200 response as a confirmed payout.",
                             },
                         ].map(({ title, body }) => (
                             <div key={title} className="flex items-start gap-3">
@@ -160,8 +160,8 @@ const PayoutBankForeignAchUsd = () => {
                             </thead>
                             <tbody className="divide-y divide-border">
                                 {[
-                                    { field: 'status: "NEW"',    meaning: "Transfer queued successfully. This is not final — monitor via webhook callback or the Transfer Status endpoint for the settled state." },
-                                    { field: "transactionId",    meaning: "Passpoint's unique identifier for this transaction. Store this value — it is required for status lookups and reconciliation." },
+                                    { field: 'status: "NEW"',    meaning: "Transfer queued successfully. This is not final  monitor via webhook callback or the Transfer Status endpoint for the settled state." },
+                                    { field: "transactionId",    meaning: "Passpoint's unique identifier for this transaction. Store this value  it is required for status lookups and reconciliation." },
                                     { field: "amount",           meaning: "The submitted transfer amount as confirmed by Passpoint at the time of queuing." },
                                     { field: "charges",          meaning: "The ACH processing fee deducted from your wallet for this transaction. Review the Rate endpoint to check current fee schedules." },
                                 ].map(({ field, meaning }) => (

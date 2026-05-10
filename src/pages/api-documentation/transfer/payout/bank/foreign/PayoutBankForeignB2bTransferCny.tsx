@@ -100,7 +100,7 @@ const PayoutBankForeignB2bTransferCny = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    B2B Transfer — CNY
+                    B2B Transfer  CNY
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Process business-to-business transfers in Chinese Yuan (CNY) to bank accounts.
@@ -137,7 +137,7 @@ const PayoutBankForeignB2bTransferCny = () => {
                         {[
                             {
                                 title: "Both sender and recipient are businesses",
-                                body: "Set remitterType to \"B\" (Business) and beneficiaryType to \"B\". The receiverFirstName should be the registered business name. The receiverNativeFirstname field must contain the Chinese-language legal business name (e.g. 苏宁环球股份有限公司) — this is mandatory for Chinese cross-border B2B compliance.",
+                                body: "Set remitterType to \"B\" (Business) and beneficiaryType to \"B\". The receiverFirstName should be the registered business name. The receiverNativeFirstname field must contain the Chinese-language legal business name (e.g. 苏宁环球股份有限公司)  this is mandatory for Chinese cross-border B2B compliance.",
                             },
                             {
                                 title: "locationId identifies the recipient bank branch",
@@ -178,8 +178,8 @@ const PayoutBankForeignB2bTransferCny = () => {
                             </thead>
                             <tbody className="divide-y divide-border">
                                 {[
-                                    { field: 'status: "NEW"',  meaning: "Transfer queued successfully. This is not final — monitor via webhook callback for the settled state." },
-                                    { field: "transactionId",  meaning: "Passpoint's unique identifier for this transaction. Store this value — it is required for status lookups and reconciliation." },
+                                    { field: 'status: "NEW"',  meaning: "Transfer queued successfully. This is not final  monitor via webhook callback for the settled state." },
+                                    { field: "transactionId",  meaning: "Passpoint's unique identifier for this transaction. Store this value  it is required for status lookups and reconciliation." },
                                     { field: "amount",         meaning: "The submitted transfer amount as confirmed by Passpoint at the time of queuing." },
                                     { field: "charges",        meaning: "The processing fee deducted from your wallet for this B2B CNY transaction. Check the Rate endpoint for current fee schedules." },
                                 ].map(({ field, meaning }) => (

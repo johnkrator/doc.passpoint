@@ -82,7 +82,7 @@ const PayoutBankForeignWireUsd = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Wire — USD
+                    Wire  USD
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Process wire transfers in US Dollar (USD) for international payments.

@@ -253,12 +253,12 @@ const response = await createTransaction({
                     <div className="bg-white dark:bg-card border border-border rounded-2xl p-6">
                         <h4 className="text-sm font-semibold text-foreground mb-3">responseCode</h4>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                            Result of your API <em>request</em> to Passpoint — was it accepted, rejected, or errored?
+                            Result of your API <em>request</em> to Passpoint  was it accepted, rejected, or errored?
                         </p>
                         <ul className="space-y-1.5 text-xs text-muted-foreground font-mono">
-                            <li><span className="text-green-600 dark:text-green-400 font-semibold">"00"</span> — API request successful</li>
-                            <li><span className="text-amber-600 dark:text-amber-400 font-semibold">"01"</span> — Request accepted, transaction pending</li>
-                            <li><span className="text-red-500 font-semibold">"02", "30", "31"…</span> — Request failed</li>
+                            <li><span className="text-green-600 dark:text-green-400 font-semibold">"00"</span>  API request successful</li>
+                            <li><span className="text-amber-600 dark:text-amber-400 font-semibold">"01"</span>  Request accepted, transaction pending</li>
+                            <li><span className="text-red-500 font-semibold">"02", "30", "31"</span>  Request failed</li>
                         </ul>
                     </div>
 
@@ -268,11 +268,11 @@ const response = await createTransaction({
                             Current state of the <em>transaction</em> in the payment processing pipeline.
                         </p>
                         <ul className="space-y-1.5 text-xs text-muted-foreground font-mono">
-                            <li><span className="text-foreground font-semibold">"NEW"</span> — Transaction created</li>
-                            <li><span className="text-amber-600 dark:text-amber-400 font-semibold">"PENDING"</span> — Awaiting processing</li>
-                            <li><span className="text-brand font-semibold">"PROCESSING"</span> — Being processed</li>
-                            <li><span className="text-green-600 dark:text-green-400 font-semibold">"SUCCESSFUL"</span> — Completed</li>
-                            <li><span className="text-red-500 font-semibold">"FAILED"</span> — Transaction failed</li>
+                            <li><span className="text-foreground font-semibold">"NEW"</span>  Transaction created</li>
+                            <li><span className="text-amber-600 dark:text-amber-400 font-semibold">"PENDING"</span>  Awaiting processing</li>
+                            <li><span className="text-brand font-semibold">"PROCESSING"</span>  Being processed</li>
+                            <li><span className="text-green-600 dark:text-green-400 font-semibold">"SUCCESSFUL"</span>  Completed</li>
+                            <li><span className="text-red-500 font-semibold">"FAILED"</span>  Transaction failed</li>
                         </ul>
                     </div>
                 </div>
@@ -295,7 +295,7 @@ const response = await createTransaction({
             <section>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">Monitoring transactions</h2>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
-                    Two ways to track status changes — webhooks are strongly preferred over polling.
+                    Two ways to track status changes  webhooks are strongly preferred over polling.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -466,7 +466,7 @@ const response = await createTransaction({
                             desc: "Failures can occur at various stages:",
                             lines: [
                                 { text: 'POST /transfer → responseCode: "31"', muted: false },
-                                { text: "// Validation error — fix and retry", muted: true },
+                                { text: "// Validation error  fix and retry", muted: true },
                                 { text: "OR", muted: true },
                                 { text: 'POST /transfer → responseCode: "00", data.status: "PENDING"', muted: false },
                                 { text: 'Webhook received → data.status: "FAILED"', muted: false },

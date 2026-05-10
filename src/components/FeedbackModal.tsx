@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 interface FeedbackModalProps {
   isOpen: boolean;
   onClose: () => void;
-  /** Async — errors must be handled by the caller. */
+  /** Async  errors must be handled by the caller. */
   onSubmit: (feedback: string) => Promise<void>;
   type: "dislike";
 }
@@ -168,7 +168,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({
             {isSubmitting ? (
               <span className="flex items-center gap-2">
                 <span className="h-3 w-3 animate-spin rounded-full border-2 border-primary-foreground border-t-transparent" />
-                Submitting…
+                Submitting
               </span>
             ) : (
               "Submit"

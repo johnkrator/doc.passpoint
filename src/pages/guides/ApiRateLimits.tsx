@@ -208,7 +208,7 @@ async function apiCall(url, options) {
             title: "Frequently hitting rate limits",
             desc: "If you're consistently exceeding rate limits, consider these solutions:",
             bullets: [
-                "Review your integration architecture — are you polling when you could use webhooks?",
+                "Review your integration architecture  are you polling when you could use webhooks?",
                 "Implement caching to reduce redundant API calls",
                 "Use bulk endpoints to batch operations",
                 "Consider using multiple API keys to distribute load",

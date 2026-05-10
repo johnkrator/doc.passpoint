@@ -25,7 +25,7 @@ Content-Type: application/json`;
   "recipientPhone": "+2348123456789",
   "network": "MTN",
   "reference": "PAYOUT_20240115_001",
-  "description": "Vendor settlement — January 2024"
+  "description": "Vendor settlement  January 2024"
 }`;
 
   const getMoMoPayoutCurlCode = () =>
@@ -41,7 +41,7 @@ Content-Type: application/json`;
     "recipientPhone": "+2348123456789",
     "network": "MTN",
     "reference": "PAYOUT_20240115_001",
-    "description": "Vendor settlement — January 2024"
+    "description": "Vendor settlement  January 2024"
 }'`;
 
   const getMoMoPayoutResponseCode = () => `{
@@ -76,7 +76,7 @@ Content-Type: application/json`;
   "bankCode": "058",
   "accountName": "Jane Smith",
   "reference": "PAYOUT_BANK_20240115_001",
-  "description": "Contractor payment — project #PRJ-009"
+  "description": "Contractor payment  project #PRJ-009"
 }`;
 
   const getBankPayoutCurlCode = () =>
@@ -93,7 +93,7 @@ Content-Type: application/json`;
     "bankCode": "058",
     "accountName": "Jane Smith",
     "reference": "PAYOUT_BANK_20240115_001",
-    "description": "Contractor payment — project #PRJ-009"
+    "description": "Contractor payment  project #PRJ-009"
 }'`;
 
   const getBankPayoutResponseCode = () => `{
@@ -192,7 +192,7 @@ Content-Type: application/json`;
     {
       icon: <DollarSign className="h-5 w-5 text-brand" />,
       name: "Bulk Payout",
-      desc: "Process multiple payouts in a single batch — mix mobile money and bank transfers.",
+      desc: "Process multiple payouts in a single batch  mix mobile money and bank transfers.",
       processingTime: "Instant – T+1",
       currencies: "NGN, USD",
     },

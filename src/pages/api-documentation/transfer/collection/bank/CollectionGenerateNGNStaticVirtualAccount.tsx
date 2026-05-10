@@ -60,7 +60,7 @@ const CollectionGenerateNgnStaticVirtualAccount = () => {
                         <div className="space-y-2">
                             {[
                                 { title: "Permanent", desc: "Once generated, the account number is permanent. You never need to regenerate it per payment." },
-                                { title: "Exclusive", desc: "Each account number is uniquely tied to one customer — payments always route to the correct customer record." },
+                                { title: "Exclusive", desc: "Each account number is uniquely tied to one customer  payments always route to the correct customer record." },
                                 { title: "Unlimited payments", desc: "The same account can receive as many payments as needed over its lifetime, with no expiry." },
                                 { title: "Webhook-driven", desc: "Every payment to this account triggers the Wallet Credit Callback webhook with full transaction details." },
                             ].map(({ title, desc }) => (

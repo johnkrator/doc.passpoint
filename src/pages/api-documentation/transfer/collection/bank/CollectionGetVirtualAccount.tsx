@@ -36,7 +36,7 @@ const CollectionGetVirtualAccount = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Virtual Account Lookup Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    Use this endpoint to retrieve the current state and full details of any virtual account — whether NGN static, NGN dynamic, USD individual, or USD business — using the account's unique Passpoint identifier. This is the definitive source for checking account status, bank details, and activation state.
+                    Use this endpoint to retrieve the current state and full details of any virtual account  whether NGN static, NGN dynamic, USD individual, or USD business  using the account's unique Passpoint identifier. This is the definitive source for checking account status, bank details, and activation state.
                 </p>
 
                 <div className="space-y-4 mb-8">

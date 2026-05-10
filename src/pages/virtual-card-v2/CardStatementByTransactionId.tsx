@@ -75,7 +75,7 @@ const CardStatementByTransactionId = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Statement by Transaction ID Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This is a filtered variant of the Card Statement endpoint that pinpoints a single ledger entry by its transaction ID. Use it when you need the exact ledger impact — opening balance, amount, closing balance — for one specific transaction.
+                    This is a filtered variant of the Card Statement endpoint that pinpoints a single ledger entry by its transaction ID. Use it when you need the exact ledger impact  opening balance, amount, closing balance  for one specific transaction.
                 </p>
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-4 mb-4">
@@ -85,7 +85,7 @@ const CardStatementByTransactionId = () => {
                             <div>
                                 <p className="text-sm font-semibold text-foreground mb-0.5">The ref:: prefix is required</p>
                                 <p className="text-xs text-muted-foreground leading-relaxed">
-                                    Set <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">transMode</code> to <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">ref::&lt;transactionId&gt;</code> — for example <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">ref::M2</code> or <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">ref::809dae1e-eebc-4f56-9480-dfd06b5fe5a4</code>. The prefix tells the API you are filtering by transaction reference rather than by debit/credit direction.
+                                    Set <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">transMode</code> to <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">ref::&lt;transactionId&gt;</code>  for example <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">ref::M2</code> or <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">ref::809dae1e-eebc-4f56-9480-dfd06b5fe5a4</code>. The prefix tells the API you are filtering by transaction reference rather than by debit/credit direction.
                                 </p>
                             </div>
                         </div>
@@ -103,7 +103,7 @@ const CardStatementByTransactionId = () => {
                             <div>
                                 <p className="text-sm font-semibold text-foreground mb-0.5">Use for dispute evidence</p>
                                 <p className="text-xs text-muted-foreground leading-relaxed">
-                                    This endpoint provides the <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">openingBalance</code>, <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">amount</code>, and <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">runningBalance</code> — the exact ledger footprint of the transaction. This is the authoritative source for resolving balance discrepancies and providing evidence in cardholder disputes.
+                                    This endpoint provides the <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">openingBalance</code>, <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">amount</code>, and <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">runningBalance</code>  the exact ledger footprint of the transaction. This is the authoritative source for resolving balance discrepancies and providing evidence in cardholder disputes.
                                 </p>
                             </div>
                         </div>
@@ -113,7 +113,7 @@ const CardStatementByTransactionId = () => {
                 <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                     <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                     <p className="text-xs text-muted-foreground">
-                        This endpoint uses the same URL as <strong className="text-foreground">Card Statement</strong> — the <code className="font-mono text-xs">ref::</code> prefix in <code className="font-mono text-xs">transMode</code> is what changes the behavior.
+                        This endpoint uses the same URL as <strong className="text-foreground">Card Statement</strong>  the <code className="font-mono text-xs">ref::</code> prefix in <code className="font-mono text-xs">transMode</code> is what changes the behavior.
                     </p>
                 </div>
             </section>

@@ -44,7 +44,7 @@ This request doesn't return any response body`;
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Callback Configuration Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    Passpoint delivers card event notifications — such as transaction authorizations, settlements, chargebacks, and status changes — by sending a POST request to your configured webhook URL. This endpoint lets you register or update both the destination URL and an optional secret used to verify payload authenticity.
+                    Passpoint delivers card event notifications  such as transaction authorizations, settlements, chargebacks, and status changes  by sending a POST request to your configured webhook URL. This endpoint lets you register or update both the destination URL and an optional secret used to verify payload authenticity.
                 </p>
 
                 <div className="space-y-4">
@@ -59,7 +59,7 @@ This request doesn't return any response body`;
                         </p>
                         <ul className="space-y-2 mt-2">
                             {[
-                                "Must use HTTPS — plain HTTP endpoints will be rejected.",
+                                "Must use HTTPS  plain HTTP endpoints will be rejected.",
                                 "Must be publicly reachable. Private or localhost URLs will not receive callbacks.",
                                 "Should respond within 10 seconds. Long-running processing should be offloaded to a background queue.",
                             ].map((item) => (
@@ -90,7 +90,7 @@ This request doesn't return any response body`;
                                 </thead>
                                 <tbody className="divide-y divide-border">
                                     {[
-                                        { step: "1", action: "Store your secret securely in an environment variable — never hardcode it in source code." },
+                                        { step: "1", action: "Store your secret securely in an environment variable  never hardcode it in source code." },
                                         { step: "2", action: "On each incoming callback, read the `signature` header from the request." },
                                         { step: "3", action: "Compute HMAC-SHA512 of the raw request body using your secret as the key." },
                                         { step: "4", action: "Compare your computed hash with the received signature. If they match, the payload is authentic. Reject mismatches." },
@@ -113,10 +113,10 @@ This request doesn't return any response body`;
                         </div>
                         <ul className="space-y-2">
                             {[
-                                "During initial integration setup — to register your webhook URL before issuing any cards.",
-                                "When rotating your callback secret for security — update the secret periodically as part of your key rotation policy.",
-                                "When migrating to a new server or endpoint URL — update before decommissioning the old URL to avoid missed events.",
-                                "When adding or removing signature verification — set or clear the secret field as needed.",
+                                "During initial integration setup  to register your webhook URL before issuing any cards.",
+                                "When rotating your callback secret for security  update the secret periodically as part of your key rotation policy.",
+                                "When migrating to a new server or endpoint URL  update before decommissioning the old URL to avoid missed events.",
+                                "When adding or removing signature verification  set or clear the secret field as needed.",
                             ].map((item) => (
                                 <li key={item} className="flex items-start gap-2">
                                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand shrink-0" />
@@ -130,7 +130,7 @@ This request doesn't return any response body`;
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">Treat your callback secret like a password.</strong> Anyone who obtains your secret can forge valid-looking callback payloads. Store it in a secrets manager or environment variable — never in version control. Rotate it immediately if you suspect it has been compromised.
+                            <strong className="text-foreground">Treat your callback secret like a password.</strong> Anyone who obtains your secret can forge valid-looking callback payloads. Store it in a secrets manager or environment variable  never in version control. Rotate it immediately if you suspect it has been compromised.
                         </p>
                     </div>
                 </div>

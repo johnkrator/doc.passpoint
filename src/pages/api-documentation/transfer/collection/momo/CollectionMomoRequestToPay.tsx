@@ -182,7 +182,7 @@ const CollectionMomoRequestToPay = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How MoMo Request to Pay Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint initiates an inbound mobile money payment. Passpoint sends a payment request (push notification) to the customer's mobile money wallet — the customer must approve the request on their phone to complete the payment.
+                    This endpoint initiates an inbound mobile money payment. Passpoint sends a payment request (push notification) to the customer's mobile money wallet  the customer must approve the request on their phone to complete the payment.
                 </p>
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-5">
@@ -191,7 +191,7 @@ const CollectionMomoRequestToPay = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <AlertTriangle className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">Fully asynchronous:</strong> A <code className="bg-muted px-1 py-0.5 rounded">responseCode: "00"</code> confirms the request was <em>submitted</em> to the network — not that payment was received. Final payment confirmation arrives via the <strong className="text-foreground">Wallet Credit Callback</strong> webhook. Never fulfill an order on the initial API response alone.
+                            <strong className="text-foreground">Fully asynchronous:</strong> A <code className="bg-muted px-1 py-0.5 rounded">responseCode: "00"</code> confirms the request was <em>submitted</em> to the network  not that payment was received. Final payment confirmation arrives via the <strong className="text-foreground">Wallet Credit Callback</strong> webhook. Never fulfill an order on the initial API response alone.
                         </p>
                     </div>
 
@@ -217,7 +217,7 @@ const CollectionMomoRequestToPay = () => {
                                     </tr>
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-5 py-3.5 font-mono text-xs text-foreground">bankCode</td>
-                                        <td className="px-5 py-3.5 text-xs text-muted-foreground">Always <code className="bg-muted px-1 py-0.5 rounded">"000000"</code> — the special code designating the Passpoint wallet as the collection destination.</td>
+                                        <td className="px-5 py-3.5 text-xs text-muted-foreground">Always <code className="bg-muted px-1 py-0.5 rounded">"000000"</code>  the special code designating the Passpoint wallet as the collection destination.</td>
                                     </tr>
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-5 py-3.5 font-mono text-xs text-foreground">channel</td>
@@ -225,7 +225,7 @@ const CollectionMomoRequestToPay = () => {
                                     </tr>
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-5 py-3.5 font-mono text-xs text-foreground">clientReference</td>
-                                        <td className="px-5 py-3.5 text-xs text-muted-foreground">Your unique idempotency reference for this collection request. Passpoint uses this to deduplicate retries — always generate a unique value per transaction attempt.</td>
+                                        <td className="px-5 py-3.5 text-xs text-muted-foreground">Your unique idempotency reference for this collection request. Passpoint uses this to deduplicate retries  always generate a unique value per transaction attempt.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -298,7 +298,7 @@ const CollectionMomoRequestToPay = () => {
                                         <td className="px-5 py-3.5">
                                             {row.values
                                                 ? <span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">{row.values}</span>
-                                                : <span className="text-muted-foreground">—</span>}
+                                                : <span className="text-muted-foreground"></span>}
                                         </td>
                                     </tr>
                                 ))}
@@ -330,7 +330,7 @@ const CollectionMomoRequestToPay = () => {
                                         <td className="px-5 py-3.5">
                                             {row.values
                                                 ? <span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">{row.values}</span>
-                                                : <span className="text-muted-foreground">—</span>}
+                                                : <span className="text-muted-foreground"></span>}
                                         </td>
                                     </tr>
                                 ))}

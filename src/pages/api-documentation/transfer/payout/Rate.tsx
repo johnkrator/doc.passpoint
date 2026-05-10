@@ -82,7 +82,7 @@ const Rate = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How rates and fees work</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
-                    This module exposes two distinct lookup operations — one for transfer cost estimation and one for
+                    This module exposes two distinct lookup operations  one for transfer cost estimation and one for
                     live currency conversion rates. Neither moves any funds.
                 </p>
 
@@ -97,7 +97,7 @@ const Rate = () => {
                             </div>
                             <p className="text-xs text-muted-foreground leading-relaxed">
                                 Call this <span className="font-semibold text-foreground">before</span> initiating a transfer
-                                to show users the exact fee they will be charged. This is a preview — no funds are moved.
+                                to show users the exact fee they will be charged. This is a preview  no funds are moved.
                                 Fees vary by transfer method (MoMo, Bank, Foreign), amount, currency, and destination country.
                             </p>
                         </div>
@@ -110,7 +110,7 @@ const Rate = () => {
                             </div>
                             <p className="text-xs text-muted-foreground leading-relaxed">
                                 Use this to display live currency conversion rates in your UI (e.g., "1 USD = 1,580 NGN at
-                                current rate"). This is informational only — it does not lock or reserve a rate.
+                                current rate"). This is informational only  it does not lock or reserve a rate.
                             </p>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const Rate = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground leading-relaxed">
-                            <span className="font-semibold text-foreground">Exchange rates are live market rates — they fluctuate.</span> Always
+                            <span className="font-semibold text-foreground">Exchange rates are live market rates  they fluctuate.</span> Always
                             re-fetch before displaying to users. The <span className="font-semibold text-foreground">Convert Funds</span> endpoint
                             executes the actual conversion at the live rate at the moment of execution, which may differ slightly from
                             a rate you previewed earlier. The exact rate used is returned in the conversion response.

@@ -85,13 +85,13 @@ const CardDetails = () => {
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">The Card ID</p>
-                            <p className="text-xs text-muted-foreground">The <code className="font-mono text-xs bg-muted/60 px-1 py-0.5 rounded">cardId</code> is returned when the card is issued. Store it in your database — it is the primary identifier for all subsequent card operations including funding, freezing, and termination.</p>
+                            <p className="text-xs text-muted-foreground">The <code className="font-mono text-xs bg-muted/60 px-1 py-0.5 rounded">cardId</code> is returned when the card is issued. Store it in your database  it is the primary identifier for all subsequent card operations including funding, freezing, and termination.</p>
                         </div>
                     </div>
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            The <code className="font-mono text-xs">id</code> query parameter accepts the card's UUID (<code className="font-mono text-xs">cardId</code>) returned at issuance. This endpoint is safe to call frequently — it does not expose sensitive card credentials and is appropriate for status polling and display purposes.
+                            The <code className="font-mono text-xs">id</code> query parameter accepts the card's UUID (<code className="font-mono text-xs">cardId</code>) returned at issuance. This endpoint is safe to call frequently  it does not expose sensitive card credentials and is appropriate for status polling and display purposes.
                         </p>
                     </div>
                 </div>

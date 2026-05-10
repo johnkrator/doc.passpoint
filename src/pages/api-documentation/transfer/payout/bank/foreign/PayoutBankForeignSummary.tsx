@@ -17,14 +17,14 @@ type ResponseRow = {
 };
 
 const PAYOUT_APIS = [
-    { method: "POST", path: "foreign-ft-app/make-payment/bank",   desc: "Account deposit — USD, EUR, GBP, CNY" },
-    { method: "POST", path: "foreign-ft-app/make-payment/ach",    desc: "ACH transfer — USD" },
-    { method: "POST", path: "foreign-ft-app/make-payment/rtp",    desc: "Real-time payment (RTP) — USD" },
-    { method: "POST", path: "foreign-ft-app/make-payment/fednow", desc: "FedNow instant payment — USD" },
-    { method: "POST", path: "foreign-ft-app/make-payment/wire",   desc: "Wire transfer — USD" },
-    { method: "POST", path: "foreign-ft-app/make-payment/b2b",    desc: "Business-to-business transfer — CNY, USD" },
-    { method: "POST", path: "foreign-ft-app/make-payment/b2c",    desc: "Business-to-consumer transfer — CNY" },
-    { method: "POST", path: "foreign-ft-app/make-payment/momo",   desc: "Mobile money deposit — CNY" },
+    { method: "POST", path: "foreign-ft-app/make-payment/bank",   desc: "Account deposit  USD, EUR, GBP, CNY" },
+    { method: "POST", path: "foreign-ft-app/make-payment/ach",    desc: "ACH transfer  USD" },
+    { method: "POST", path: "foreign-ft-app/make-payment/rtp",    desc: "Real-time payment (RTP)  USD" },
+    { method: "POST", path: "foreign-ft-app/make-payment/fednow", desc: "FedNow instant payment  USD" },
+    { method: "POST", path: "foreign-ft-app/make-payment/wire",   desc: "Wire transfer  USD" },
+    { method: "POST", path: "foreign-ft-app/make-payment/b2b",    desc: "Business-to-business transfer  CNY, USD" },
+    { method: "POST", path: "foreign-ft-app/make-payment/b2c",    desc: "Business-to-consumer transfer  CNY" },
+    { method: "POST", path: "foreign-ft-app/make-payment/momo",   desc: "Mobile money deposit  CNY" },
 ];
 
 function MethodBadge({ method }: { method: string }) {
@@ -66,7 +66,7 @@ function ParamsTable({ rows }: { rows: ParamRow[] }) {
                                     : <span className="text-xs text-muted-foreground">optional</span>}
                             </td>
                             <td className="px-5 py-3.5 text-muted-foreground text-sm">{r.description}</td>
-                            <td className="px-5 py-3.5 font-mono text-xs text-muted-foreground">{r.defaultVal ?? "—"}</td>
+                            <td className="px-5 py-3.5 font-mono text-xs text-muted-foreground">{r.defaultVal ?? ""}</td>
                         </tr>
                     ))}
                 </tbody>
@@ -155,7 +155,7 @@ const PayoutBankForeignSummary = () => {
                             <h3 className="text-sm font-semibold text-foreground">Fully Asynchronous</h3>
                         </div>
                         <p className="text-xs text-muted-foreground leading-relaxed">
-                            All foreign transfers are asynchronous. A successful API response means the transfer is queued — not completed. Final settlement status is delivered via webhook callback. Always implement webhook handling before going live.
+                            All foreign transfers are asynchronous. A successful API response means the transfer is queued  not completed. Final settlement status is delivered via webhook callback. Always implement webhook handling before going live.
                         </p>
                     </div>
                     <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 space-y-3">
@@ -211,7 +211,7 @@ const PayoutBankForeignSummary = () => {
                                     { field: "transactionCurrency", desc: "Currency code of the funds being sent (e.g. USD, GBP, EUR, CNY)." },
                                     { field: "baseCurrency", desc: "Currency code of your wallet being debited. May differ from transactionCurrency for cross-currency transfers." },
                                     { field: "countryCode", desc: "ISO 2-letter code for the recipient's country. Must match a code returned by the country list endpoint." },
-                                    { field: "paymentInfo", desc: "Object containing full sender and recipient details. Required fields vary by payment method — see individual endpoint pages." },
+                                    { field: "paymentInfo", desc: "Object containing full sender and recipient details. Required fields vary by payment method  see individual endpoint pages." },
                                 ].map(({ field, desc }) => (
                                     <tr key={field} className="hover:bg-muted/20 transition-colors">
                                         <td className="px-5 py-3.5">
@@ -641,9 +641,9 @@ const PayoutBankForeignSummary = () => {
                 </div>
                 <ul className="space-y-3">
                     {[
-                        "Always call the country list and payment methods endpoints before initiating a payout — supported countries and methods can change.",
+                        "Always call the country list and payment methods endpoints before initiating a payout  supported countries and methods can change.",
                         "The countryCode query parameter for available-payment-methods must be an ISO 2-letter code matching an entry from the country list response.",
-                        "All metadata endpoints (type=acct, idt, sbr, pop, sof, ocu, cny) return a name/value pair array. Always pass the value field — not the name — in your payout request body.",
+                        "All metadata endpoints (type=acct, idt, sbr, pop, sof, ocu, cny) return a name/value pair array. Always pass the value field  not the name  in your payout request body.",
                         "minLimit and maxLimit in the payment methods response are in the currency of the target country. Validate your payout amount against these bounds before submitting.",
                         "CNY B2B payouts require a bank location code from the retrieve-metadata?type=cny endpoint.",
                         "All payout requests must include a valid Bearer token. Refer to the Authentication section for how to obtain and use tokens.",

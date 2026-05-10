@@ -201,7 +201,7 @@ const GetMomoCollectionNetwork = () => {
                                 <tr className="hover:bg-muted/20 transition-colors">
                                     <td className="px-5 py-3.5 font-mono text-xs text-foreground">type</td>
                                     <td className="px-5 py-3.5 text-muted-foreground">string</td>
-                                    <td className="px-5 py-3.5 text-muted-foreground">Transaction type — value: <code className="bg-muted px-1.5 py-0.5 rounded text-xs">collection</code></td>
+                                    <td className="px-5 py-3.5 text-muted-foreground">Transaction type  value: <code className="bg-muted px-1.5 py-0.5 rounded text-xs">collection</code></td>
                                 </tr>
                                 <tr className="hover:bg-muted/20 transition-colors">
                                     <td className="px-5 py-3.5 font-mono text-xs text-foreground">countryCode</td>

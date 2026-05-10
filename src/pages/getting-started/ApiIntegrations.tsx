@@ -544,7 +544,7 @@ app.listen(3000, () => {
                     Quick start examples
                 </h2>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
-                    A minimal end-to-end integration in three steps — authenticate, create a wallet, and run your first operation.
+                    A minimal end-to-end integration in three steps  authenticate, create a wallet, and run your first operation.
                 </p>
 
                 <div className="space-y-8">
@@ -611,10 +611,10 @@ app.listen(3000, () => {
                     </div>
                     <div className="divide-y divide-border">
                         {[
-                            { code: "30 / 31", desc: "Validation errors — check request parameters", color: "text-amber-600 dark:text-amber-400" },
-                            { code: "06", desc: "Session timeout — refresh your token", color: "text-blue-600 dark:text-blue-400" },
-                            { code: "60", desc: "Security violation — verify credentials", color: "text-red-600 dark:text-red-400" },
-                            { code: "50 / 51", desc: "Server errors — implement retry logic", color: "text-muted-foreground" },
+                            { code: "30 / 31", desc: "Validation errors  check request parameters", color: "text-amber-600 dark:text-amber-400" },
+                            { code: "06", desc: "Session timeout  refresh your token", color: "text-blue-600 dark:text-blue-400" },
+                            { code: "60", desc: "Security violation  verify credentials", color: "text-red-600 dark:text-red-400" },
+                            { code: "50 / 51", desc: "Server errors  implement retry logic", color: "text-muted-foreground" },
                         ].map(({ code, desc, color }) => (
                             <div key={code} className="flex items-center justify-between px-6 py-3.5 hover:bg-muted/30 transition-colors">
                                 <code className="font-mono text-sm font-semibold text-foreground">{code}</code>

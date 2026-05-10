@@ -71,7 +71,7 @@ const PayoutMomoGetCurrency = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Currency Lookup Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This is the <strong className="text-foreground">first step</strong> in any MoMo payout flow. Before you can send funds, you need to know which currencies are supported for mobile money payouts and retrieve their currency codes — which are required in every subsequent step.
+                    This is the <strong className="text-foreground">first step</strong> in any MoMo payout flow. Before you can send funds, you need to know which currencies are supported for mobile money payouts and retrieve their currency codes  which are required in every subsequent step.
                 </p>
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-4 mb-4">

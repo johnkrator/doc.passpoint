@@ -25,7 +25,7 @@ Content-Type: application/json`;
     "country": "US"
   },
   "reference": "XBORDER_20240115_001",
-  "description": "International supplier payment — Invoice INV-2024-001"
+  "description": "International supplier payment  Invoice INV-2024-001"
 }`;
 
     const getCrossBorderCurlCode = () =>
@@ -48,7 +48,7 @@ Content-Type: application/json`;
         "country": "US"
     },
     "reference": "XBORDER_20240115_001",
-    "description": "International supplier payment — Invoice INV-2024-001"
+    "description": "International supplier payment  Invoice INV-2024-001"
 }'`;
 
     const getCrossBorderResponseCode = () => `{
@@ -140,7 +140,7 @@ Content-Type: application/json`;
         { param: "recipient.bankSwiftCode", type: "string", req: "conditional", desc: "Required for SWIFT and WIRE transfers." },
         { param: "recipient.country", type: "string", req: "mandatory", desc: "ISO 3166-1 alpha-2 country code of the recipient's bank." },
         { param: "reference", type: "string", req: "mandatory", desc: "Your unique transaction reference." },
-        { param: "description", type: "string", req: "optional", desc: "Purpose of the transfer — may be required by the receiving bank." },
+        { param: "description", type: "string", req: "optional", desc: "Purpose of the transfer  may be required by the receiving bank." },
     ] as const;
 
     return (

@@ -100,7 +100,7 @@ const PayoutBankForeignAccountDepositEur = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Account Deposit — EUR
+                    Account Deposit  EUR
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Deposit funds to bank accounts in Euro (EUR).
@@ -116,7 +116,7 @@ const PayoutBankForeignAccountDepositEur = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How EUR Account Deposit Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    The EUR account deposit endpoint transfers Euros to European bank accounts within the SEPA (Single Euro Payments Area) zone — enabling EUR payments across 36+ European countries using a single, standardized payment infrastructure.
+                    The EUR account deposit endpoint transfers Euros to European bank accounts within the SEPA (Single Euro Payments Area) zone  enabling EUR payments across 36+ European countries using a single, standardized payment infrastructure.
                 </p>
 
                 <div className="grid gap-4 sm:grid-cols-3 mb-6">
@@ -136,7 +136,7 @@ const PayoutBankForeignAccountDepositEur = () => {
                     <div className="space-y-4">
                         {[
                             {
-                                title: "IBAN is required — not account number + routing number",
+                                title: "IBAN is required  not account number + routing number",
                                 body: "All SEPA transfers use IBAN (International Bank Account Number) for recipient identification. Pass the recipient's IBAN as bankAccountNumber in the paymentInfo object. US-style routing numbers are not applicable here.",
                             },
                             {

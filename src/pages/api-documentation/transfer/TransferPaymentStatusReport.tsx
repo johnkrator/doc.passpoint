@@ -172,7 +172,7 @@ const TransferPaymentStatusReport = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Payment Status Report Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint generates a comprehensive status report for transfers, returning the full processing history for a transaction. Unlike Transfer Status — which queries a single transaction in real time — this endpoint is designed for batch reconciliation and audit workflows.
+                    This endpoint generates a comprehensive status report for transfers, returning the full processing history for a transaction. Unlike Transfer Status  which queries a single transaction in real time  this endpoint is designed for batch reconciliation and audit workflows.
                 </p>
 
                 <div className="space-y-4">
@@ -197,12 +197,12 @@ const TransferPaymentStatusReport = () => {
                                 <tbody className="divide-y divide-border">
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3"><span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">"all"</span></td>
-                                        <td className="px-4 py-3 text-muted-foreground text-xs">Returns every processing stage for each transaction in the period — the full history array</td>
+                                        <td className="px-4 py-3 text-muted-foreground text-xs">Returns every processing stage for each transaction in the period  the full history array</td>
                                         <td className="px-4 py-3 text-muted-foreground text-xs">Audit trails, debugging, full reconciliation</td>
                                     </tr>
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3"><span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">"latest"</span></td>
-                                        <td className="px-4 py-3 text-muted-foreground text-xs">Returns only the most recent status record for each transaction — one entry per <code className="font-mono bg-muted px-1 py-0.5 rounded">transactionId</code></td>
+                                        <td className="px-4 py-3 text-muted-foreground text-xs">Returns only the most recent status record for each transaction  one entry per <code className="font-mono bg-muted px-1 py-0.5 rounded">transactionId</code></td>
                                         <td className="px-4 py-3 text-muted-foreground text-xs">Deduplication, end-of-day status snapshots</td>
                                     </tr>
                                 </tbody>
@@ -217,7 +217,7 @@ const TransferPaymentStatusReport = () => {
                             <h3 className="text-sm font-semibold text-foreground">Understanding paymentOrder and callbackSent</h3>
                         </div>
                         <p className="text-xs text-muted-foreground mb-3">
-                            When <code className="font-mono bg-muted px-1.5 py-0.5 rounded">mode=all</code> is used, the response contains multiple records per transaction — one for each processing stage. Two fields help you interpret the sequence and notification state:
+                            When <code className="font-mono bg-muted px-1.5 py-0.5 rounded">mode=all</code> is used, the response contains multiple records per transaction  one for each processing stage. Two fields help you interpret the sequence and notification state:
                         </p>
                         <div className="overflow-x-auto">
                             <table className="w-full text-sm">
@@ -237,7 +237,7 @@ const TransferPaymentStatusReport = () => {
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3"><span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">callbackSent</span></td>
                                         <td className="px-4 py-3 text-muted-foreground text-xs">boolean</td>
-                                        <td className="px-4 py-3 text-muted-foreground text-xs"><code className="font-mono bg-muted px-1 py-0.5 rounded">true</code> if the webhook notification was dispatched for this stage. <code className="font-mono bg-muted px-1 py-0.5 rounded">false</code> means the callback has not fired yet or failed — use this to identify missed notifications that need manual recovery.</td>
+                                        <td className="px-4 py-3 text-muted-foreground text-xs"><code className="font-mono bg-muted px-1 py-0.5 rounded">true</code> if the webhook notification was dispatched for this stage. <code className="font-mono bg-muted px-1 py-0.5 rounded">false</code> means the callback has not fired yet or failed  use this to identify missed notifications that need manual recovery.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -261,11 +261,11 @@ const TransferPaymentStatusReport = () => {
                                 <tbody className="divide-y divide-border">
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3 text-muted-foreground text-xs">Payment Status Report (this endpoint)</td>
-                                        <td className="px-4 py-3 text-muted-foreground text-xs">Batch reconciliation — end-of-day reports, identifying missed callbacks across multiple transactions, full audit history</td>
+                                        <td className="px-4 py-3 text-muted-foreground text-xs">Batch reconciliation  end-of-day reports, identifying missed callbacks across multiple transactions, full audit history</td>
                                     </tr>
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3 text-muted-foreground text-xs">Transfer Status</td>
-                                        <td className="px-4 py-3 text-muted-foreground text-xs">Real-time single-transaction lookup — polling for a specific transaction's current state</td>
+                                        <td className="px-4 py-3 text-muted-foreground text-xs">Real-time single-transaction lookup  polling for a specific transaction's current state</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -314,7 +314,7 @@ const TransferPaymentStatusReport = () => {
                                         <td className="px-5 py-3.5">
                                             {row.values
                                                 ? <span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">{row.values}</span>
-                                                : <span className="text-muted-foreground">—</span>}
+                                                : <span className="text-muted-foreground"></span>}
                                         </td>
                                     </tr>
                                 ))}
@@ -346,7 +346,7 @@ const TransferPaymentStatusReport = () => {
                                         <td className="px-5 py-3.5">
                                             {row.values
                                                 ? <span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">{row.values}</span>
-                                                : <span className="text-muted-foreground">—</span>}
+                                                : <span className="text-muted-foreground"></span>}
                                         </td>
                                     </tr>
                                 ))}

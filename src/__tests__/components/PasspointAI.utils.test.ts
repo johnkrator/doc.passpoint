@@ -91,7 +91,7 @@ describe("enrichFollowUpPrompt", () => {
   it("enriches 'tell me more' with the last user question", () => {
     const msgs = [
       makeMsg("user", "How do I set up webhooks?"),
-      makeMsg("assistant", "Configure a callback URL…"),
+      makeMsg("assistant", "Configure a callback URL"),
     ];
     const result = enrichFollowUpPrompt("tell me more", msgs);
     expect(result).toContain("How do I set up webhooks?");
@@ -112,7 +112,7 @@ describe("enrichFollowUpPrompt", () => {
   it("is case-insensitive for follow-up detection", () => {
     const msgs = [
       makeMsg("user", "What is MoMo payout?"),
-      makeMsg("assistant", "MoMo payout lets you…"),
+      makeMsg("assistant", "MoMo payout lets you"),
     ];
     const result = enrichFollowUpPrompt("TELL ME MORE", msgs);
     expect(result).toContain("What is MoMo payout?");
@@ -121,7 +121,7 @@ describe("enrichFollowUpPrompt", () => {
   it("handles trailing punctuation in follow-up phrases", () => {
     const msgs = [
       makeMsg("user", "Explain authentication"),
-      makeMsg("assistant", "Use Bearer token…"),
+      makeMsg("assistant", "Use Bearer token"),
     ];
     expect(enrichFollowUpPrompt("elaborate.", msgs)).toContain(
       "Explain authentication",

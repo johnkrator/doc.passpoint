@@ -66,7 +66,7 @@ const CollectionGenerateNgnDynamicVirtualAccount = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How NGN Dynamic Virtual Accounts Work</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    A dynamic virtual account is a <strong className="text-foreground">one-time bank account number</strong> generated for a single specific payment. It is tied to a specific <code className="bg-muted px-1.5 py-0.5 rounded text-xs font-mono">transactionReference</code> and a specific <code className="bg-muted px-1.5 py-0.5 rounded text-xs font-mono">amount</code>. Once the expected payment is received — or the timeout expires — the account automatically deactivates.
+                    A dynamic virtual account is a <strong className="text-foreground">one-time bank account number</strong> generated for a single specific payment. It is tied to a specific <code className="bg-muted px-1.5 py-0.5 rounded text-xs font-mono">transactionReference</code> and a specific <code className="bg-muted px-1.5 py-0.5 rounded text-xs font-mono">amount</code>. Once the expected payment is received  or the timeout expires  the account automatically deactivates.
                 </p>
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-5">
@@ -77,7 +77,7 @@ const CollectionGenerateNgnDynamicVirtualAccount = () => {
                         <div className="space-y-2">
                             {[
                                 { title: "active: false on creation is expected", desc: "The account isn't active immediately after generation. It activates only after the expected payment is received or the timeout period begins." },
-                                { title: "Auto-deactivates after payment or timeout", desc: "After the payment is received — or the timeout expires — the account automatically deactivates and cannot receive further payments." },
+                                { title: "Auto-deactivates after payment or timeout", desc: "After the payment is received  or the timeout expires  the account automatically deactivates and cannot receive further payments." },
                                 { title: "Linked to a specific order", desc: "The transactionReference ties this account to a specific order or invoice in your system. It appears in the Wallet Credit Callback when payment arrives." },
                                 { title: "Never reuse dynamic accounts", desc: "Generate a fresh dynamic account for every new transaction. Reusing accounts leads to payment attribution errors." },
                             ].map(({ title, desc }) => (

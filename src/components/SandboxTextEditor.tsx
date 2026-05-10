@@ -342,7 +342,7 @@ const SandboxTextEditor: React.FC<SandboxTextEditorProps> = ({
     const responseTime = `${Math.floor(Math.random() * 200) + 120}ms`;
     const b = (body ?? {}) as Record<string, string>;
 
-    // Wallet balance — handles both old and new path patterns
+    // Wallet balance  handles both old and new path patterns
     if (
       path.includes("wallet-app/get-wallet-balance") ||
       path.includes("wallet/balance") ||
@@ -364,7 +364,7 @@ const SandboxTextEditor: React.FC<SandboxTextEditorProps> = ({
       };
     }
 
-    // Mobile money transfer — handles /momo-app/transfer and /payout/momo
+    // Mobile money transfer  handles /momo-app/transfer and /payout/momo
     if (path.includes("momo-app/transfer") || path.includes("payout/momo")) {
       const msisdn = b.msisdn ?? "2348000000000";
       return {
@@ -386,7 +386,7 @@ const SandboxTextEditor: React.FC<SandboxTextEditorProps> = ({
       };
     }
 
-    // Virtual account — handles /collection-app/virtual-account and old paths
+    // Virtual account  handles /collection-app/virtual-account and old paths
     if (
       path.includes("collection-app/virtual-account") ||
       path.includes("collection/virtual-account") ||
@@ -513,7 +513,7 @@ const SandboxTextEditor: React.FC<SandboxTextEditorProps> = ({
       try {
         fetchResponse = await fetch(requestConfig.url, fetchOptions);
       } catch {
-        // Network error (CORS, DNS, timeout) — fall back to mock
+        // Network error (CORS, DNS, timeout)  fall back to mock
         await new Promise((resolve) =>
           setTimeout(resolve, Math.floor(Math.random() * 200) + 100),
         );

@@ -100,7 +100,7 @@ const PayoutBankForeignAccountDepositGbp = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Account Deposit — GBP
+                    Account Deposit  GBP
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Deposit funds to bank accounts in British Pound (GBP).
@@ -116,7 +116,7 @@ const PayoutBankForeignAccountDepositGbp = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How GBP Account Deposit Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    The GBP account deposit endpoint transfers British Pounds to a UK bank account. Passpoint automatically routes through the appropriate UK payment rail — Faster Payments for eligible amounts (typically instant) or BACS (3 business days) depending on the amount and destination bank.
+                    The GBP account deposit endpoint transfers British Pounds to a UK bank account. Passpoint automatically routes through the appropriate UK payment rail  Faster Payments for eligible amounts (typically instant) or BACS (3 business days) depending on the amount and destination bank.
                 </p>
 
                 <div className="grid gap-4 sm:grid-cols-3 mb-6">

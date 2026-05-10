@@ -908,7 +908,7 @@ const calculateSearchScore = (item: SearchItem, query: string): number => {
     const qLower = query.toLowerCase().trim();
     let score = 0;
 
-    // Check tags first — exact technical value matches get high priority
+    // Check tags first  exact technical value matches get high priority
     if (item.tags && item.tags.length > 0) {
         const tagsLower = item.tags.map(t => t.toLowerCase());
 
@@ -925,7 +925,7 @@ const calculateSearchScore = (item: SearchItem, query: string): number => {
             score += 300;
         }
 
-        // Handle "key = value" or "key: value" patterns — normalise and re-check tags
+        // Handle "key = value" or "key: value" patterns  normalise and re-check tags
         const queryVariants = normaliseTechnicalQuery(qLower);
         if (queryVariants.length > 1) {
             for (const variant of queryVariants) {
@@ -1101,7 +1101,7 @@ const calculateSearchScore = (item: SearchItem, query: string): number => {
             score += 200;
         }
 
-        // Partial word match bonus — majority of words found
+        // Partial word match bonus  majority of words found
         const matchingWords = queryWords.filter(word =>
             item.title.toLowerCase().includes(word) ||
             item.keywords?.some(k => k.toLowerCase().includes(word)) ||

@@ -93,7 +93,7 @@ const DocumentationLayout = ({children}: DocumentationLayoutProps) => {
                 {/* Header */}
                 <Header onMenuClick={handleMenuClick}/>
 
-                {/* Main layout — fills remaining height, each column scrolls independently */}
+                {/* Main layout  fills remaining height, each column scrolls independently */}
                 <div className="flex flex-1 min-h-0">
                     <div
                         className={`transition-all duration-300 ease-out overflow-hidden ${isHomePage ? 'w-0 opacity-0 pointer-events-none' : 'opacity-100'}`}
@@ -101,7 +101,7 @@ const DocumentationLayout = ({children}: DocumentationLayoutProps) => {
                         <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose}/>
                     </div>
 
-                    {/* Main content — its own scroll context */}
+                    {/* Main content  its own scroll context */}
                     <main
                         ref={mainRef}
                         className="flex-1 min-w-0 min-h-0 overflow-y-auto"

@@ -53,7 +53,7 @@ const PayoutBankLocalPasspointEnquiry = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Passpoint Wallet Enquiry Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    Passpoint Enquiry is the wallet equivalent of Account Enquiry — it verifies a Passpoint wallet holder's identity before a wallet-to-wallet transfer. The <code className="font-mono bg-muted px-1.5 py-0.5 rounded text-xs">walletId</code> is the recipient's <strong className="text-foreground">registered Passpoint email address</strong>, and a successful response returns their name for your user to confirm.
+                    Passpoint Enquiry is the wallet equivalent of Account Enquiry  it verifies a Passpoint wallet holder's identity before a wallet-to-wallet transfer. The <code className="font-mono bg-muted px-1.5 py-0.5 rounded text-xs">walletId</code> is the recipient's <strong className="text-foreground">registered Passpoint email address</strong>, and a successful response returns their name for your user to confirm.
                 </p>
 
                 <div className="space-y-4">
@@ -62,17 +62,17 @@ const PayoutBankLocalPasspointEnquiry = () => {
                             {
                                 icon: <Wallet className="h-4 w-4 text-brand" />,
                                 title: "walletId = email address",
-                                desc: "The walletId is the recipient's registered Passpoint email. It's the same value used as accountId in the Passpoint Wallet Transfer request — keep them consistent.",
+                                desc: "The walletId is the recipient's registered Passpoint email. It's the same value used as accountId in the Passpoint Wallet Transfer request  keep them consistent.",
                             },
                             {
                                 icon: <CheckCircle className="h-4 w-4 text-brand" />,
                                 title: "Always confirm with user",
-                                desc: "The returned accountName is the wallet holder's registered display name. Show it to your user before proceeding — this prevents transfers to the wrong Passpoint account.",
+                                desc: "The returned accountName is the wallet holder's registered display name. Show it to your user before proceeding  this prevents transfers to the wrong Passpoint account.",
                             },
                             {
                                 icon: <Info className="h-4 w-4 text-brand" />,
                                 title: "Instant settlement",
-                                desc: "Wallet-to-wallet transfers settle nearly instantly on Passpoint, unlike bank transfers. Enquiry responses are synchronous — if it returns successfully, the wallet is active and ready to receive.",
+                                desc: "Wallet-to-wallet transfers settle nearly instantly on Passpoint, unlike bank transfers. Enquiry responses are synchronous  if it returns successfully, the wallet is active and ready to receive.",
                             },
                         ].map(({ icon, title, desc }) => (
                             <div key={title} className="bg-white dark:bg-card border border-border rounded-2xl p-5 space-y-2">
@@ -123,7 +123,7 @@ const PayoutBankLocalPasspointEnquiry = () => {
                         <div>
                             <p className="text-xs font-semibold text-foreground mb-1">Enquiry failure = invalid wallet</p>
                             <p className="text-xs text-muted-foreground">
-                                If the enquiry returns an error, the <code className="font-mono bg-muted px-1 py-0.5 rounded">walletId</code> does not correspond to an active Passpoint wallet. Do not proceed to transfer — prompt your user to verify the email address they entered.
+                                If the enquiry returns an error, the <code className="font-mono bg-muted px-1 py-0.5 rounded">walletId</code> does not correspond to an active Passpoint wallet. Do not proceed to transfer  prompt your user to verify the email address they entered.
                             </p>
                         </div>
                     </div>

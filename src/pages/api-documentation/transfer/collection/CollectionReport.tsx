@@ -393,7 +393,7 @@ const CollectionReport = () => {
                                 <tbody className="divide-y divide-border">
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-4 py-3 text-xs font-medium text-foreground">Paginated</td>
-                                        <td className="px-4 py-3 font-mono text-xs text-muted-foreground">1, 2, 3…</td>
+                                        <td className="px-4 py-3 font-mono text-xs text-muted-foreground">1, 2, 3</td>
                                         <td className="px-4 py-3 font-mono text-xs text-muted-foreground">e.g. 25</td>
                                         <td className="px-4 py-3 text-xs text-muted-foreground">Recommended for large date ranges</td>
                                     </tr>
@@ -415,7 +415,7 @@ const CollectionReport = () => {
                     {/* Transaction History Response Field Glossary */}
                     <div className="bg-white dark:bg-card border border-border rounded-2xl overflow-hidden">
                         <div className="px-5 py-3 border-b border-border bg-muted/30">
-                            <h3 className="text-sm font-semibold text-foreground">Transaction History — Response Field Reference</h3>
+                            <h3 className="text-sm font-semibold text-foreground">Transaction History  Response Field Reference</h3>
                         </div>
                         <div className="overflow-x-auto">
                             <table className="w-full text-sm">
@@ -469,13 +469,13 @@ const CollectionReport = () => {
                 </div>
             </section>
 
-            {/* Transaction History — All Currency — Paginated */}
+            {/* Transaction History  All Currency  Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history — all currency — paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history  all currency  paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Returns the list of transactions across all currencies with pagination support.
@@ -512,13 +512,13 @@ const CollectionReport = () => {
                 </div>
             </section>
 
-            {/* Transaction History — NGN — Paginated */}
+            {/* Transaction History  NGN  Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history — NGN — paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history  NGN  paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Returns the list of NGN transactions with detailed settlement information.
@@ -555,13 +555,13 @@ const CollectionReport = () => {
                 </div>
             </section>
 
-            {/* Transaction History — All Currency — Not Paginated */}
+            {/* Transaction History  All Currency  Not Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history — all currency — not paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Transaction history  all currency  not paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Returns the complete list of transactions without pagination. Set pageNumber and pageSize to 0.
@@ -598,13 +598,13 @@ const CollectionReport = () => {
                 </div>
             </section>
 
-            {/* List Virtual Accounts — All Currency — Paginated */}
+            {/* List Virtual Accounts  All Currency  Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">List virtual accounts — all currency — paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">List virtual accounts  all currency  paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Retrieve a paginated list of virtual accounts across all supported currencies within a specified date range.
@@ -637,13 +637,13 @@ const CollectionReport = () => {
                 </div>
             </section>
 
-            {/* List Virtual Accounts — All Currency — Not Paginated */}
+            {/* List Virtual Accounts  All Currency  Not Paginated */}
             <section>
                 <div className="flex items-center gap-3 mb-3">
                     <div className="bg-brand-50 dark:bg-brand-950/40 w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                         <FileText className="h-4 w-4 text-brand" />
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">List virtual accounts — all currency — not paginated</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">List virtual accounts  all currency  not paginated</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
                     Retrieve all virtual accounts across all currencies without pagination. Set pageNumber and pageSize to 0.

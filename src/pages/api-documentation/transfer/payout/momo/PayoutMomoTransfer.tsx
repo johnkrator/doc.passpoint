@@ -75,7 +75,7 @@ const PayoutMomoTransfer = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How MoMo Transfer Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint initiates an outbound mobile money payment, dispatching funds directly to the recipient's mobile money wallet. Calling it successfully submits the transfer — it does not guarantee immediate completion.
+                    This endpoint initiates an outbound mobile money payment, dispatching funds directly to the recipient's mobile money wallet. Calling it successfully submits the transfer  it does not guarantee immediate completion.
                 </p>
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-4 mb-4">
@@ -84,7 +84,7 @@ const PayoutMomoTransfer = () => {
                         <h3 className="text-sm font-semibold text-foreground">Asynchronous by design</h3>
                     </div>
                     <p className="text-xs text-muted-foreground leading-relaxed">
-                        A <code className="font-mono bg-muted px-1 py-0.5 rounded">responseCode: "00"</code> only confirms the transfer was <strong className="text-foreground">submitted successfully</strong> — not that it has completed. The transaction begins in <code className="font-mono bg-muted px-1 py-0.5 rounded">NEW</code> status and progresses asynchronously.
+                        A <code className="font-mono bg-muted px-1 py-0.5 rounded">responseCode: "00"</code> only confirms the transfer was <strong className="text-foreground">submitted successfully</strong>  not that it has completed. The transaction begins in <code className="font-mono bg-muted px-1 py-0.5 rounded">NEW</code> status and progresses asynchronously.
                     </p>
                     <div className="flex flex-wrap items-center gap-2 pt-1">
                         {["NEW", "PENDING", "PROCESSING", "SUCCESSFUL / FAILED"].map((status, index, arr) => (
@@ -107,14 +107,14 @@ const PayoutMomoTransfer = () => {
                     <ul className="space-y-2.5">
                         {[
                             {label: "serviceCode", note: "Must come from the Get MoMo Network endpoint response for the target currency. Do not hardcode this value."},
-                            {label: "clientReference", note: "Must be unique per transaction. This is your system's idempotency key — duplicate references may cause request rejection."},
+                            {label: "clientReference", note: "Must be unique per transaction. This is your system's idempotency key  duplicate references may cause request rejection."},
                             {label: "msisdn", note: "Always validate the recipient's phone number with the Validate MSISDN endpoint before calling this."},
                             {label: "channel", note: "Identifies your integration type. Use the channel value assigned to your merchant account."},
                         ].map(({label, note}) => (
                             <li key={label} className="flex items-start gap-2.5">
                                 <CheckCircle className="h-3.5 w-3.5 text-brand shrink-0 mt-0.5" />
                                 <span className="text-xs text-muted-foreground leading-relaxed">
-                                    <code className="font-mono bg-muted px-1 py-0.5 rounded text-foreground">{label}</code> — {note}
+                                    <code className="font-mono bg-muted px-1 py-0.5 rounded text-foreground">{label}</code>  {note}
                                 </span>
                             </li>
                         ))}
@@ -217,7 +217,7 @@ const PayoutMomoTransfer = () => {
                                 </tr>
                                 <tr className="hover:bg-muted/20 transition-colors">
                                     <td className="px-5 py-3.5 font-mono text-xs text-foreground whitespace-nowrap">transactionId</td>
-                                    <td className="px-5 py-3.5 text-xs text-muted-foreground">Passpoint's unique identifier for this transaction. Store this immediately — it is required for status checks and reconciliation.</td>
+                                    <td className="px-5 py-3.5 text-xs text-muted-foreground">Passpoint's unique identifier for this transaction. Store this immediately  it is required for status checks and reconciliation.</td>
                                 </tr>
                                 <tr className="hover:bg-muted/20 transition-colors">
                                     <td className="px-5 py-3.5 font-mono text-xs text-foreground whitespace-nowrap">amount</td>

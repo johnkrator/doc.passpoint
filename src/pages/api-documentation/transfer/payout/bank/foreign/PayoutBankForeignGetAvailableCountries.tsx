@@ -89,7 +89,7 @@ const PayoutBankForeignGetAvailableCountries = () => {
                             },
                             {
                                 title: "countryCode is reused downstream",
-                                body: "The code field returned for each country (e.g. \"US\", \"GB\", \"CN\") is the same countryCode you must pass in the Get Payment Methods call and in the transfer request body. Store it — do not hard-code country codes.",
+                                body: "The code field returned for each country (e.g. \"US\", \"GB\", \"CN\") is the same countryCode you must pass in the Get Payment Methods call and in the transfer request body. Store it  do not hard-code country codes.",
                             },
                             {
                                 title: "Supported destinations change",
@@ -109,7 +109,7 @@ const PayoutBankForeignGetAvailableCountries = () => {
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl overflow-hidden mb-4">
                     <div className="px-5 py-3 border-b border-border bg-muted/30">
-                        <h4 className="text-sm font-semibold text-foreground">Response fields — what to use</h4>
+                        <h4 className="text-sm font-semibold text-foreground">Response fields  what to use</h4>
                     </div>
                     <div className="overflow-x-auto">
                         <table className="w-full text-sm">

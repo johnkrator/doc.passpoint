@@ -302,7 +302,7 @@ function validateOperation(apiKey, operation) {
                     <h3 className="text-sm font-semibold text-brand mb-3">Best practices</h3>
                     <ul className="space-y-2">
                         {[
-                            "Follow the principle of least privilege — grant users only the permissions they need",
+                            "Follow the principle of least privilege  grant users only the permissions they need",
                             "Use Limited Write API keys for production integrations instead of Full Access keys",
                             "Regularly audit user roles and API key permissions to maintain security",
                             "Implement session management to handle role changes in real-time",

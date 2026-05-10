@@ -100,7 +100,7 @@ const PayoutBankForeignB2bTransferUsd = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    B2B Transfer — USD
+                    B2B Transfer  USD
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Process business-to-business transfers in US Dollar (USD) to bank accounts.
@@ -116,7 +116,7 @@ const PayoutBankForeignB2bTransferUsd = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How USD B2B Transfers Work</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint initiates a USD-denominated business-to-business (B2B) international wire transfer. Unlike consumer payouts, B2B transfers involve full compliance disclosure for both the sending and receiving business entities — including identity verification, purpose of payment, and source of funds — to satisfy AML and cross-border regulatory requirements.
+                    This endpoint initiates a USD-denominated business-to-business (B2B) international wire transfer. Unlike consumer payouts, B2B transfers involve full compliance disclosure for both the sending and receiving business entities  including identity verification, purpose of payment, and source of funds  to satisfy AML and cross-border regulatory requirements.
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -165,7 +165,7 @@ const PayoutBankForeignB2bTransferUsd = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">All transfers are asynchronous.</strong> A successful response means the transfer has been accepted and queued — not completed. Always implement webhook callback handling to receive the final SUCCESSFUL or FAILED status. Do not assume completion based on the API response alone.
+                            <strong className="text-foreground">All transfers are asynchronous.</strong> A successful response means the transfer has been accepted and queued  not completed. Always implement webhook callback handling to receive the final SUCCESSFUL or FAILED status. Do not assume completion based on the API response alone.
                         </p>
                     </div>
                 </div>

@@ -45,7 +45,7 @@ const FreezeCard = () => {
                             {
                                 icon: <ShieldCheck className="h-4 w-4 text-brand shrink-0 mt-0.5" />,
                                 title: "Instant and reversible",
-                                body: "The card declines all new transaction attempts immediately after a successful freeze. Unlike termination, this action is fully reversible — use Unfreeze Card to restore the card to ACTIVE status at any time.",
+                                body: "The card declines all new transaction attempts immediately after a successful freeze. Unlike termination, this action is fully reversible  use Unfreeze Card to restore the card to ACTIVE status at any time.",
                             },
                             {
                                 icon: <ShieldCheck className="h-4 w-4 text-brand shrink-0 mt-0.5" />,

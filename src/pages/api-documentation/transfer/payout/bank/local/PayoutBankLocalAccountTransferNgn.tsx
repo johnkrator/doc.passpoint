@@ -78,7 +78,7 @@ const PayoutBankLocalAccountTransferNgn = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Account Transfer — NGN
+                    Account Transfer  NGN
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Process account transfers in Nigerian Naira (NGN) to local bank accounts.
@@ -94,7 +94,7 @@ const PayoutBankLocalAccountTransferNgn = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How NGN Bank Transfer Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint initiates an outbound NGN transfer to any Nigerian bank account. The transfer is <strong className="text-foreground">fully asynchronous</strong> — submission and completion are separate events. A successful response means the transfer is queued, not settled. Final status arrives via webhook.
+                    This endpoint initiates an outbound NGN transfer to any Nigerian bank account. The transfer is <strong className="text-foreground">fully asynchronous</strong>  submission and completion are separate events. A successful response means the transfer is queued, not settled. Final status arrives via webhook.
                 </p>
 
                 <div className="space-y-4">
@@ -108,7 +108,7 @@ const PayoutBankLocalAccountTransferNgn = () => {
                             {
                                 icon: <Send className="h-4 w-4 text-brand" />,
                                 title: "Fully asynchronous",
-                                desc: "responseCode: \"00\" confirms the transfer was accepted and queued — not completed. The initial status is always \"NEW\". Monitor the final outcome via webhook.",
+                                desc: "responseCode: \"00\" confirms the transfer was accepted and queued  not completed. The initial status is always \"NEW\". Monitor the final outcome via webhook.",
                             },
                             {
                                 icon: <Info className="h-4 w-4 text-brand" />,
@@ -143,9 +143,9 @@ const PayoutBankLocalAccountTransferNgn = () => {
                                 </thead>
                                 <tbody className="divide-y divide-border">
                                     {[
-                                        { status: "NEW", meaning: "Accepted and queued for processing", action: "Wait — do not retry", color: "bg-muted text-foreground" },
-                                        { status: "PENDING", meaning: "Being validated and prepared", action: "Wait — monitor webhook", color: "bg-muted text-foreground" },
-                                        { status: "PROCESSING", meaning: "Submitted to destination bank", action: "Wait — settlement imminent", color: "bg-muted text-foreground" },
+                                        { status: "NEW", meaning: "Accepted and queued for processing", action: "Wait  do not retry", color: "bg-muted text-foreground" },
+                                        { status: "PENDING", meaning: "Being validated and prepared", action: "Wait  monitor webhook", color: "bg-muted text-foreground" },
+                                        { status: "PROCESSING", meaning: "Submitted to destination bank", action: "Wait  settlement imminent", color: "bg-muted text-foreground" },
                                         { status: "SUCCESSFUL", meaning: "Settled at recipient's bank", action: "Update records, notify user", color: "bg-green-50 text-green-700 dark:bg-green-950/30 dark:text-green-400" },
                                         { status: "FAILED", meaning: "Could not be completed", action: "Check reason, retry if appropriate", color: "bg-red-50 text-red-700 dark:bg-red-950/30 dark:text-red-400" },
                                     ].map(({ status, meaning, action, color }) => (

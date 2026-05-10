@@ -135,7 +135,7 @@ const PageFallback = (): React.ReactElement => (
     </div>
 );
 
-// ─── Router — created once at module level (not inside a component) ───────────
+// ─── Router  created once at module level (not inside a component) ───────────
 
 const router = createBrowserRouter([
     {

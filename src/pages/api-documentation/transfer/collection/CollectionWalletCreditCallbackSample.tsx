@@ -76,7 +76,7 @@ String signature = hmac.hmacHex(callback_data);`;
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Wallet Credit Callbacks Work</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    When a customer makes a bank transfer into any of your Passpoint virtual accounts, Passpoint instantly detects the incoming credit and dispatches a POST webhook notification to your configured callback URL. This is how your application learns about new incoming payments in real time — no polling required.
+                    When a customer makes a bank transfer into any of your Passpoint virtual accounts, Passpoint instantly detects the incoming credit and dispatches a POST webhook notification to your configured callback URL. This is how your application learns about new incoming payments in real time  no polling required.
                 </p>
 
                 <div className="space-y-4">
@@ -87,7 +87,7 @@ String signature = hmac.hmacHex(callback_data);`;
                             <h3 className="text-sm font-semibold text-foreground">What triggers this callback</h3>
                         </div>
                         <p className="text-xs text-muted-foreground mb-2">
-                            This callback fires for the <code className="font-mono bg-muted px-1.5 py-0.5 rounded">VIRTUAL_ACCOUNT_CREDIT</code> event type — meaning funds have been successfully received into a virtual account assigned to your merchant. The <code className="font-mono bg-muted px-1.5 py-0.5 rounded">destAccountNumber</code> field identifies which virtual account was credited.
+                            This callback fires for the <code className="font-mono bg-muted px-1.5 py-0.5 rounded">VIRTUAL_ACCOUNT_CREDIT</code> event type  meaning funds have been successfully received into a virtual account assigned to your merchant. The <code className="font-mono bg-muted px-1.5 py-0.5 rounded">destAccountNumber</code> field identifies which virtual account was credited.
                         </p>
                         <ul className="space-y-2">
                             {[
@@ -119,13 +119,13 @@ String signature = hmac.hmacHex(callback_data);`;
                                 </thead>
                                 <tbody className="divide-y divide-border">
                                     {[
-                                        { field: "transactionId", desc: "Unique transaction ID — use as your idempotency key to prevent duplicate credit processing." },
+                                        { field: "transactionId", desc: "Unique transaction ID  use as your idempotency key to prevent duplicate credit processing." },
                                         { field: "destAccountNumber", desc: "The virtual account number that was credited. Map this to a customer in your system." },
                                         { field: "transactionAmount", desc: "The amount received in the specified currency." },
                                         { field: "charges", desc: "Any Passpoint fees deducted from the received amount." },
-                                        { field: "srcAccountName / srcBank", desc: "Name and bank of the sender — useful for reconciliation and customer-facing receipts." },
-                                        { field: "eventType", desc: "VIRTUAL_ACCOUNT_CREDIT — always check this before processing to ensure you are handling the correct event." },
-                                        { field: "merchantId", desc: "Your Passpoint merchant ID — verify this matches your expected merchant to prevent processing callbacks meant for another integration." },
+                                        { field: "srcAccountName / srcBank", desc: "Name and bank of the sender  useful for reconciliation and customer-facing receipts." },
+                                        { field: "eventType", desc: "VIRTUAL_ACCOUNT_CREDIT  always check this before processing to ensure you are handling the correct event." },
+                                        { field: "merchantId", desc: "Your Passpoint merchant ID  verify this matches your expected merchant to prevent processing callbacks meant for another integration." },
                                     ].map(({ field, desc }) => (
                                         <tr key={field} className="hover:bg-muted/20 transition-colors">
                                             <td className="px-5 py-3.5"><span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">{field}</span></td>
@@ -152,7 +152,7 @@ String signature = hmac.hmacHex(callback_data);`;
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">Never process a callback without verifying the signature.</strong> The <code className="font-mono bg-muted px-1 py-0.5 rounded">signature</code> header is HMAC-SHA512 of the raw request body using your callback secret as the key. Any request that fails signature verification should be rejected immediately — it may be a spoofed or tampered payload.
+                            <strong className="text-foreground">Never process a callback without verifying the signature.</strong> The <code className="font-mono bg-muted px-1 py-0.5 rounded">signature</code> header is HMAC-SHA512 of the raw request body using your callback secret as the key. Any request that fails signature verification should be rejected immediately  it may be a spoofed or tampered payload.
                         </p>
                     </div>
                 </div>

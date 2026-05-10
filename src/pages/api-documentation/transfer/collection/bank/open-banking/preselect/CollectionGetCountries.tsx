@@ -107,8 +107,8 @@ const CollectionGetCountries = () => {
                                 </thead>
                                 <tbody className="divide-y divide-border">
                                     {[
-                                        { field: "data[].name", desc: "Country display name — use for your country selector UI." },
-                                        { field: "data[].code", desc: "ISO 2-letter country code — pass as countryCode in the Get Banks endpoint." },
+                                        { field: "data[].name", desc: "Country display name  use for your country selector UI." },
+                                        { field: "data[].code", desc: "ISO 2-letter country code  pass as countryCode in the Get Banks endpoint." },
                                         { field: "data[].currencyCode", desc: "The currency used for collections in this country. Pass as transactionCurrency when creating payment requests." },
                                     ].map(({ field, desc }) => (
                                         <tr key={field} className="hover:bg-muted/20 transition-colors">

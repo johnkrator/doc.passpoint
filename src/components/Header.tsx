@@ -78,9 +78,9 @@ const Header = ({ onMenuClick }: HeaderProps) => {
     <>
       <header className="bg-white/90 dark:bg-background/90 backdrop-blur-md border-b border-border sticky top-0 z-50">
         <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
-          {/* Left — hamburger + logo */}
+          {/* Left  hamburger + logo */}
           <div className="flex items-center gap-2 min-w-0 shrink-0">
-            {/* Hamburger — always visible on mobile; hidden on lg+ for homepage */}
+            {/* Hamburger  always visible on mobile; hidden on lg+ for homepage */}
             <Button
               variant="ghost"
               size="sm"
@@ -117,12 +117,12 @@ const Header = ({ onMenuClick }: HeaderProps) => {
             </Link>
           </div>
 
-          {/* Center — search (desktop only) */}
+          {/* Center  search (desktop only) */}
           <div className="hidden lg:flex flex-1 max-w-sm xl:max-w-md mx-4 xl:mx-8">
             <SearchInput />
           </div>
 
-          {/* Right — nav + theme + Ask AI */}
+          {/* Right  nav + theme + Ask AI */}
           <nav className="flex items-center gap-1 sm:gap-1.5 lg:gap-2">
             <a
               href="https://mypasspoint.com/"
@@ -166,7 +166,7 @@ const Header = ({ onMenuClick }: HeaderProps) => {
               </button>
             )}
 
-            {/* Homepage CTA — desktop only */}
+            {/* Homepage CTA  desktop only */}
             {isHomePage && (
               <a
                 href="https://go.mypasspoint.com/auth/login"
@@ -181,14 +181,14 @@ const Header = ({ onMenuClick }: HeaderProps) => {
           </nav>
         </div>
 
-        {/* Search — mobile & tablet (hidden when mobile nav is open) */}
+        {/* Search  mobile & tablet (hidden when mobile nav is open) */}
         {!mobileNavOpen && (
           <div className="lg:hidden px-4 sm:px-6 pb-2.5">
             <SearchInput />
           </div>
         )}
 
-        {/* Mobile nav drawer — homepage only */}
+        {/* Mobile nav drawer  homepage only */}
         {isHomePage && mobileNavOpen && (
           <nav
             className="lg:hidden border-t border-border bg-background overflow-y-auto"

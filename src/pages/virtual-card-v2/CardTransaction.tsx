@@ -73,7 +73,7 @@ const CardTransaction = () => {
                                     { field: "transactionId", meaning: "Passpoint's unique identifier for this card transaction." },
                                     { field: "cardAcceptorName", meaning: "The merchant name where the transaction occurred. Use this to identify the purchase in dispute resolution." },
                                     { field: "cardAcceptorCity / Country", meaning: "The location of the merchant. Useful for detecting cross-border transactions or suspicious activity." },
-                                    { field: "authorizationStatus", meaning: "APPROVED means the transaction was authorized. DECLINED means it was blocked — check authorizationMessage for the reason." },
+                                    { field: "authorizationStatus", meaning: "APPROVED means the transaction was authorized. DECLINED means it was blocked  check authorizationMessage for the reason." },
                                     { field: "authorizationCode", meaning: "The approval code returned by the card network. Useful for bank-level reconciliation and dispute evidence." },
                                     { field: "transMode", meaning: "DEBIT means funds were spent from the card balance. CREDIT means funds were returned (refund or reversal)." },
                                     { field: "clientOrderId", meaning: "Your system's order reference tied to this transaction (from funding or withdrawal operations)." },

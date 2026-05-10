@@ -26,7 +26,7 @@ function getPersistedReaction(pageId: string): Reaction | null {
         const raw = localStorage.getItem(storageKey(pageId));
         if (raw === "helpful" || raw === "not_helpful") return raw;
     } catch {
-        // localStorage unavailable (private mode, etc.) — degrade gracefully
+        // localStorage unavailable (private mode, etc.)  degrade gracefully
     }
     return null;
 }
@@ -60,7 +60,7 @@ const LikeFeature: React.FC<LikeFeatureProps> = ({ pageId, className = "" }) => 
         } catch {
             // Revert optimistic update
             setSubmittedReaction(null);
-            toast.error("Couldn't save your feedback — please try again.");
+            toast.error("Couldn't save your feedback  please try again.");
         }
     };
 

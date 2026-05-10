@@ -106,7 +106,7 @@ const CollectionListVirtualAccountsNgnPaginated = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    List Virtual Accounts — NGN Paginated
+                    List Virtual Accounts  NGN Paginated
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Retrieve a paginated list of NGN virtual accounts created within a specified date range.
@@ -123,7 +123,7 @@ const CollectionListVirtualAccountsNgnPaginated = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Virtual Account Listing Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    Retrieves a paginated list of all NGN virtual accounts — both static and dynamic — generated under your merchant account within a specified date range. Use this for admin dashboards, reconciliation reports, and auditing account status.
+                    Retrieves a paginated list of all NGN virtual accounts  both static and dynamic  generated under your merchant account within a specified date range. Use this for admin dashboards, reconciliation reports, and auditing account status.
                 </p>
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-5">
@@ -142,7 +142,7 @@ const CollectionListVirtualAccountsNgnPaginated = () => {
                                 <tbody className="divide-y divide-border">
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-5 py-3.5 font-mono text-xs text-foreground">dynamic</td>
-                                        <td className="px-5 py-3.5 text-xs text-muted-foreground"><code className="bg-muted px-1 py-0.5 rounded">true</code> — this is a one-time dynamic account. <code className="bg-muted px-1 py-0.5 rounded">false</code> — this is a permanent static account.</td>
+                                        <td className="px-5 py-3.5 text-xs text-muted-foreground"><code className="bg-muted px-1 py-0.5 rounded">true</code>  this is a one-time dynamic account. <code className="bg-muted px-1 py-0.5 rounded">false</code>  this is a permanent static account.</td>
                                     </tr>
                                     <tr className="hover:bg-muted/20 transition-colors">
                                         <td className="px-5 py-3.5 font-mono text-xs text-foreground">processed</td>

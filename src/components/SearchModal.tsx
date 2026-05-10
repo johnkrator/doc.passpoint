@@ -199,7 +199,7 @@ const SearchModal: React.FC = () => {
                     </button>
                 </div>
 
-                {/* Category filter tabs — only shown when there are results */}
+                {/* Category filter tabs  only shown when there are results */}
                 {searchTerm.trim() && searchResults.length > 0 && (
                     <div className="flex items-center gap-1 px-4 py-2 border-b border-border dark:border-white/10 overflow-x-auto scrollbar-hide">
                         {TABS.map(tab => {
@@ -328,7 +328,7 @@ const SearchModal: React.FC = () => {
                             })}
                             {filteredResults.length > 10 && (
                                 <li className="px-5 py-2 text-xs text-muted-foreground border-t border-border dark:border-white/10">
-                                    Showing 10 of {filteredResults.length} results — refine your search to narrow results
+                                    Showing 10 of {filteredResults.length} results  refine your search to narrow results
                                 </li>
                             )}
                         </ul>

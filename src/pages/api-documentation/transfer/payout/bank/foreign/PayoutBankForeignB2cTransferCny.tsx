@@ -104,7 +104,7 @@ const PayoutBankForeignB2cTransferCny = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    B2C Transfer — CNY
+                    B2C Transfer  CNY
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Process business-to-consumer transfers in Chinese Yuan (CNY) to bank accounts.
@@ -145,11 +145,11 @@ const PayoutBankForeignB2cTransferCny = () => {
                             },
                             {
                                 title: "Chinese native name fields are required",
-                                body: "You must provide receiverNativeFirstname and receiverNativeLastname in Chinese characters — these must match exactly as they appear on the recipient's national ID and bank account. Mismatches will cause the transfer to be rejected by the recipient bank.",
+                                body: "You must provide receiverNativeFirstname and receiverNativeLastname in Chinese characters  these must match exactly as they appear on the recipient's national ID and bank account. Mismatches will cause the transfer to be rejected by the recipient bank.",
                             },
                             {
                                 title: "Full ID verification is mandatory",
-                                body: "Chinese cross-border regulations require individual beneficiary identity verification. Provide receiverIdType (use \"01\" for Chinese national ID), receiverIdNumber (18-digit national ID number), and receiverIdIssueCountry (CHN). This is not optional — omitting these fields will cause the request to fail.",
+                                body: "Chinese cross-border regulations require individual beneficiary identity verification. Provide receiverIdType (use \"01\" for Chinese national ID), receiverIdNumber (18-digit national ID number), and receiverIdIssueCountry (CHN). This is not optional  omitting these fields will cause the request to fail.",
                             },
                             {
                                 title: "uploadRef may be required for certain amounts",
@@ -182,8 +182,8 @@ const PayoutBankForeignB2cTransferCny = () => {
                             </thead>
                             <tbody className="divide-y divide-border">
                                 {[
-                                    { field: 'status: "NEW"',  meaning: "Transfer queued successfully. This is not final — monitor via webhook callback for the settled state." },
-                                    { field: "transactionId",  meaning: "Passpoint's unique identifier for this transaction. Store this value — it is required for status lookups and reconciliation." },
+                                    { field: 'status: "NEW"',  meaning: "Transfer queued successfully. This is not final  monitor via webhook callback for the settled state." },
+                                    { field: "transactionId",  meaning: "Passpoint's unique identifier for this transaction. Store this value  it is required for status lookups and reconciliation." },
                                     { field: "amount",         meaning: "The submitted transfer amount as confirmed by Passpoint at the time of queuing." },
                                     { field: "charges",        meaning: "The processing fee deducted from your wallet for this B2C CNY transaction. Check the Rate endpoint for current fee schedules." },
                                 ].map(({ field, meaning }) => (

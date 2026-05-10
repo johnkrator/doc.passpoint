@@ -99,7 +99,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   </button>
 );
 
-// ─── 404 — editorial layout ──────────────────────────────────────────────────
+// ─── 404  editorial layout ──────────────────────────────────────────────────
 
 const POPULAR_LINKS: ReadonlyArray<{ label: string; href: string }> = [
   { label: "Introduction", href: "/introduction" },
@@ -220,7 +220,7 @@ const ErrorShell: React.FC<ErrorShellProps> = ({
           {description}
         </p>
 
-        {/* Error details — hairline editorial card */}
+        {/* Error details  hairline editorial card */}
         <div className="border-y border-border py-6 mb-10">
           <div className="flex items-start gap-3">
             <AlertCircle
@@ -308,7 +308,7 @@ const resolveRouteError = (error: unknown): ResolvedErrorInfo => {
           code: "500",
           title: "Server error",
           description:
-            "Our servers are experiencing issues. Please try again in a few moments — the team has been notified.",
+            "Our servers are experiencing issues. Please try again in a few moments  the team has been notified.",
           Icon: ServerCrash,
         };
       default:
@@ -406,7 +406,7 @@ class ErrorBoundary extends React.Component<
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     this.setState({ error, errorInfo });
 
-    // Log error to console for diagnostic purposes — never log PII.
+    // Log error to console for diagnostic purposes  never log PII.
     // In production, this is the integration point for an error reporting service.
     console.error("Error caught by ErrorBoundary:", error, errorInfo);
   }
@@ -428,7 +428,7 @@ class ErrorBoundary extends React.Component<
         code: "Application",
         title: "Application error",
         description:
-          "We encountered an unexpected error while rendering this page. The team has been notified — try refreshing or returning home.",
+          "We encountered an unexpected error while rendering this page. The team has been notified  try refreshing or returning home.",
         Icon: Bug,
       };
       const errorMessage =

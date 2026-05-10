@@ -74,7 +74,7 @@ const PayoutConvertFunds = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Currency Conversion Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint converts a specified amount from one currency to another within your Passpoint merchant wallet. The conversion executes at the live market rate at the moment of the API call and settles instantly — debiting the source currency balance and crediting the destination currency balance. No funds leave Passpoint during this operation.
+                    This endpoint converts a specified amount from one currency to another within your Passpoint merchant wallet. The conversion executes at the live market rate at the moment of the API call and settles instantly  debiting the source currency balance and crediting the destination currency balance. No funds leave Passpoint during this operation.
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -130,7 +130,7 @@ const PayoutConvertFunds = () => {
                                 </thead>
                                 <tbody className="divide-y divide-border">
                                     {[
-                                        { field: "data.exchangeRate", desc: "The exact rate applied to this conversion. Use this for reconciliation — it is the authoritative rate, not the preview." },
+                                        { field: "data.exchangeRate", desc: "The exact rate applied to this conversion. Use this for reconciliation  it is the authoritative rate, not the preview." },
                                         { field: "data.srcAmount", desc: "The amount debited from your source currency balance, before fees." },
                                         { field: "data.destAmount", desc: "The amount credited to your destination currency balance after conversion." },
                                         { field: "data.fee", desc: "The conversion fee charged in the source currency." },

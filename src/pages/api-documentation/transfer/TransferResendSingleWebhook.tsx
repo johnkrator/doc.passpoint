@@ -98,13 +98,13 @@ const TransferResendSingleWebhook = () => {
                     <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-3">
                         <div className="flex items-center gap-2 mb-1">
                             <ShieldCheck className="h-4 w-4 text-brand shrink-0" />
-                            <h3 className="text-sm font-semibold text-foreground">Idempotency — what resend does and does not do</h3>
+                            <h3 className="text-sm font-semibold text-foreground">Idempotency  what resend does and does not do</h3>
                         </div>
                         <p className="text-xs text-muted-foreground">
                             Resending the webhook does <strong className="text-foreground">not</strong> reprocess the transaction. Funds are not moved again, and the transaction state is not changed. The endpoint only re-delivers the notification payload for the transaction's <em>current</em> status. Your webhook handler will receive the same payload it would have received originally.
                         </p>
                         <p className="text-xs text-muted-foreground">
-                            This also means your webhook handler must be <strong className="text-foreground">idempotent</strong> — it must be able to safely receive and process the same notification more than once without creating duplicate records or side effects. Use the <code className="font-mono bg-muted px-1.5 py-0.5 rounded">transactionId</code> or <code className="font-mono bg-muted px-1.5 py-0.5 rounded">notificationId</code> as an idempotency key.
+                            This also means your webhook handler must be <strong className="text-foreground">idempotent</strong>  it must be able to safely receive and process the same notification more than once without creating duplicate records or side effects. Use the <code className="font-mono bg-muted px-1.5 py-0.5 rounded">transactionId</code> or <code className="font-mono bg-muted px-1.5 py-0.5 rounded">notificationId</code> as an idempotency key.
                         </p>
                     </div>
 

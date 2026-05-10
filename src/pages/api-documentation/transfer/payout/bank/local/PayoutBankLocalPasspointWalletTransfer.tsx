@@ -5,7 +5,7 @@ const WALLET_TRANSFER_RESPONSE_FIELDS: { field: string; description: string }[] 
     {
         field: 'status: "NEW"',
         description:
-            "Queued for processing. Even for wallet-to-wallet transfers, the async pattern applies — confirm the final outcome via webhook or the Transfer Status endpoint.",
+            "Queued for processing. Even for wallet-to-wallet transfers, the async pattern applies  confirm the final outcome via webhook or the Transfer Status endpoint.",
     },
     {
         field: "transactionId",
@@ -87,7 +87,7 @@ const PayoutBankLocalPasspointWalletTransfer = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Passpoint Wallet Transfer Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint moves funds from your merchant wallet directly into another Passpoint user's wallet. Unlike bank transfers, wallet-to-wallet transfers on Passpoint settle <strong className="text-foreground">near-instantly</strong> — but the async response pattern still applies. Always confirm via webhook before treating the transfer as complete.
+                    This endpoint moves funds from your merchant wallet directly into another Passpoint user's wallet. Unlike bank transfers, wallet-to-wallet transfers on Passpoint settle <strong className="text-foreground">near-instantly</strong>  but the async response pattern still applies. Always confirm via webhook before treating the transfer as complete.
                 </p>
 
                 <div className="space-y-4">
@@ -101,12 +101,12 @@ const PayoutBankLocalPasspointWalletTransfer = () => {
                             {
                                 icon: <Send className="h-4 w-4 text-brand" />,
                                 title: "accountId = email address",
-                                desc: "The accountId field must be the recipient's registered Passpoint email address — the same walletId used in the preceding Passpoint Enquiry call. Never use an account number here.",
+                                desc: "The accountId field must be the recipient's registered Passpoint email address  the same walletId used in the preceding Passpoint Enquiry call. Never use an account number here.",
                             },
                             {
                                 icon: <Info className="h-4 w-4 text-brand" />,
                                 title: "Enquiry is mandatory first",
-                                desc: "Always call Passpoint Enquiry before this endpoint. Confirm the returned accountName with your user before initiating — this is the key safeguard against misdirected transfers.",
+                                desc: "Always call Passpoint Enquiry before this endpoint. Confirm the returned accountName with your user before initiating  this is the key safeguard against misdirected transfers.",
                             },
                         ].map(({ icon, title, desc }) => (
                             <div key={title} className="bg-white dark:bg-card border border-border rounded-2xl p-5 space-y-2">
@@ -138,7 +138,7 @@ const PayoutBankLocalPasspointWalletTransfer = () => {
                                     {[
                                         { value: "1", channel: "MOBILE_ANDROID", use: "Initiated from an Android mobile app" },
                                         { value: "2", channel: "MOBILE_IOS", use: "Initiated from an iOS mobile app" },
-                                        { value: "3", channel: "WEB / API", use: "Initiated from a web app or backend API — use this for server-to-server integrations" },
+                                        { value: "3", channel: "WEB / API", use: "Initiated from a web app or backend API  use this for server-to-server integrations" },
                                         { value: "4", channel: "THIRDPARTY", use: "Initiated via a third-party platform integration" },
                                         { value: "5", channel: "USSD", use: "Initiated via USSD session" },
                                     ].map(({ value, channel, use }) => (
@@ -158,7 +158,7 @@ const PayoutBankLocalPasspointWalletTransfer = () => {
                         <div>
                             <p className="text-xs font-semibold text-foreground mb-1">Idempotency & webhook confirmation</p>
                             <p className="text-xs text-muted-foreground">
-                                Use a unique <code className="font-mono bg-muted px-1 py-0.5 rounded">clientReference</code> for every transfer — duplicate references are rejected to prevent double-transfers. Even though wallet transfers are near-instant, <code className="font-mono bg-muted px-1 py-0.5 rounded">status: "NEW"</code> in the response is not a final confirmation. Always verify the outcome via webhook callback.
+                                Use a unique <code className="font-mono bg-muted px-1 py-0.5 rounded">clientReference</code> for every transfer  duplicate references are rejected to prevent double-transfers. Even though wallet transfers are near-instant, <code className="font-mono bg-muted px-1 py-0.5 rounded">status: "NEW"</code> in the response is not a final confirmation. Always verify the outcome via webhook callback.
                             </p>
                         </div>
                     </div>

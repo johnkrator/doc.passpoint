@@ -271,7 +271,7 @@ const CollectionGenerateUsdVirtualAccountBusiness = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Generate USD Virtual Account — Business
+                    Generate USD Virtual Account  Business
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     This endpoint generates a USD virtual account for a business. Generated accounts become active after 24 hours.
@@ -287,7 +287,7 @@ const CollectionGenerateUsdVirtualAccountBusiness = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How USD Business Virtual Accounts Work</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    A USD business virtual account is a US bank account number provisioned specifically for a registered business entity. It supports multiple payment rails — ACH, RTP, and Wire — each with their own account and routing numbers for maximum compatibility with the US banking ecosystem.
+                    A USD business virtual account is a US bank account number provisioned specifically for a registered business entity. It supports multiple payment rails  ACH, RTP, and Wire  each with their own account and routing numbers for maximum compatibility with the US banking ecosystem.
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -347,7 +347,7 @@ const CollectionGenerateUsdVirtualAccountBusiness = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">All fields in otherInfo are mandatory for business accounts.</strong> Missing KYC data — including taxId, beneficialOwner, and uploadRef — will result in account creation failure. Ensure all documentation is uploaded and verified before calling this endpoint.
+                            <strong className="text-foreground">All fields in otherInfo are mandatory for business accounts.</strong> Missing KYC data  including taxId, beneficialOwner, and uploadRef  will result in account creation failure. Ensure all documentation is uploaded and verified before calling this endpoint.
                         </p>
                     </div>
                 </div>

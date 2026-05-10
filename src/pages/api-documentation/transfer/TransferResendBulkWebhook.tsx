@@ -53,7 +53,7 @@ const TransferResendBulkWebhook = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Bulk Webhook Resend Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint queues a bulk resend of webhook notifications for all transactions within a specified date range. It is the recovery tool of choice after a webhook outage — when your callback endpoint was down for a period and missed multiple notifications simultaneously.
+                    This endpoint queues a bulk resend of webhook notifications for all transactions within a specified date range. It is the recovery tool of choice after a webhook outage  when your callback endpoint was down for a period and missed multiple notifications simultaneously.
                 </p>
 
                 <div className="space-y-4">
@@ -61,7 +61,7 @@ const TransferResendBulkWebhook = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            The response <code className="font-mono bg-muted px-1 py-0.5 rounded">"transactions have been queued"</code> means the resend jobs are enqueued — they will be dispatched asynchronously, not immediately. Delivery to your webhook endpoint will happen in the background after the API call returns.
+                            The response <code className="font-mono bg-muted px-1 py-0.5 rounded">"transactions have been queued"</code> means the resend jobs are enqueued  they will be dispatched asynchronously, not immediately. Delivery to your webhook endpoint will happen in the background after the API call returns.
                         </p>
                     </div>
 
@@ -74,7 +74,7 @@ const TransferResendBulkWebhook = () => {
                         <ul className="space-y-2">
                             {[
                                 "After server downtime or a sustained webhook endpoint unavailability window",
-                                "After fixing a bug in your webhook handler that caused silent processing failures — reprocess the affected window",
+                                "After fixing a bug in your webhook handler that caused silent processing failures  reprocess the affected window",
                                 "For reconciliation during end-of-day or end-of-month batch processes to ensure all statuses are synced",
                                 "When a deployment caused your handler to return non-2xx responses, causing Passpoint to mark deliveries as failed",
                             ].map((item) => (
@@ -136,7 +136,7 @@ const TransferResendBulkWebhook = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <AlertTriangle className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">Volume warning:</strong> Large date ranges can trigger a high volume of simultaneous webhook deliveries. Narrow the <code className="font-mono bg-muted px-1 py-0.5 rounded">startDate</code> to <code className="font-mono bg-muted px-1 py-0.5 rounded">endDate</code> window as precisely as possible — ideally to the actual outage window — to avoid overwhelming your endpoint with unnecessary retries.
+                            <strong className="text-foreground">Volume warning:</strong> Large date ranges can trigger a high volume of simultaneous webhook deliveries. Narrow the <code className="font-mono bg-muted px-1 py-0.5 rounded">startDate</code> to <code className="font-mono bg-muted px-1 py-0.5 rounded">endDate</code> window as precisely as possible  ideally to the actual outage window  to avoid overwhelming your endpoint with unnecessary retries.
                         </p>
                     </div>
                 </div>

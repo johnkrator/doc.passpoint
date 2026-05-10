@@ -140,7 +140,7 @@ const GetMomoCollectionCurrency = () => {
                                     <CheckCircle2 className="h-4 w-4 text-brand shrink-0" />
                                     <div>
                                         <span className="font-mono text-xs font-semibold text-foreground">{code}</span>
-                                        <span className="text-xs text-muted-foreground ml-2">— {label} ({country})</span>
+                                        <span className="text-xs text-muted-foreground ml-2"> {label} ({country})</span>
                                     </div>
                                 </div>
                             ))}
@@ -195,7 +195,7 @@ const GetMomoCollectionCurrency = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">Integration tip:</strong> Call this endpoint at initialization or when building your payment method selector. The result changes infrequently — cache it for a reasonable period (e.g., 1 hour) to avoid unnecessary API calls. Only present currencies where both <code className="bg-muted px-1 py-0.5 rounded">momoCollectionEnabled</code> and <code className="bg-muted px-1 py-0.5 rounded">active</code> are <code className="bg-muted px-1 py-0.5 rounded">true</code>.
+                            <strong className="text-foreground">Integration tip:</strong> Call this endpoint at initialization or when building your payment method selector. The result changes infrequently  cache it for a reasonable period (e.g., 1 hour) to avoid unnecessary API calls. Only present currencies where both <code className="bg-muted px-1 py-0.5 rounded">momoCollectionEnabled</code> and <code className="bg-muted px-1 py-0.5 rounded">active</code> are <code className="bg-muted px-1 py-0.5 rounded">true</code>.
                         </p>
                     </div>
                 </div>

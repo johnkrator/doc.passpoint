@@ -93,7 +93,7 @@ const Authentication = () => {
           {/* Layer 1 */}
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-3">
-              Layer 1 — Obtain a Bearer token
+              Layer 1  Obtain a Bearer token
             </h3>
             <p className="text-xs text-muted-foreground leading-relaxed mb-3">
               Call <code className="font-mono bg-muted px-1.5 py-0.5 rounded">POST /{"{{userAppContext}}"}/merchant-app/get-auth-token</code> with
@@ -103,11 +103,11 @@ const Authentication = () => {
             <div className="grid sm:grid-cols-2 gap-3">
               <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4">
                 <p className="text-xs font-semibold text-foreground mb-1">Development token expiry</p>
-                <p className="text-xs text-muted-foreground">10 minutes — short lifespan for sandbox testing.</p>
+                <p className="text-xs text-muted-foreground">10 minutes  short lifespan for sandbox testing.</p>
               </div>
               <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4">
                 <p className="text-xs font-semibold text-foreground mb-1">Production token expiry</p>
-                <p className="text-xs text-muted-foreground">1 hour — implement proactive refresh to avoid interruptions.</p>
+                <p className="text-xs text-muted-foreground">1 hour  implement proactive refresh to avoid interruptions.</p>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ const Authentication = () => {
           {/* Layer 2 */}
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-3">
-              Layer 2 — Use the token with channel headers
+              Layer 2  Use the token with channel headers
             </h3>
             <p className="text-xs text-muted-foreground leading-relaxed mb-3">
               Every subsequent payment API call must include the <code className="font-mono bg-muted px-1.5 py-0.5 rounded">Authorization: Bearer {"{"} accessToken {"}"}</code> header
@@ -167,7 +167,7 @@ const Authentication = () => {
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Your <code className="font-mono bg-muted px-1 py-0.5 rounded">apiKey</code> and the resulting
                 Bearer token must only ever exist on your server. Always call the authentication endpoint from
-                your backend — tokens should never reach the browser.
+                your backend  tokens should never reach the browser.
               </p>
             </div>
           </div>
@@ -176,7 +176,7 @@ const Authentication = () => {
             {[
               {
                 title: "Environment variables",
-                body: "Store merchantId and apiKey in environment variables — never commit them to source code or version control.",
+                body: "Store merchantId and apiKey in environment variables  never commit them to source code or version control.",
               },
               {
                 title: "Server-side token management",
@@ -339,7 +339,7 @@ const Authentication = () => {
                     Returns all whitelisted IP addresses for the merchant
                   </td>
                   <td className="px-5 py-3.5 text-xs text-muted-foreground">
-                    Yes — Bearer Token
+                    Yes  Bearer Token
                   </td>
                 </tr>
               </tbody>

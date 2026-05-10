@@ -73,7 +73,7 @@ const IssueCardClientBilling = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Issue Card — Client Billing Details
+                    Issue Card  Client Billing Details
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Create a virtual card using a custom client billing address. Scheme: 1 = Mastercard, 2 = Visa.
@@ -96,7 +96,7 @@ const IssueCardClientBilling = () => {
                     <div className="grid sm:grid-cols-2 gap-4">
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Address Verification (AVS)</p>
-                            <p className="text-xs text-muted-foreground">Many online merchants run AVS checks — they verify that the billing address provided at checkout matches the address on file for the card. Using a real customer address through this mode significantly reduces AVS mismatches and payment declines.</p>
+                            <p className="text-xs text-muted-foreground">Many online merchants run AVS checks  they verify that the billing address provided at checkout matches the address on file for the card. Using a real customer address through this mode significantly reduces AVS mismatches and payment declines.</p>
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Required Billing Fields</p>
@@ -107,7 +107,7 @@ const IssueCardClientBilling = () => {
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Best Fit For</p>
-                            <p className="text-xs text-muted-foreground">Customer-facing cards where the cardholder will use the card to make purchases at online merchants that enforce AVS — such as subscription services, e-commerce platforms, and travel bookings.</p>
+                            <p className="text-xs text-muted-foreground">Customer-facing cards where the cardholder will use the card to make purchases at online merchants that enforce AVS  such as subscription services, e-commerce platforms, and travel bookings.</p>
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Card Scheme Values</p>

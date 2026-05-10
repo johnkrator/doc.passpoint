@@ -33,7 +33,7 @@ const TransferListCountries = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Country Listing Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    This endpoint returns all countries where Passpoint supports transfer operations — both outbound payouts and inbound collections. Use it as a preliminary check before initiating any international transfer to confirm the destination country is supported.
+                    This endpoint returns all countries where Passpoint supports transfer operations  both outbound payouts and inbound collections. Use it as a preliminary check before initiating any international transfer to confirm the destination country is supported.
                 </p>
 
                 <div className="space-y-4">
@@ -79,7 +79,7 @@ const TransferListCountries = () => {
                             <h3 className="text-sm font-semibold text-foreground">Using countryCode in transfer requests</h3>
                         </div>
                         <p className="text-xs text-muted-foreground">
-                            The <code className="font-mono bg-muted px-1.5 py-0.5 rounded">countryCode</code> field returned by this endpoint is in ISO 3-letter format (e.g., <code className="font-mono bg-muted px-1.5 py-0.5 rounded">NGA</code> for Nigeria, <code className="font-mono bg-muted px-1.5 py-0.5 rounded">GHA</code> for Ghana). This value is used directly in transfer initiation payloads to specify the destination or source country — do not use the 2-letter ISO code for this purpose.
+                            The <code className="font-mono bg-muted px-1.5 py-0.5 rounded">countryCode</code> field returned by this endpoint is in ISO 3-letter format (e.g., <code className="font-mono bg-muted px-1.5 py-0.5 rounded">NGA</code> for Nigeria, <code className="font-mono bg-muted px-1.5 py-0.5 rounded">GHA</code> for Ghana). This value is used directly in transfer initiation payloads to specify the destination or source country  do not use the 2-letter ISO code for this purpose.
                         </p>
                     </div>
 
@@ -90,7 +90,7 @@ const TransferListCountries = () => {
                             <h3 className="text-sm font-semibold text-foreground">Caching guidance</h3>
                         </div>
                         <p className="text-xs text-muted-foreground">
-                            The supported countries list is relatively stable and does not change frequently. It is safe to call this endpoint at application startup and cache the result in memory for the duration of a session. However, do not hardcode the list — always fetch it dynamically so your integration automatically reflects any additions or removals without requiring a code change.
+                            The supported countries list is relatively stable and does not change frequently. It is safe to call this endpoint at application startup and cache the result in memory for the duration of a session. However, do not hardcode the list  always fetch it dynamically so your integration automatically reflects any additions or removals without requiring a code change.
                         </p>
                     </div>
 

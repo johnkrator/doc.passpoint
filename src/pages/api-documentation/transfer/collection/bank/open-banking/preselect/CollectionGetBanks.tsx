@@ -51,7 +51,7 @@ const CollectionGetBanks = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Bank Preselection Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    In the standard Open Banking payment flow, the customer selects their bank on the Passpoint-hosted payment page. Bank preselection allows you to <strong className="text-foreground">move the bank selection step into your own UI</strong> — fetching the list of supported banks and letting the customer choose before you create the payment request. This creates a smoother checkout experience within your product.
+                    In the standard Open Banking payment flow, the customer selects their bank on the Passpoint-hosted payment page. Bank preselection allows you to <strong className="text-foreground">move the bank selection step into your own UI</strong>  fetching the list of supported banks and letting the customer choose before you create the payment request. This creates a smoother checkout experience within your product.
                 </p>
 
                 <div className="space-y-4 mb-8">

@@ -10,7 +10,7 @@ const renderHome = () =>
         </MemoryRouter>
     );
 
-describe("Home — FAQ accordion renderer", () => {
+describe("Home  FAQ accordion renderer", () => {
     describe("plain-text paragraphs", () => {
         it("renders a plain answer as <p> elements", () => {
             renderHome();
@@ -41,7 +41,7 @@ describe("Home — FAQ accordion renderer", () => {
     });
 
     describe("bullet-list paragraphs", () => {
-        it("renders bullet items as <ul><li> — not inline <p> text", () => {
+        it("renders bullet items as <ul><li>  not inline <p> text", () => {
             renderHome();
 
             const codesBtn = screen.getByRole("button", {
@@ -50,7 +50,7 @@ describe("Home — FAQ accordion renderer", () => {
             fireEvent.click(codesBtn);
 
             const list = screen
-                .getByText(/00 — success/i)
+                .getByText(/00  success/i)
                 .closest("li");
             expect(list).toBeInTheDocument();
             expect(list?.tagName).toBe("LI");
@@ -115,7 +115,7 @@ describe("Home — FAQ accordion renderer", () => {
             renderHome();
 
             expect(
-                screen.queryByText(/00 — success/i)
+                screen.queryByText(/00  success/i)
             ).not.toBeInTheDocument();
         });
 
@@ -126,10 +126,10 @@ describe("Home — FAQ accordion renderer", () => {
                 name: /what do the passpoint response codes mean\?/i,
             });
             fireEvent.click(codesBtn);
-            expect(screen.getByText(/00 — success/i)).toBeInTheDocument();
+            expect(screen.getByText(/00  success/i)).toBeInTheDocument();
 
             fireEvent.click(codesBtn);
-            expect(screen.queryByText(/00 — success/i)).not.toBeInTheDocument();
+            expect(screen.queryByText(/00  success/i)).not.toBeInTheDocument();
         });
 
         it("opening one item does not open another", () => {

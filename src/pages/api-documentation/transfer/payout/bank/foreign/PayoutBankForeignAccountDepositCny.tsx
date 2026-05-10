@@ -130,7 +130,7 @@ const PayoutBankForeignAccountDepositCny = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Account Deposit — CNY
+                    Account Deposit  CNY
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Deposit funds to bank accounts in Chinese Yuan (CNY).
@@ -179,7 +179,7 @@ const PayoutBankForeignAccountDepositCny = () => {
                             },
                             {
                                 title: "transactionCurrency must be CNY",
-                                body: "Set transactionCurrency to \"CNY\" and countryCode to \"CN\". The baseCurrency reflects your wallet's funding currency — Passpoint handles the cross-currency conversion.",
+                                body: "Set transactionCurrency to \"CNY\" and countryCode to \"CN\". The baseCurrency reflects your wallet's funding currency  Passpoint handles the cross-currency conversion.",
                             },
                         ].map(({ title, body }) => (
                             <div key={title} className="flex items-start gap-3">

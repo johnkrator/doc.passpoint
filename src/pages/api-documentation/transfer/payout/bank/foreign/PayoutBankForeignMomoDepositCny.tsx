@@ -114,7 +114,7 @@ const PayoutBankForeignMomoDepositCny = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    MoMo Deposit — CNY
+                    MoMo Deposit  CNY
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Deposit funds via mobile money (MoMo) in Chinese Yuan (CNY).
@@ -130,7 +130,7 @@ const PayoutBankForeignMomoDepositCny = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How CNY MoMo Deposit Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    The CNY MoMo deposit endpoint sends Chinese Yuan directly into a recipient's Chinese mobile wallet — WeChat Pay or Alipay. These platforms have hundreds of millions of active users in China and are the dominant payment method for Chinese individuals.
+                    The CNY MoMo deposit endpoint sends Chinese Yuan directly into a recipient's Chinese mobile wallet  WeChat Pay or Alipay. These platforms have hundreds of millions of active users in China and are the dominant payment method for Chinese individuals.
                 </p>
 
                 <div className="grid gap-4 sm:grid-cols-3 mb-6">
@@ -155,7 +155,7 @@ const PayoutBankForeignMomoDepositCny = () => {
                             },
                             {
                                 title: "Preferred for: gig workers, freelancers, small business suppliers",
-                                body: "MoMo is the ideal payment method for Chinese individuals who prefer mobile wallets over bank accounts — common among gig economy workers, freelancers, influencers (KOL), and small business owners operating informally.",
+                                body: "MoMo is the ideal payment method for Chinese individuals who prefer mobile wallets over bank accounts  common among gig economy workers, freelancers, influencers (KOL), and small business owners operating informally.",
                             },
                             {
                                 title: "Recipient ID verification is required",
@@ -163,7 +163,7 @@ const PayoutBankForeignMomoDepositCny = () => {
                             },
                             {
                                 title: "transactionCurrency must be CNY, countryCode must be CN",
-                                body: "Set transactionCurrency to \"CNY\" and countryCode to \"CN\". The baseCurrency reflects your wallet's funding currency — Passpoint performs the FX conversion automatically.",
+                                body: "Set transactionCurrency to \"CNY\" and countryCode to \"CN\". The baseCurrency reflects your wallet's funding currency  Passpoint performs the FX conversion automatically.",
                             },
                         ].map(({ title, body }) => (
                             <div key={title} className="flex items-start gap-3">

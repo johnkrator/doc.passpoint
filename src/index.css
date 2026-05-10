@@ -68,7 +68,7 @@ h6 {
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* ─── Brand palette — primary: #ff003d ───────────────────────────────────── */
+  /* ─── Brand palette  primary: #ff003d ───────────────────────────────────── */
   --color-brand: #ff003d;
   --color-brand-50: #fff0f3;
   --color-brand-100: #ffe0e8;
@@ -192,7 +192,7 @@ h6 {
     @apply bg-background text-foreground;
   }
 
-  /* ─── Logo color filter — converts the logo image to the brand primary color.
+  /* ─── Logo color filter  converts the logo image to the brand primary color.
    * When the primary color changes, update this filter chain accordingly.
    * Formula: brightness(0) renders the image black, the remaining filters
    * shift it to #ff003d. ──────────────────────────────────────────────────── */
@@ -217,13 +217,13 @@ h6 {
 
   /* ─── Unified Documentation Typography ─────────────────────────────────────
    * Scale (matches Flutterwave / Stripe reference quality):
-   *   h1  — page title        : 1.75rem  → 2.25rem  @ md  (bold, tight tracking)
-   *   h2  — section heading   : 1.25rem  → 1.625rem @ md  (semibold)
-   *   h3  — subsection heading: 1.0625rem → 1.25rem @ md  (semibold)
-   *   h4  — label heading     : 0.9375rem  (medium, uppercase tracked)
-   *   p   — body paragraph    : 0.9375rem → 1rem     @ md  (comfortable read)
-   *   li  — list item         : same as p
-   *   td,th — table cells     : 0.875rem
+   *   h1   page title        : 1.75rem  → 2.25rem  @ md  (bold, tight tracking)
+   *   h2   section heading   : 1.25rem  → 1.625rem @ md  (semibold)
+   *   h3   subsection heading: 1.0625rem → 1.25rem @ md  (semibold)
+   *   h4   label heading     : 0.9375rem  (medium, uppercase tracked)
+   *   p    body paragraph    : 0.9375rem → 1rem     @ md  (comfortable read)
+   *   li   list item         : same as p
+   *   td,th  table cells     : 0.875rem
    * ─────────────────────────────────────────────────────────────────────────── */
 
   /* Page title */
@@ -324,7 +324,7 @@ h6 {
     }
   }
 
-  /* Table cells — allow long strings to wrap */
+  /* Table cells  allow long strings to wrap */
   .docs-content td,
   .docs-content th {
     font-size: 0.875rem;
@@ -333,13 +333,13 @@ h6 {
     word-break: break-word;
   }
 
-  /* Inline code / monospace in paragraphs — break long tokens */
+  /* Inline code / monospace in paragraphs  break long tokens */
   .docs-content code {
     overflow-wrap: break-word;
     word-break: break-all;
   }
 
-  /* Lead paragraph — first <p> directly after h1 */
+  /* Lead paragraph  first <p> directly after h1 */
   .docs-content h1 + p {
     font-size: 1rem;
     color: var(--muted-foreground);
@@ -378,7 +378,7 @@ h6 {
     word-break: break-word;
   }
 
-  /* Icon column in endpoint cards — horizontal on mobile, vertical on desktop */
+  /* Icon column in endpoint cards  horizontal on mobile, vertical on desktop */
   .docs-content .lg\:w-48 {
     width: auto;
   }
@@ -388,7 +388,7 @@ h6 {
     }
   }
 
-  /* Icon size — smaller on mobile */
+  /* Icon size  smaller on mobile */
   .docs-content .h-12.w-12 {
     height: 2rem;
     width: 2rem;
@@ -406,7 +406,7 @@ h6 {
     }
   }
 
-  /* ─── Tables — tighter cell padding on mobile ────────────────────────────── */
+  /* ─── Tables  tighter cell padding on mobile ────────────────────────────── */
   .docs-content td,
   .docs-content th {
     padding-top: 0.5rem;
@@ -421,7 +421,7 @@ h6 {
     }
   }
 
-  /* ─── Tables — horizontal scroll on mobile ──────────────────────────────── */
+  /* ─── Tables  horizontal scroll on mobile ──────────────────────────────── */
   /* Give every scrollable table a minimum width so the overflow-x-auto
      wrapper actually activates scroll instead of squashing columns.        */
   .docs-content .overflow-x-auto table,
@@ -429,7 +429,7 @@ h6 {
     min-width: 520px;
   }
 
-  /* All table cells must not wrap — let the table scroll instead */
+  /* All table cells must not wrap  let the table scroll instead */
   .docs-content td,
   .docs-content th {
     white-space: nowrap;
@@ -592,7 +592,7 @@ h6 {
 
   /* ─── Claude-aesthetic landing palette (scoped to .claude-home) ──────────── */
   /* Reset .docs-content overrides so editorial typography wins inside the
-     landing page. The parent layout applies .docs-content to all routes —
+     landing page. The parent layout applies .docs-content to all routes 
      these rules unwind it within .claude-home only.                       */
   .docs-content .claude-home h1,
   .docs-content .claude-home h2,

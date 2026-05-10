@@ -48,15 +48,15 @@ const CardBalance = () => {
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Balance Accuracy</p>
-                            <p className="text-xs text-muted-foreground">The returned balance reflects all pending authorizations and settlements — it represents the true spendable amount available to the cardholder at the moment of the call, not just the funded amount.</p>
+                            <p className="text-xs text-muted-foreground">The returned balance reflects all pending authorizations and settlements  it represents the true spendable amount available to the cardholder at the moment of the call, not just the funded amount.</p>
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">When to Call This</p>
-                            <p className="text-xs text-muted-foreground">Call this endpoint on-demand when a cardholder opens their card dashboard or explicitly requests to view their balance. Do not poll this endpoint continuously — use webhook callbacks to track balance changes in near real time instead.</p>
+                            <p className="text-xs text-muted-foreground">Call this endpoint on-demand when a cardholder opens their card dashboard or explicitly requests to view their balance. Do not poll this endpoint continuously  use webhook callbacks to track balance changes in near real time instead.</p>
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Currency</p>
-                            <p className="text-xs text-muted-foreground">All Passpoint virtual cards are USD-denominated. The balance returned is always in USD. Cross-border transaction charges may affect the balance at settlement — see the Authorization webhook events for details.</p>
+                            <p className="text-xs text-muted-foreground">All Passpoint virtual cards are USD-denominated. The balance returned is always in USD. Cross-border transaction charges may affect the balance at settlement  see the Authorization webhook events for details.</p>
                         </div>
                     </div>
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">

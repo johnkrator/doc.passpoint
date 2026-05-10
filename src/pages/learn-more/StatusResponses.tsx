@@ -86,7 +86,7 @@ const StatusResponses = () => {
                 { code: "401", name: "Unauthorized", desc: "Invalid or missing API key" },
                 { code: "403", name: "Forbidden", desc: "Valid API key but insufficient permissions" },
                 { code: "404", name: "Not Found", desc: "Requested resource does not exist" },
-                { code: "429", name: "Too Many Requests", desc: "Rate limit exceeded — retry after specified time" },
+                { code: "429", name: "Too Many Requests", desc: "Rate limit exceeded  retry after specified time" },
             ],
         },
         {
@@ -263,7 +263,7 @@ const StatusResponses = () => {
                     Status responses
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
-                    All possible API status codes and response patterns — understand what each code means and
+                    All possible API status codes and response patterns  understand what each code means and
                     how to handle it correctly in your integration.
                 </p>
             </section>
@@ -291,7 +291,7 @@ const StatusResponses = () => {
                                             </span>
                                             <div>
                                                 <span className="text-sm font-medium text-foreground">{name}</span>
-                                                <span className="text-sm text-muted-foreground ml-2">— {desc}</span>
+                                                <span className="text-sm text-muted-foreground ml-2"> {desc}</span>
                                             </div>
                                         </div>
                                     ))}

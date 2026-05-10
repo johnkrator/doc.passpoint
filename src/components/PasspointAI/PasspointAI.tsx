@@ -259,7 +259,7 @@ export default function PasspointAI({ isOpen, onClose }: PasspointAIProps) {
         onClick={onClose}
       />
 
-      {/* Panel — bottom sheet on mobile, floating card on md+, full screen when expanded */}
+      {/* Panel  bottom sheet on mobile, floating card on md+, full screen when expanded */}
       <div
         className={`relative flex flex-col w-full overflow-hidden shadow-2xl bg-background border-border ${
           isFullscreen
@@ -268,7 +268,7 @@ export default function PasspointAI({ isOpen, onClose }: PasspointAIProps) {
         }`}
         style={{ animation: "slideUpSheet 0.32s cubic-bezier(0.32,0.72,0,1)" }}
       >
-        {/* Drag handle — mobile only */}
+        {/* Drag handle  mobile only */}
         <div className="flex justify-center pt-2.5 pb-0.5 md:hidden">
           <div className="w-9 h-1 rounded-full bg-muted-foreground/25" />
         </div>
@@ -547,7 +547,7 @@ export default function PasspointAI({ isOpen, onClose }: PasspointAIProps) {
 }
 
 function cleanResponseMarkdown(content: string): string {
-  // Strip inline backtick code spans — replace `value` with just value
+  // Strip inline backtick code spans  replace `value` with just value
   return content.replace(/`([^`\n]+)`/g, "$1");
 }
 

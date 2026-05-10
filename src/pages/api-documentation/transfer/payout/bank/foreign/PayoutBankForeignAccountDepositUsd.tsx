@@ -118,7 +118,7 @@ const PayoutBankForeignAccountDepositUsd = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Account Deposit — USD
+                    Account Deposit  USD
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Deposit funds to bank accounts in US Dollar (USD).
@@ -134,7 +134,7 @@ const PayoutBankForeignAccountDepositUsd = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How USD Account Deposit Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    The USD account deposit endpoint sends USD funds directly into a US bank account. Unlike the specific rail endpoints (ACH, RTP, Wire, FedNow), this endpoint abstracts the payment rail — Passpoint automatically routes via the optimal available rail for the recipient's bank.
+                    The USD account deposit endpoint sends USD funds directly into a US bank account. Unlike the specific rail endpoints (ACH, RTP, Wire, FedNow), this endpoint abstracts the payment rail  Passpoint automatically routes via the optimal available rail for the recipient's bank.
                 </p>
 
                 <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-4 mb-4">

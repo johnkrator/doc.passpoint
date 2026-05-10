@@ -225,7 +225,7 @@ app.post('/webhooks/passpoint', (req, res) => {
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Get up and running with Passpoint APIs in minutes. Step-by-step guides for common integration
-                    scenarios — from authentication to transaction processing.
+                    scenarios  from authentication to transaction processing.
                 </p>
             </section>
 
@@ -270,7 +270,7 @@ app.post('/webhooks/passpoint', (req, res) => {
             <section>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">5-minute integration</h2>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
-                    Authenticate and make your first API call. This example uses JavaScript — the same concepts
+                    Authenticate and make your first API call. This example uses JavaScript  the same concepts
                     apply to any language.
                 </p>
 
@@ -309,7 +309,7 @@ app.post('/webhooks/passpoint', (req, res) => {
             <section>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">Webhook integration</h2>
                 <p className="text-muted-foreground text-sm sm:text-base mb-8 max-w-xl">
-                    Webhooks provide real-time notifications about transaction events — the recommended approach
+                    Webhooks provide real-time notifications about transaction events  the recommended approach
                     over polling for status updates.
                 </p>
 

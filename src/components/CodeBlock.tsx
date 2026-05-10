@@ -51,7 +51,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      toast.error("Failed to copy — please copy the text manually.");
+      toast.error("Failed to copy  please copy the text manually.");
     }
   };
 
@@ -129,7 +129,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
   /**
    * Security: dangerouslySetInnerHTML is used below to render syntax-highlighted output.
    * This is safe because:
-   *   1. Input is code entered by authenticated users or loaded from the CMS — not from untrusted third parties.
+   *   1. Input is code entered by authenticated users or loaded from the CMS  not from untrusted third parties.
    *   2. The highlightSyntax function only produces <span class="..."> wrappers using a fixed allow-list of Tailwind classes.
    *   3. HTML special characters (&, <, >, ", ') are entity-escaped before any regex replacements run.
    * No user-supplied HTML is ever injected; the output shape is fully controlled by this function.

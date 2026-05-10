@@ -102,7 +102,7 @@ const ReactionBadge = ({ reaction }: ReactionBadgeProps): React.ReactElement =>
 
 // ─── Main component ───────────────────────────────────────────────────────────
 
-// Re-export to silence the unused-import lint for AdminRole — used in future role-scoped logic
+// Re-export to silence the unused-import lint for AdminRole  used in future role-scoped logic
 export type { AdminRole };
 
 const FeedbackPage = (): React.ReactElement => {
@@ -247,7 +247,7 @@ const FeedbackPage = (): React.ReactElement => {
                     type="text"
                     value={filters.pageId}
                     onChange={(e) => handleFilterChange("pageId", e.target.value)}
-                    placeholder="Filter by page ID…"
+                    placeholder="Filter by page ID"
                     aria-label="Filter by page ID"
                     className="flex-1 px-3 py-2 text-sm bg-card border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-brand/40 text-foreground placeholder:text-muted-foreground"
                 />
@@ -318,13 +318,13 @@ const FeedbackPage = (): React.ReactElement => {
                                                     {entry.comment}
                                                 </span>
                                             ) : (
-                                                <span className="text-xs text-muted-foreground/40 italic" aria-label="No comment">—</span>
+                                                <span className="text-xs text-muted-foreground/40 italic" aria-label="No comment"></span>
                                             )}
                                         </td>
                                         <td className="px-4 py-3 hidden sm:table-cell text-xs text-muted-foreground whitespace-nowrap">
                                             {entry.createdAt && !isNaN(new Date(entry.createdAt).getTime())
                                                 ? formatDistanceToNow(new Date(entry.createdAt), { addSuffix: true })
-                                                : '—'}
+                                                : ''}
                                         </td>
                                     </tr>
                                 ))}

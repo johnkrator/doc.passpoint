@@ -94,7 +94,7 @@ String signature = hmac.hmacHex(callback_data)`;
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Fund Transfer Callbacks Work</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    Passpoint processes payouts asynchronously. When the final status of a fund transfer is determined — whether successful or failed — Passpoint sends a POST request with the full transaction details to your configured callback URL. This is the primary mechanism for learning the definitive outcome of a transfer.
+                    Passpoint processes payouts asynchronously. When the final status of a fund transfer is determined  whether successful or failed  Passpoint sends a POST request with the full transaction details to your configured callback URL. This is the primary mechanism for learning the definitive outcome of a transfer.
                 </p>
 
                 <div className="space-y-4">
@@ -106,7 +106,7 @@ String signature = hmac.hmacHex(callback_data)`;
                         </div>
                         <ul className="space-y-2">
                             {[
-                                "Passpoint sends one callback per status change — typically one for the final SUCCESSFUL or FAILED state.",
+                                "Passpoint sends one callback per status change  typically one for the final SUCCESSFUL or FAILED state.",
                                 "Your endpoint must return HTTP 200 OK to acknowledge receipt. Any other status code (4xx, 5xx) or a timeout causes Passpoint to mark the delivery as failed.",
                                 "Failed deliveries can be re-triggered manually via the Resend Single Webhook or Resend Bulk Webhook endpoints.",
                                 "Configure your callback URL via your Passpoint merchant dashboard or the Global Callback Setup API.",
@@ -134,7 +134,7 @@ String signature = hmac.hmacHex(callback_data)`;
                                 </thead>
                                 <tbody className="divide-y divide-border">
                                     {[
-                                        { field: "transactionId", desc: "Unique Passpoint transaction ID. Use this as an idempotency key — your handler must safely process duplicates." },
+                                        { field: "transactionId", desc: "Unique Passpoint transaction ID. Use this as an idempotency key  your handler must safely process duplicates." },
                                         { field: "clientReference", desc: "The reference you supplied when initiating the transfer. Use this to match the callback to your internal order or payment record." },
                                         { field: "eventType", desc: "FUNDS_TRANSFER for standard payouts. Check this to route the callback to the correct handler in your system." },
                                         { field: "status", desc: "Terminal status of the transfer: \"successful\" or \"failed\"." },
@@ -156,10 +156,10 @@ String signature = hmac.hmacHex(callback_data)`;
                     <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-3">
                         <div className="flex items-center gap-2 mb-1">
                             <ShieldCheck className="h-4 w-4 text-brand shrink-0" />
-                            <h3 className="text-sm font-semibold text-foreground">Idempotency — handle duplicates safely</h3>
+                            <h3 className="text-sm font-semibold text-foreground">Idempotency  handle duplicates safely</h3>
                         </div>
                         <p className="text-xs text-muted-foreground">
-                            The same callback may be delivered more than once — for example, after a manual webhook resend or a retry following a temporary failure. Your handler must be <strong className="text-foreground">idempotent</strong>: check whether a transaction with the given <code className="font-mono bg-muted px-1 py-0.5 rounded">transactionId</code> has already been processed and skip it if so. Never credit a wallet or fulfill an order twice based on the same transaction ID.
+                            The same callback may be delivered more than once  for example, after a manual webhook resend or a retry following a temporary failure. Your handler must be <strong className="text-foreground">idempotent</strong>: check whether a transaction with the given <code className="font-mono bg-muted px-1 py-0.5 rounded">transactionId</code> has already been processed and skip it if so. Never credit a wallet or fulfill an order twice based on the same transaction ID.
                         </p>
                     </div>
 

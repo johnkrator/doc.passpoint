@@ -8,5 +8,5 @@ export const FEEDBACK_API = {
 export const FEEDBACK_PAGE_SIZE = 20;
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
-/** Tailwind `lg` breakpoint in pixels — used for sidebar open/close logic. */
+/** Tailwind `lg` breakpoint in pixels  used for sidebar open/close logic. */
 export const LG_BREAKPOINT = 1024;

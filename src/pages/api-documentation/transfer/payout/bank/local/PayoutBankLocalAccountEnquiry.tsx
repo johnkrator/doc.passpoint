@@ -63,7 +63,7 @@ const PayoutBankLocalAccountEnquiry = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How Account Enquiry Works</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    Account Enquiry is the <strong className="text-foreground">mandatory verification step</strong> that must precede every NGN bank transfer. It confirms the destination account is real, active, and belongs to the correct bank — and returns the account holder's name for your user to review before committing funds.
+                    Account Enquiry is the <strong className="text-foreground">mandatory verification step</strong> that must precede every NGN bank transfer. It confirms the destination account is real, active, and belongs to the correct bank  and returns the account holder's name for your user to review before committing funds.
                 </p>
 
                 <div className="space-y-4">
@@ -74,17 +74,17 @@ const PayoutBankLocalAccountEnquiry = () => {
                             {
                                 icon: <ShieldCheck className="h-4 w-4 text-brand" />,
                                 title: "Always call first",
-                                desc: "Never call the NGN Transfer endpoint without a successful Account Enquiry. A failed enquiry means the account or bankCode is invalid — proceeding risks a failed or misdirected transfer.",
+                                desc: "Never call the NGN Transfer endpoint without a successful Account Enquiry. A failed enquiry means the account or bankCode is invalid  proceeding risks a failed or misdirected transfer.",
                             },
                             {
                                 icon: <CheckCircle className="h-4 w-4 text-brand" />,
                                 title: "Show accountName to user",
-                                desc: "The returned accountName is the bank's official registered name. Display it prominently and require confirmation — this is the primary fraud prevention step in the transfer flow.",
+                                desc: "The returned accountName is the bank's official registered name. Display it prominently and require confirmation  this is the primary fraud prevention step in the transfer flow.",
                             },
                             {
                                 icon: <Info className="h-4 w-4 text-brand" />,
                                 title: "bankCode must be dynamic",
-                                desc: "Always source the bankCode from the Get Banks endpoint. Never hardcode bank codes — they can change, and hardcoding leads to failed enquiries and broken transfers.",
+                                desc: "Always source the bankCode from the Get Banks endpoint. Never hardcode bank codes  they can change, and hardcoding leads to failed enquiries and broken transfers.",
                             },
                         ].map(({ icon, title, desc }) => (
                             <div key={title} className="bg-white dark:bg-card border border-border rounded-2xl p-5 space-y-2">

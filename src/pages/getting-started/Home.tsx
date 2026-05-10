@@ -146,7 +146,7 @@ const STEPS: StepItem[] = [
   {
     num: "03",
     title: "Test in sandbox",
-    body: "Replay deterministic fixtures for every payment state — success, retry, decline, refund.",
+    body: "Replay deterministic fixtures for every payment state  success, retry, decline, refund.",
   },
   {
     num: "04",
@@ -264,26 +264,26 @@ const FAQ_ITEMS: FaqItem[] = [
     question:
       "What are x-channel-id and x-channel-code, and what values should I use?",
     answer:
-      "These headers identify the integration channel making the request and must be included on every authenticated API call alongside your x-merchant-id.\n\n• x-channel-id: 3 · x-channel-code: legacy-api-user — use for legacy or direct API access. The payment status report and transfer status endpoints specifically require channel 3.\n\nUsing the wrong channel for an endpoint will result in an authentication or routing error.",
+      "These headers identify the integration channel making the request and must be included on every authenticated API call alongside your x-merchant-id.\n\n• x-channel-id: 3 · x-channel-code: legacy-api-user  use for legacy or direct API access. The payment status report and transfer status endpoints specifically require channel 3.\n\nUsing the wrong channel for an endpoint will result in an authentication or routing error.",
   },
   {
     id: "response-codes",
     question: "What do the Passpoint response codes mean?",
     answer:
-      "Every API response includes a responseCode field. The key codes are:\n\n• 00 — Success. The request was processed successfully.\n• 01 — Pending. The transaction has been received and is still processing.\n• 09 — Duplicate transaction reference. The clientReference you sent has already been used.\n• 25 — Transaction not found. The reference or ID does not match any record.\n• 31 — Invalid parameter. A required field is missing or has an invalid value.\n• 96 — System error. A temporary issue on Passpoint's end — safe to retry with exponential backoff.\n\nAlways check responseCode first. A 200 HTTP status does not guarantee a successful transaction.",
+      "Every API response includes a responseCode field. The key codes are:\n\n• 00  Success. The request was processed successfully.\n• 01  Pending. The transaction has been received and is still processing.\n• 09  Duplicate transaction reference. The clientReference you sent has already been used.\n• 25  Transaction not found. The reference or ID does not match any record.\n• 31  Invalid parameter. A required field is missing or has an invalid value.\n• 96  System error. A temporary issue on Passpoint's end  safe to retry with exponential backoff.\n\nAlways check responseCode first. A 200 HTTP status does not guarantee a successful transaction.",
   },
   {
     id: "idempotency",
     question:
       "How do I safely retry failed requests without creating duplicate transactions?",
     answer:
-      "Pass a unique clientReference in every payout, collection, or transfer request. Passpoint uses this value as an idempotency key — if you retry a request with the same clientReference, the API returns the original response instead of creating a second transaction. Use a reference that is unique per operation (e.g. a UUID or your internal order ID). If you receive a 96 system error or a network timeout with no response, wait and retry with the identical clientReference so no double-charge occurs.",
+      "Pass a unique clientReference in every payout, collection, or transfer request. Passpoint uses this value as an idempotency key  if you retry a request with the same clientReference, the API returns the original response instead of creating a second transaction. Use a reference that is unique per operation (e.g. a UUID or your internal order ID). If you receive a 96 system error or a network timeout with no response, wait and retry with the identical clientReference so no double-charge occurs.",
   },
   {
     id: "rate-limits",
     question: "Are there API rate limits I need to know about?",
     answer:
-      "Yes. Passpoint enforces per-merchant rate limits to ensure platform stability. If you exceed the limit, you will receive a 429 Too Many Requests response. Implement exponential backoff with jitter when retrying: start with a 1-second delay, double on each failure up to a maximum of 32 seconds. Cache data that does not change frequently — such as bank lists, currency lists, and wallet balances — rather than polling the API on every request. For high-throughput use cases, contact Passpoint support to discuss elevated limits.",
+      "Yes. Passpoint enforces per-merchant rate limits to ensure platform stability. If you exceed the limit, you will receive a 429 Too Many Requests response. Implement exponential backoff with jitter when retrying: start with a 1-second delay, double on each failure up to a maximum of 32 seconds. Cache data that does not change frequently  such as bank lists, currency lists, and wallet balances  rather than polling the API on every request. For high-throughput use cases, contact Passpoint support to discuss elevated limits.",
   },
 ];
 
@@ -951,7 +951,7 @@ const HeroSection = (): ReactNode => (
           </span>
         </div>
 
-        {/* Headline — editorial serif with italic emphasis */}
+        {/* Headline  editorial serif with italic emphasis */}
         <h1
           className="font-['Fraunces',serif] font-medium tracking-[-0.035em] leading-[0.96] mb-8"
           style={{
@@ -976,7 +976,7 @@ const HeroSection = (): ReactNode => (
           className="text-[16px] sm:text-[18px] leading-[1.65] mb-10 max-w-[540px]"
           style={{ color: "var(--ink-soft)" }}
         >
-          A complete payments suite — collections, payouts, wallets, virtual
+          A complete payments suite  collections, payouts, wallets, virtual
           cards and cross-border transfers. One contract for auth, idempotency
           and webhooks across every product.
         </p>
@@ -1016,7 +1016,7 @@ const HeroSection = (): ReactNode => (
           </Link>
         </div>
 
-        {/* Editorial trust strip — three columns separated by hairlines */}
+        {/* Editorial trust strip  three columns separated by hairlines */}
         <div
           className="grid grid-cols-3 border-y"
           style={{ borderColor: "var(--rule)" }}
@@ -1052,7 +1052,7 @@ const HeroSection = (): ReactNode => (
         </div>
       </div>
 
-      {/* Right column — code card */}
+      {/* Right column  code card */}
       <div className="relative max-w-full lg:mt-6">
         <HeroCodeCard />
       </div>
@@ -1081,7 +1081,7 @@ const ProductSection = (): ReactNode => (
         className="text-[16px] leading-[1.65] max-w-[460px]"
         style={{ color: "var(--ink-soft)" }}
       >
-        Every endpoint shares the same auth, idempotency and webhook contract —
+        Every endpoint shares the same auth, idempotency and webhook contract 
         wiring up a new product is a config change, not a re-integration.
       </p>
     </div>
@@ -1499,7 +1499,7 @@ const CoverageSection = (): ReactNode => (
         style={{ color: "var(--ink-soft)" }}
       >
         The currencies, rails and certifications behind every Passpoint API
-        call. One contract — twenty currencies, eight rails, four
+        call. One contract  twenty currencies, eight rails, four
         independently-audited control sets.
       </p>
     </div>
@@ -1622,7 +1622,7 @@ const FaqSection = ({ openFaq, toggleFaq }: FaqProps): ReactNode => (
         className="text-[16px] leading-[1.65] max-w-[460px]"
         style={{ color: "var(--ink-soft)" }}
       >
-        Everything else lives in the docs — these are the ones that come up in
+        Everything else lives in the docs  these are the ones that come up in
         nearly every integration.
       </p>
     </div>
@@ -1759,7 +1759,7 @@ const FinalCtaSection = (): ReactNode => (
             style={{ color: "var(--ink-soft)" }}
           >
             Spin up a sandbox account in under a minute. Live keys, real
-            webhooks, real money — whenever you are ready.
+            webhooks, real money  whenever you are ready.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -1794,7 +1794,7 @@ const FinalCtaSection = (): ReactNode => (
           </div>
         </div>
 
-        {/* Sandbox panel — paper, not glass */}
+        {/* Sandbox panel  paper, not glass */}
         <div
           className="relative rounded-[14px] border overflow-hidden"
           style={{

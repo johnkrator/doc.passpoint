@@ -95,7 +95,7 @@ const AdminSidebar = ({ isOpen, onClose }: AdminSidebarProps): React.ReactElemen
         }
     };
 
-    // Narrowed role — falls back to undefined for unknown/missing values
+    // Narrowed role  falls back to undefined for unknown/missing values
     const userRole = (user?.role as AdminRole | undefined);
 
     return (
@@ -197,7 +197,7 @@ const AdminSidebar = ({ isOpen, onClose }: AdminSidebarProps): React.ReactElemen
                         {isLoggingOut ? (
                             <>
                                 <div className='h-5 w-5 border-2 border-current border-t-transparent rounded-full animate-spin' aria-hidden="true" />
-                                <span>Logging out…</span>
+                                <span>Logging out</span>
                             </>
                         ) : (
                             <>

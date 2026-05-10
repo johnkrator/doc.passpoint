@@ -82,7 +82,7 @@ const PayoutBankForeignRtpUsd = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    RTP — USD
+                    RTP  USD
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Process Real-Time Payments (RTP) in US Dollar (USD) for instant transfers.
@@ -148,7 +148,7 @@ const PayoutBankForeignRtpUsd = () => {
                 <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                     <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                     <p className="text-xs text-muted-foreground">
-                        RTP transfers are credit-push only — funds move from your wallet to the recipient. There is no pull or reversal capability on the RTP network. Verify recipient details carefully before initiating any RTP payment.
+                        RTP transfers are credit-push only  funds move from your wallet to the recipient. There is no pull or reversal capability on the RTP network. Verify recipient details carefully before initiating any RTP payment.
                     </p>
                 </div>
             </section>

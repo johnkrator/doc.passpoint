@@ -187,7 +187,7 @@ Authorization: Bearer [your-access-token]`;
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
           The Wallet module provides endpoints for managing merchant wallet
-          operations — including checking balances across multiple currencies,
+          operations  including checking balances across multiple currencies,
           retrieving wallet metadata, and generating paginated transaction
           history and statements. All endpoints require a valid Bearer Token.
         </p>
@@ -289,7 +289,7 @@ Authorization: Bearer [your-access-token]`;
             <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
             <p className="text-xs text-muted-foreground leading-relaxed">
               <span className="font-semibold text-foreground">Real-time balance:</span> Wallet balance updates
-              immediately upon settlement of transactions — no polling needed. Use the wallet balance endpoint
+              immediately upon settlement of transactions  no polling needed. Use the wallet balance endpoint
               to check available funds before initiating payouts.
             </p>
           </div>
@@ -482,7 +482,7 @@ Authorization: Bearer [your-access-token]`;
             },
             {
               title: "Different base URL context",
-              body: "Wallet endpoints use {{paymentContext}} in the base URL path — not {{userAppContext}} used by Authentication. Ensure you are using the correct context for your environment.",
+              body: "Wallet endpoints use {{paymentContext}} in the base URL path  not {{userAppContext}} used by Authentication. Ensure you are using the correct context for your environment.",
             },
           ].map(({ title, body }) => (
             <div

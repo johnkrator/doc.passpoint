@@ -87,7 +87,7 @@ const RealtimeAuthorizationDecisionMaker = () => {
                             {[
                                 { step: "1", label: "Cardholder initiates purchase", detail: "The cardholder attempts a transaction using their virtual card at an online or in-person merchant." },
                                 { step: "2", label: "Passpoint forwards the request", detail: "Passpoint intercepts the authorization request and immediately POSTs it to your configured merchant webhook URL with the full transaction context." },
-                                { step: "3", label: "Your system evaluates the request", detail: "Apply your custom logic — check spending limits, block specific merchant categories (MCC), restrict time-of-day access, or enforce per-user controls." },
+                                { step: "3", label: "Your system evaluates the request", detail: "Apply your custom logic  check spending limits, block specific merchant categories (MCC), restrict time-of-day access, or enforce per-user controls." },
                                 { step: "4", label: "Your system responds", detail: "Return a JSON response with responseCode: \"approve\" to authorize the transaction, or responseCode: \"decline\" to reject it. You must respond within the latency window." },
                                 { step: "5", label: "Passpoint processes the decision", detail: "Passpoint uses your decision to approve or reject the authorization with the card network. Approved transactions proceed; declined transactions are returned to the merchant as declined." },
                             ].map(({ step, label, detail }) => (
@@ -114,7 +114,7 @@ const RealtimeAuthorizationDecisionMaker = () => {
                             {[
                                 { title: "MCC blocking", desc: "Decline transactions at specific merchant category codes (e.g., gambling, luxury goods, foreign merchants) automatically." },
                                 { title: "Spending limits", desc: "Enforce per-transaction or cumulative daily/weekly limits per card or per user, beyond the card's loaded balance." },
-                                { title: "Time-of-day restrictions", desc: "Only allow transactions during business hours or a defined window — decline any attempt made outside that range." },
+                                { title: "Time-of-day restrictions", desc: "Only allow transactions during business hours or a defined window  decline any attempt made outside that range." },
                                 { title: "Geographic controls", desc: "Block transactions from specific countries or outside a user's registered home region using cardAcceptorCountry." },
                             ].map(({ title, desc }) => (
                                 <div key={title} className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-3.5">
@@ -129,7 +129,7 @@ const RealtimeAuthorizationDecisionMaker = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">Latency is critical.</strong> Your endpoint must respond within a strict time window (typically under 5 seconds). If your server does not respond in time, Passpoint will either approve or decline the transaction based on your configured timeout policy. Keep your authorization logic fast — offload any logging or analytics to async processes after responding.
+                            <strong className="text-foreground">Latency is critical.</strong> Your endpoint must respond within a strict time window (typically under 5 seconds). If your server does not respond in time, Passpoint will either approve or decline the transaction based on your configured timeout policy. Keep your authorization logic fast  offload any logging or analytics to async processes after responding.
                         </p>
                     </div>
 
@@ -148,12 +148,12 @@ const RealtimeAuthorizationDecisionMaker = () => {
                                 </thead>
                                 <tbody className="divide-y divide-border">
                                     {[
-                                        { field: "cardId", desc: "Unique ID of the virtual card — use this to look up user-specific rules and spending limits in your system." },
-                                        { field: "mcc", desc: "Merchant Category Code — use this to implement category-based controls such as blocking gambling or restricting to specific merchants." },
-                                        { field: "transactionAmount", desc: "The transaction amount in the transactionCurrency — use this to enforce per-transaction limits." },
-                                        { field: "cardAcceptorCountry", desc: "ISO country code of the merchant — use this for geographic restrictions." },
+                                        { field: "cardId", desc: "Unique ID of the virtual card  use this to look up user-specific rules and spending limits in your system." },
+                                        { field: "mcc", desc: "Merchant Category Code  use this to implement category-based controls such as blocking gambling or restricting to specific merchants." },
+                                        { field: "transactionAmount", desc: "The transaction amount in the transactionCurrency  use this to enforce per-transaction limits." },
+                                        { field: "cardAcceptorCountry", desc: "ISO country code of the merchant  use this for geographic restrictions." },
                                         { field: "maskedCardPan", desc: "Masked card PAN for logging and display purposes. Do not store the full PAN." },
-                                        { field: "crossborder", desc: "Boolean flag indicating whether the transaction is cross-border — useful for applying additional restrictions on international transactions." },
+                                        { field: "crossborder", desc: "Boolean flag indicating whether the transaction is cross-border  useful for applying additional restrictions on international transactions." },
                                     ].map(({ field, desc }) => (
                                         <tr key={field} className="hover:bg-muted/20 transition-colors">
                                             <td className="px-5 py-3.5"><span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded text-foreground">{field}</span></td>

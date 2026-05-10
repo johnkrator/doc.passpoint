@@ -307,7 +307,7 @@ const SandboxPlayground = () => {
               </span>
               {isAuthenticated ? (
                 <span className="hidden sm:inline-flex items-center gap-1 text-xs text-green-600 dark:text-green-400 font-medium">
-                  <CheckCircle2 className="h-3 w-3" /> Token active — requests
+                  <CheckCircle2 className="h-3 w-3" /> Token active  requests
                   authorized
                 </span>
               ) : (
@@ -332,7 +332,7 @@ const SandboxPlayground = () => {
 
           {showAuth && (
             <div className="p-4 bg-card border-t border-border space-y-4">
-              {/* Bearer token — editable directly or generated */}
+              {/* Bearer token  editable directly or generated */}
               <div>
                 <label className="block text-xs font-semibold text-foreground mb-1.5">
                   Bearer Token
@@ -400,7 +400,7 @@ const SandboxPlayground = () => {
                 </div>
                 {isAuthenticated && (
                   <p className="flex items-center gap-1 text-[11px] text-green-600 dark:text-green-400 mt-1">
-                    <CheckCircle2 className="h-3 w-3" /> Token active — requests
+                    <CheckCircle2 className="h-3 w-3" /> Token active  requests
                     will be authorized
                   </p>
                 )}
@@ -413,7 +413,7 @@ const SandboxPlayground = () => {
                     Generate token automatically
                   </p>
                   <p className="text-[11px] text-muted-foreground mt-0.5">
-                    Enter the auth endpoint and credentials — the token will be
+                    Enter the auth endpoint and credentials  the token will be
                     fetched and filled above.
                   </p>
                 </div>
@@ -505,7 +505,7 @@ const SandboxPlayground = () => {
                       {auth.status === "loading" ? (
                         <>
                           <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                          Fetching token…
+                          Fetching token
                         </>
                       ) : (
                         <>

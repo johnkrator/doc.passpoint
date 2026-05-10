@@ -63,7 +63,7 @@ const CardProfileStatus = () => {
                                 {([
                                     { status: "ACTIVE", meaning: "Card is live and accepting purchases.", actions: "Fund, Withdraw, Freeze, Terminate" },
                                     { status: "INACTIVE / FROZEN", meaning: "Card is temporarily suspended. New purchases are declined.", actions: "Fund, Unfreeze, Terminate" },
-                                    { status: "TERMINATED", meaning: "Card is permanently closed. Cannot be reactivated.", actions: "None — card is closed" },
+                                    { status: "TERMINATED", meaning: "Card is permanently closed. Cannot be reactivated.", actions: "None  card is closed" },
                                 ] as { status: string; meaning: string; actions: string }[]).map(({ status, meaning, actions }) => (
                                     <tr key={status} className="hover:bg-muted/20 transition-colors">
                                         <td className="px-5 py-3.5">
@@ -113,7 +113,7 @@ const CardProfileStatus = () => {
                 <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                     <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                     <p className="text-xs text-muted-foreground">
-                        Check card status before performing any card operation in your application — especially before attempting to fund or charge a card that may have been frozen or terminated by another process.
+                        Check card status before performing any card operation in your application  especially before attempting to fund or charge a card that may have been frozen or terminated by another process.
                     </p>
                 </div>
             </section>

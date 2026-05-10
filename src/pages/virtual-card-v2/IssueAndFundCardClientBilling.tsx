@@ -75,7 +75,7 @@ const IssueAndFundCardClientBilling = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Issue and Fund Card — Client Billing Details
+                    Issue and Fund Card  Client Billing Details
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Create and fund a virtual card in a single operation using a custom client billing address.
@@ -98,7 +98,7 @@ const IssueAndFundCardClientBilling = () => {
                     <div className="grid sm:grid-cols-2 gap-4">
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Atomic Issuance + Funding</p>
-                            <p className="text-xs text-muted-foreground">Rather than calling Issue Card and Fund Card as separate requests, this endpoint completes both operations in one call. The card is created and funded in a single transaction — reducing latency and eliminating the risk of a card existing in an unfunded state.</p>
+                            <p className="text-xs text-muted-foreground">Rather than calling Issue Card and Fund Card as separate requests, this endpoint completes both operations in one call. The card is created and funded in a single transaction  reducing latency and eliminating the risk of a card existing in an unfunded state.</p>
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">The <code className="font-mono text-xs">amount</code> Field</p>

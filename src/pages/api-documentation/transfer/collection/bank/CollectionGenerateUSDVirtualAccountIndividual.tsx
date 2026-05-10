@@ -310,7 +310,7 @@ const CollectionGenerateUsdVirtualAccountIndividual = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Generate USD Virtual Account — Individual
+                    Generate USD Virtual Account  Individual
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     This endpoint generates a USD virtual account for an individual. Generated accounts become active after 24 hours.
@@ -326,7 +326,7 @@ const CollectionGenerateUsdVirtualAccountIndividual = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-foreground">How USD Individual Virtual Accounts Work</h2>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base mb-6 max-w-2xl">
-                    A USD individual virtual account is a US bank account number provisioned for a specific person. Like business accounts, it supports ACH, RTP, and Wire payment rails — but the KYC requirements are tailored for individual consumers rather than entities, requiring personal identity documentation instead of company registration details.
+                    A USD individual virtual account is a US bank account number provisioned for a specific person. Like business accounts, it supports ACH, RTP, and Wire payment rails  but the KYC requirements are tailored for individual consumers rather than entities, requiring personal identity documentation instead of company registration details.
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -339,7 +339,7 @@ const CollectionGenerateUsdVirtualAccountIndividual = () => {
                             {[
                                 { title: "24-hour activation", desc: "Individual accounts become active approximately 24 hours after creation. The active field in the response will be false until activation completes." },
                                 { title: "Identity verification required", desc: "Upload identity documents before calling this endpoint. Pass the resulting uploadRef in the request. Supported id types include: passport, national_id, drivers_license, state_or_provincial_id, permanent_residency_id, visa, ssn." },
-                                { title: "Multi-rail account details", desc: "The response returns separate routing/account numbers for ACH, RTP, and Wire — use the correct rail details when providing payment instructions to the account holder." },
+                                { title: "Multi-rail account details", desc: "The response returns separate routing/account numbers for ACH, RTP, and Wire  use the correct rail details when providing payment instructions to the account holder." },
                                 { title: "One account per individual", desc: "Each individual should have a single USD virtual account. Generating multiple accounts for the same person may trigger compliance flags." },
                             ].map(({ title, desc }) => (
                                 <div key={title} className="flex items-start gap-3 px-4 py-3 bg-muted/30 dark:bg-background/30 border border-border rounded-xl">

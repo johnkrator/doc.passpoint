@@ -60,7 +60,7 @@ const CollectionRequestPaymentForeignWithBankPreselect = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Request Payment — Foreign (Bank Pre-select)
+                    Request Payment  Foreign (Bank Pre-select)
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Initiate a foreign payment request with bank preselection. Allows you to create a payment with a specific bank already selected, streamlining the customer checkout experience.

@@ -54,7 +54,7 @@ const CollectionRequestPaymentForeign = () => {
                     API Reference
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-                    Request Payment — Foreign
+                    Request Payment  Foreign
                 </h1>
                 <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
                     Initiate a foreign payment request via Open Banking. Creates a payment session and returns a payment URL for the customer to complete the transaction through their bank.
@@ -100,7 +100,7 @@ const CollectionRequestPaymentForeign = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            <strong className="text-foreground">redirectUrl and clientReference are critical.</strong> The <code className="font-mono bg-muted px-1 py-0.5 rounded">redirectUrl</code> must be a valid HTTPS URL — embed enough context (e.g., your order ID) in the URL to identify the session. The <code className="font-mono bg-muted px-1 py-0.5 rounded">clientReference</code> must be unique per transaction and is the key used to match the webhook callback to your internal records.
+                            <strong className="text-foreground">redirectUrl and clientReference are critical.</strong> The <code className="font-mono bg-muted px-1 py-0.5 rounded">redirectUrl</code> must be a valid HTTPS URL  embed enough context (e.g., your order ID) in the URL to identify the session. The <code className="font-mono bg-muted px-1 py-0.5 rounded">clientReference</code> must be unique per transaction and is the key used to match the webhook callback to your internal records.
                         </p>
                     </div>
                 </div>

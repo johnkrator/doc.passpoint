@@ -112,7 +112,7 @@ const CardIntroduction = () => {
             </div>
             <div className="space-y-1.5">
               <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Issuance Modes</p>
-              <p className="text-xs text-muted-foreground"><span className="font-medium text-foreground">Default Billing</span> — uses Passpoint's pre-configured billing address (simpler). <span className="font-medium text-foreground">Client Billing</span> — accepts a custom billing address supplied by your customer (required for AVS-verified merchants).</p>
+              <p className="text-xs text-muted-foreground"><span className="font-medium text-foreground">Default Billing</span>  uses Passpoint's pre-configured billing address (simpler). <span className="font-medium text-foreground">Client Billing</span>  accepts a custom billing address supplied by your customer (required for AVS-verified merchants).</p>
             </div>
             <div className="space-y-1.5">
               <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Funding Model</p>
@@ -121,9 +121,9 @@ const CardIntroduction = () => {
             <div className="space-y-1.5">
               <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Card Lifecycle States</p>
               <p className="text-xs text-muted-foreground">
-                <code className="font-mono text-xs bg-muted/60 px-1 py-0.5 rounded">ACTIVE</code> — card can transact normally.{" "}
-                <code className="font-mono text-xs bg-muted/60 px-1 py-0.5 rounded">FROZEN</code> — temporarily blocked, reversible.{" "}
-                <code className="font-mono text-xs bg-muted/60 px-1 py-0.5 rounded">TERMINATED</code> — permanently closed, cannot be reactivated.
+                <code className="font-mono text-xs bg-muted/60 px-1 py-0.5 rounded">ACTIVE</code>  card can transact normally.{" "}
+                <code className="font-mono text-xs bg-muted/60 px-1 py-0.5 rounded">FROZEN</code>  temporarily blocked, reversible.{" "}
+                <code className="font-mono text-xs bg-muted/60 px-1 py-0.5 rounded">TERMINATED</code>  permanently closed, cannot be reactivated.
               </p>
             </div>
           </div>
@@ -133,7 +133,7 @@ const CardIntroduction = () => {
               <Zap className="h-4 w-4 text-brand shrink-0 mt-0.5" />
               <div>
                 <p className="text-xs font-semibold text-foreground mb-0.5">Real-time Authorization Decisions</p>
-                <p className="text-xs text-muted-foreground">When a cardholder attempts a purchase, Passpoint can forward the authorization request to your webhook endpoint in real time. Your system can respond with <code className="font-mono text-xs">approve</code> or <code className="font-mono text-xs">decline</code> — enabling custom logic such as blocking specific merchant categories, enforcing spending limits, or applying time-of-day restrictions.</p>
+                <p className="text-xs text-muted-foreground">When a cardholder attempts a purchase, Passpoint can forward the authorization request to your webhook endpoint in real time. Your system can respond with <code className="font-mono text-xs">approve</code> or <code className="font-mono text-xs">decline</code>  enabling custom logic such as blocking specific merchant categories, enforcing spending limits, or applying time-of-day restrictions.</p>
               </div>
             </div>
           </div>
@@ -1019,7 +1019,7 @@ const CardIntroduction = () => {
 
           <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-3">
             <h4 className="text-sm font-medium text-foreground">
-              AUTHORIZATION — NON CROSSBORDER
+              AUTHORIZATION  NON CROSSBORDER
             </h4>
             <CodeBlock language="json">{`{
 "eventId": "string",
@@ -1047,7 +1047,7 @@ const CardIntroduction = () => {
 
           <div className="bg-white dark:bg-card border border-border rounded-2xl p-5 sm:p-6 space-y-3">
             <h4 className="text-sm font-medium text-foreground">
-              AUTHORIZATION — CROSSBORDER
+              AUTHORIZATION  CROSSBORDER
             </h4>
             <CodeBlock language="json">{`{
 "eventId": "string",

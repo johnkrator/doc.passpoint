@@ -56,7 +56,7 @@ const CardFullPan = () => {
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">When to Call This</p>
-                            <p className="text-xs text-muted-foreground">Only call this endpoint when the authenticated cardholder explicitly requests to view their card number — for example, from a "Show card details" button in your app. Never call this in automated or background processes.</p>
+                            <p className="text-xs text-muted-foreground">Only call this endpoint when the authenticated cardholder explicitly requests to view their card number  for example, from a "Show card details" button in your app. Never call this in automated or background processes.</p>
                         </div>
                         <div className="space-y-1.5">
                             <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Access Control</p>
@@ -73,7 +73,7 @@ const CardFullPan = () => {
                     <div className="bg-muted/40 dark:bg-background/40 border border-border rounded-xl p-4 flex items-start gap-3">
                         <Info className="h-4 w-4 text-brand shrink-0 mt-0.5" />
                         <p className="text-xs text-muted-foreground">
-                            For non-sensitive card metadata (status, masked PAN, billing details), use <strong>Get Card Details</strong> instead — it does not expose raw credentials and is safe for frequent calls.
+                            For non-sensitive card metadata (status, masked PAN, billing details), use <strong>Get Card Details</strong> instead  it does not expose raw credentials and is safe for frequent calls.
                         </p>
                     </div>
                 </div>

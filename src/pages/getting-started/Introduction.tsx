@@ -650,14 +650,14 @@ const Introduction = () => {
                     type: "string",
                     req: "mandatory",
                     desc: "The merchant ID",
-                    val: "—",
+                    val: "",
                   },
                   {
                     param: "x-submerchant-id",
                     type: "string",
                     req: "conditional",
                     desc: "The sub merchant ID. Only required for card acquiring",
-                    val: "—",
+                    val: "",
                   },
                 ].map(({ param, type, req, desc, val }) => (
                   <tr
@@ -735,19 +735,19 @@ const Introduction = () => {
                     param: "responseDescription",
                     type: "string",
                     desc: "The description of the response code",
-                    val: "—",
+                    val: "",
                   },
                   {
                     param: "responseMessage",
                     type: "string",
                     desc: "The message from the submission of the request",
-                    val: "—",
+                    val: "",
                   },
                   {
                     param: "data",
                     type: "Object",
                     desc: "Contains response data and processing details",
-                    val: "—",
+                    val: "",
                   },
                   {
                     param: "data.success",
