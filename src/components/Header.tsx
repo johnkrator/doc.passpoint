@@ -169,7 +169,7 @@ const Header = ({ onMenuClick }: HeaderProps) => {
             {/* Homepage CTA  desktop only */}
             {isHomePage && (
               <a
-                href="https://go.mypasspoint.com/auth/login"
+                href="https://go.mypasspoint.com/authentication/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand text-white text-xs font-medium hover:opacity-90 transition-all ml-1"
@@ -220,7 +220,7 @@ const Header = ({ onMenuClick }: HeaderProps) => {
               {/* CTA */}
               <div className="pt-2 flex flex-col gap-2.5">
                 <a
-                  href="https://go.mypasspoint.com/auth/login"
+                  href="https://go.mypasspoint.com/authentication/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-3 rounded-[10px] text-[14px] font-medium text-white bg-brand hover:opacity-90 transition-all"

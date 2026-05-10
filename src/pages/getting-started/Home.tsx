@@ -984,7 +984,7 @@ const HeroSection = (): ReactNode => (
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-14">
           <a
-            href="https://go.mypasspoint.com/auth/login"
+            href="https://go.mypasspoint.com/authentication/login"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-[14px] font-medium transition-all"
@@ -1763,7 +1763,7 @@ const FinalCtaSection = (): ReactNode => (
           </p>
           <div className="flex flex-wrap gap-3">
             <a
-              href="https://go.mypasspoint.com/auth/login"
+              href="https://go.mypasspoint.com/authentication/login"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-[14px] font-medium transition-all"
@@ -1871,7 +1871,7 @@ const FooterSection = (): ReactNode => {
         {
           label: "Dashboard",
           to: null,
-          href: "https://go.mypasspoint.com/auth/login",
+          href: "https://go.mypasspoint.com/authentication/login",
         },
         { label: "Support", to: null, href: "https://mypasspoint.com" },
       ],

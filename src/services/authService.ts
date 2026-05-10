@@ -33,7 +33,7 @@ let storedUser: User | null = null;
 
 class AuthService {
     async login(credentials: LoginCredentials): Promise<LoginResponse> {
-        const response = await apiClient.post<LoginResponse>('/api/auth/login', credentials);
+        const response = await apiClient.post<LoginResponse>('/api/authentication/login', credentials);
 
         if (response.data.access_token) {
             tokenStore.accessToken = response.data.access_token;
@@ -55,7 +55,7 @@ class AuthService {
 
         try {
             const response = await apiClient.post<{ access_token: string; refresh_token: string }>(
-                '/api/auth/refresh',
+                '/api/authentication/refresh',
                 { refresh_token: refreshToken },
             );
 
@@ -63,7 +63,7 @@ class AuthService {
             tokenStore.setRefreshToken(response.data.refresh_token);
 
             // Fetch the current user profile
-            const userResponse = await apiClient.get<User>('/api/auth/me');
+            const userResponse = await apiClient.get<User>('/api/authentication/me');
             storedUser = userResponse.data;
             return storedUser;
         } catch {
@@ -74,14 +74,14 @@ class AuthService {
     }
 
     async forgotPassword(data: ForgotPasswordData): Promise<void> {
-        await apiClient.post('/api/auth/forgot-password', data);
+        await apiClient.post('/api/authentication/forgot-password', data);
     }
 
     async logout(): Promise<void> {
         try {
             const refreshToken = tokenStore.getRefreshToken();
             if (refreshToken) {
-                await apiClient.post('/api/auth/logout', {
+                await apiClient.post('/api/authentication/logout', {
                     refresh_token: refreshToken,
                 });
             }
@@ -91,7 +91,7 @@ class AuthService {
     }
 
     async getCurrentUser(): Promise<User> {
-        const response = await apiClient.get<User>('/api/auth/me');
+        const response = await apiClient.get<User>('/api/authentication/me');
         storedUser = response.data;
         return response.data;
     }
